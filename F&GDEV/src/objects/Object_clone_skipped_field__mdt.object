@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is a generic setting which can be used to skip fields which should not be cloned while an object is being cloned</description>
+    <fields>
+        <fullName>Field_Name__c</fullName>
+        <description>API name of the field to be skipped during the clone</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Field Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Object_Name__c</fullName>
+        <description>The picklist for the objects for which the fields will be skipped</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Object Name</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>State_Availability__c</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Marketing_Name__c</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Marketing_Materials__c</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Product_State_Status__c</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Product_to_Plan_Code_Association__c</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Marketing_to_Product_State_Association__c</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Product_Specification__c</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Parent_Object_Name__c</fullName>
+        <description>Picklist values for the parent object for which the skip is going to happen</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Parent Object Name</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Product_Specification__c</fullName>
+                    <default>true</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Object clone skipped field</label>
+    <pluralLabel>Object clone skipped fields</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

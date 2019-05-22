@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Weekly Goal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Weekly Goals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Daily Focus --></label>
+        <name>Daily_Focus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Completed --></label>
+        <name>Date_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Focus --></label>
+        <name>Focus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Follow-up Date --></label>
+        <name>Follow_up_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Goal --></label>
+        <name>Monthly_Goal__c</name>
+        <relationshipLabel><!-- Weekly Goals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Weekly Priority --></label>
+        <name>Weekly_Priority__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

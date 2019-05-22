@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<!--Aura attribute declaration-->
+    <aura:attribute name="StateToBeChanged" type="String" default=""/>
+    <!--Aura handler-->
+    <!--Body starts-->
+    <!--Footer starts-->
+</aura:component>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Support Case</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Support Cases</value>
+    </caseValues>
+    <fields>
+        <help><!-- What Account is this related to? This field helps understand support request origination. --></help>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Support Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Anti-Virus Installed? --></label>
+        <name>Anti_Virus_Installed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Tehnical: disconnected desktop software, problems with installing, etc.
+Illustration/Calculator: numbers in illustration don&apos;t make sense, etc.
+New Business: why doesn&apos;t my policy exist, power producer standings, general account management, etc. --></help>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Illustration Technical</masterLabel>
+            <translation><!-- Illustration Technical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illustration/Calculator</masterLabel>
+            <translation><!-- Illustration/Calculator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Business</masterLabel>
+            <translation><!-- New Business --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Support Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- First Response Date --></label>
+        <name>First_Response_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of days between first response date and resolved date. --></help>
+        <label><!-- First Response to Resolved --></label>
+        <name>First_Response_to_Resolved__c</name>
+    </fields>
+    <fields>
+        <label><!-- MGA --></label>
+        <name>MGA__c</name>
+        <relationshipLabel><!-- Support Cases (MGA) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Meets System Requirements --></label>
+        <name>Meets_System_Requirements__c</name>
+        <picklistValues>
+            <masterLabel>Ask</masterLabel>
+            <translation><!-- Ask --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Problem Description --></label>
+        <name>Problem_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reported Date --></label>
+        <name>Reported_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of days between first response date and resolved date. --></help>
+        <label><!-- Reported to First Response --></label>
+        <name>Reported_to_First_Response__c</name>
+    </fields>
+    <fields>
+        <help><!-- The number of days between reported date and resolved date. --></help>
+        <label><!-- Reported to Resolved --></label>
+        <name>Reported_to_Resolved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolved Date --></label>
+        <name>Resolved_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Software Worked? --></label>
+        <name>Software_Worked__c</name>
+        <picklistValues>
+            <masterLabel>Ask</masterLabel>
+            <translation><!-- Ask --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacted</masterLabel>
+            <translation><!-- Contacted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resolved</masterLabel>
+            <translation><!-- Resolved --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Adobe Not Default PDF Viewer</masterLabel>
+            <translation><!-- Adobe Not Default PDF Viewer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apache</masterLabel>
+            <translation><!-- Apache --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Below System Requirements</masterLabel>
+            <translation><!-- Below System Requirements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compatibility</masterLabel>
+            <translation><!-- Compatibility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connectivity</masterLabel>
+            <translation><!-- Connectivity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corrupt Installation</masterLabel>
+            <translation><!-- Corrupt Installation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defect</masterLabel>
+            <translation><!-- Defect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filing Reports</masterLabel>
+            <translation><!-- Filing Reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IE 10 Zoom</masterLabel>
+            <translation><!-- IE 10 Zoom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IE 9</masterLabel>
+            <translation><!-- IE 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Install</masterLabel>
+            <translation><!-- Install --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MSSQL&amp;COSSNET</masterLabel>
+            <translation><!-- MSSQL&amp;COSSNET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pop-Up Blocker</masterLabel>
+            <translation><!-- Pop-Up Blocker --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REQ</masterLabel>
+            <translation><!-- REQ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SQL Express Service Failed</masterLabel>
+            <translation><!-- SQL Express Service Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Server Error</masterLabel>
+            <translation><!-- Server Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown Edit Error: 5</masterLabel>
+            <translation><!-- Unknown Edit Error: 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usage</masterLabel>
+            <translation><!-- Usage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User &quot;SA&quot; Error</masterLabel>
+            <translation><!-- User &quot;SA&quot; Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virus/Malware</masterLabel>
+            <translation><!-- Virus/Malware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIN8</masterLabel>
+            <translation><!-- WIN8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>iPad</masterLabel>
+            <translation><!-- iPad --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Windows Updated? --></label>
+        <name>Windows_Update__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- iPipeline Case # --></label>
+        <name>iPipeline_Case__c</name>
+    </fields>
+    <layouts>
+        <layout>Illustration/Calculator Support</layout>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>New Business Support</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Technical Support</layout>
+        <sections>
+            <label><!-- Case Details --></label>
+            <section>Case Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Illustration/Calculator --></label>
+        <name>Illustration_Calculator</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- New Business --></label>
+        <name>New_Business</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Technical --></label>
+        <name>Technical</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

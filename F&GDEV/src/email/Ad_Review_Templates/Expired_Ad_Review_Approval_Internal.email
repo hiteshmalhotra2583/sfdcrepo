@@ -1,0 +1,10 @@
+Please note that the ad review approval on {!Marketing_Materials__c.Ad_Review_Number__c} - {!Marketing_Materials__c.Form_Description__c} has expired. The expiration date is {!Marketing_Materials__c.Current_Expiration__c}. Please discontinue use of this item at once. If this item is on SalesLink or our public website, it will be removed from these sites. 
+
+If you wish to use this piece again, please submit this piece to Product.Compliance-Adreview@fglife.com, and reference {!Marketing_Materials__c.Ad_Review_Number__c} as the ad to be replaced. Please, with your submission, indicate if the ad stayed the same or if it had edits. If it had edits, please give details as to what changed. This is similar to the instruction sent 8 weeks ago in a communication to the same email address. Please note that the expired ad is not to be used during this process.
+
+Upon a new approval with a new ad review number, this ad may again be used.  
+
+The record of the expiring ad can be accessed by clicking the following link:
+{!Marketing_Materials__c.Link}
+
+Thanks!

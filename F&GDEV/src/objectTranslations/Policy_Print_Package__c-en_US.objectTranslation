@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Policy Print Package</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Policy Print Packages</value>
+    </caseValues>
+    <fields>
+        <label><!-- Package Link --></label>
+        <name>Package_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product State --></label>
+        <name>ProductState__c</name>
+        <relationshipLabel><!-- Policy Print Packages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Production End --></label>
+        <name>Production_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Production Start --></label>
+        <name>Production_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Print Received --></label>
+        <name>Test_Print_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Print Signoff --></label>
+        <name>Test_Print_Signoff__c</name>
+    </fields>
+    <layouts>
+        <layout>Policy Print Package Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

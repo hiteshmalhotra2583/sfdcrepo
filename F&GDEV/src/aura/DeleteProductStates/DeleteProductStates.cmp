@@ -1,0 +1,46 @@
+<aura:component controller="CTRL_CreateProductState" implements="flexipage:availableForAllPageTypes,force:appHostable,force:lightningquickactionwithoutheader,force:hasRecordId" access="global">
+	<aura:attribute name="recordId" type="String" /> 
+    <aura:attribute name="responseMessage" type="String"/>
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" /> 
+    <aura:attribute name="spinner" type="Boolean" default="false" />
+    <aura:html tag="style">    
+        .cuf-content {
+        	padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        	padding: 0rem !important;
+        }
+        .slds-modal__content {
+            overflow-y: hidden !important;
+            height: unset !important;
+            max-height: unset !important;
+        }
+	   .slds-modal__close{
+        	display: none;
+        }
+    </aura:html>
+    
+    <div class="slds-col modal-header slds-modal__header">
+        <h2 class="title slds-text-heading--medium">Delete Product States</h2>
+    </div>
+    <div class="slds-col modal-body scrollable slds-p-around--medium" style="height: 200px; max-height: 400px; overflow-y: auto !important">
+        <!--Show Table with Records Code Ends-->
+        <aura:if isTrue="{!v.spinner}">
+            <div class="" style="height: 6rem;">
+                <div role="status" class="slds-spinner slds-spinner_large slds-spinner_brand">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </aura:if>
+        <div>
+            {!v.responseMessage}
+        </div>
+    </div>
+    <div class="slds-col modal-footer slds-modal__footer">        
+        <lightning:button variant="brand" label="Ok" onclick="{! c.sendBackToRecord }" />
+    </div>
+    
+</aura:component>

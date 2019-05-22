@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AgentID__c.AgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.AgentName__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Email__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.MgaAgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.UplineAgentID__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>((1 OR 2 OR 3 OR 6 OR 7 OR 8) AND 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000147013 - BENEFIT ARCHITECTS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>GOV147013 - BENEFIT ARCHITECTS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000297093 - BENEFIT ARCHITECTS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.Email__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.IsActive__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>GOV288008 - BENEFIT ARCHITECTS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>000310594 - BENEFIT ARCHITECTS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>000280818 - BENEFIT ARCHITECTS INC</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>SUPP - BENEFIT ARCHITECTS by MGA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AgentID__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>AgentID__c.EffectiveDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

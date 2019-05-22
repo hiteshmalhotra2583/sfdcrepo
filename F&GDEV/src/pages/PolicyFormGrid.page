@@ -1,0 +1,203 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false">
+<link rel="stylesheet" type="text/css" media="all" href="{!URLFOR($Resource.FGL_Styles)}" />
+
+<table class="alertTable">
+	<tr>
+		<td>
+			<p>Message Center:</p>
+			<div ng-class="{'alert alert-success':!iserror && sMessage!=null,'alert alert-danger':iserror && sMessage, 'alert alert-null':sMessage==null}" role="alert">
+				<span ng-bind="message" ng-show="message"></span>
+			</div>
+		</td>
+	</tr>
+</table>
+<hr/>
+<table class="buttonTable">
+	<thead>
+		<tr> 
+			<!-- Button Header Construction -->
+			<th class="buttonCell" colspan="{{(!policies.length)?2:policies.length+1}}"> 
+				<button class="btn btn-default" ng-show="policyUpdateAccess" ng-hide="policyId" ng-click="addPolicies()">Add Policies</button>
+				<button class="btn btn-default" ng-show="policyUpdateAccess" ng-disabled="!statepolicyselectcount" ng-click="editFilingStatuses()">Edit Filings</button>
+				
+				<!--<button class="btn btn-default" ng-disabled="!policycolselcount" ng-click="removePolicies()">Remove Policies</button>--> </th>
+			<th colspan="{{products.length*(policies.length?policies.length:1)}}" ng-show="products.length" class="buttonTH"> <button class="btn btn-default" ng-click="saveProdStatePolicyStatus()" ng-disabled="!prodstatepolicyeditcount">Save Product State Records</button>
+			</th>
+		</tr>
+	</thead>
+</table>
+<div ng-class="{'thirdWheel':(policies.length && !products.length)}" class="wrapper">
+	<div class="statescolumn">
+		<table class="table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th class="statesBlock">States</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="state in paged.states">
+					<td ng-click="selectRow(state.StateCode__c);" class="stateName"> {{state.Name}} </td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>
+						<pager ng-click="setCurrentPage(currentPage)" total-items="states.length" ng-model="currentPage" items-per-page="itemsPerPage" previous-text="<<" next-text=">>"></pager>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+	<div class="stateTable">
+		<table class="table table-hover table-bordered table-condensed">
+			<thead >
+				<tr ng-show="products.length">
+					<th class="policyBlock empty" ng-show="policies.length" colspan="{{policies.length+1}}">&nbsp;</th>
+					<!--<th ng-hide="policies.length" colspan="2">States</th>--> 
+				</tr>
+				<tr> 
+					<!-- Conditional State Header Construction --> 
+					<!--<th ng-show="policies.length" class="statesBlock">States</th>
+						<th ng-show="!products.length&&!policies.length" colspan="2">States</th>-->
+					
+					<th ng-show="policies.length" ng-repeat="policy in policies | orderBy:'Name'" ng-click="selectCol(policy.Id)" class="statesPolicyNameBlock">{{policy.Name}}</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="state in paged.states"> 
+					<!--
+						<td ng-click="selectRow(state.StateCode__c)" class="stateName">
+							{{state.Name}}
+						</td>
+						-->
+					<td ng-show="{{$first}}&&!policies.length" rowspan="{{states.length}}"><span>No Policies Have Been Associated</span></td>
+					<td  ng-repeat="policy in policies | orderBy:'Name' track by $index" ng-click="select(state.StateCode__c, policy.Id)"
+							class="policyStatusBlock {{getClassSelected(state.StateCode__c, policy.Id)}}">
+
+						<img
+							ng-show="getClassStatus(state.StateCode__c, policy.Id)"
+							src="/resource/1412001594000/fgl_icons/{{getClassStatus(state.StateCode__c, policy.Id)}}.png" 
+							popover="Status: {{getStatusMessage(state.StateCode__c, policy.Id)}}" 
+							popover-trigger="mouseenter" 
+							popover-placement="right" width="20px" height="20px">
+						</img>
+
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="productTable" ng-show="policies.length && products.length">
+	<table class="table table-hover table-bordered table-condensed">
+		<thead>
+			<tr ng-show="products.length">
+				<th class="productBlock" ng-show="products.length>0" ng-repeat="product in products | orderBy:'Name'"  colspan="{{policies.length}}">{{product.Name}}</th>
+			</tr>
+			<tr>
+				<th ng-click="selProdCol($index)" ng-show="policies.length" ng-repeat="productpolicy in productpolicies track by $index" class="productPolicyNameBlock">{{productpolicy.PolicyName}}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="state in paged.states">
+				<td ng-show="{{$first}}&&!policies.length&&products.length" colspan="{{products.length}}" rowspan="{{states.length}}">&nbsp;</td>
+				<td class="pointer" ng-show="policies.length && products.length" ng-repeat="productpolicy in productpolicies track by $index" 
+						ng-click="isavail = setProdStateStatus(productpolicy.ProductId, state.StateCode__c, productpolicy.PolicyId)"
+						ng-class="{'pointer glyphicon-fgl-ok':getProdStateStatus(productpolicy.ProductId, state.StateCode__c, productpolicy.PolicyId), 'pointer glyphicon-fgl-ban-circle':(!getProdStateStatus(productpolicy.ProductId, state.StateCode__c, productpolicy.PolicyId))}"
+						></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<script type="text/ng-template" id="AddPolicyModal.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Select Policies to Add</h3>
+        </div>
+        <div class="modal-body">
+            <p>Enter a search string to return policies to add to the current table.</p>
+            <p>
+	            <input ng-model="searchPolicyString" />
+	            <button ng-click="searchPolicies(searchPolicyString)">Search</button>
+            </p>
+            <p>
+            	<table>
+            		<tr>
+            			<th colspan="2" ng-hide="policyResults">
+            				No Results
+            			</th>
+            			<th colspan="2" ng-show="policyResults">
+            				<pagination ng-click="setCurrentPage(currentPage)" total-items="policyResults.length" ng-model="currentPage" max-size="5"  items-per-page="10" class="pagination-sm" boundary-links="true" rotate="false"></pagination>
+            				<br/>
+            			</th>
+            		</tr>            	
+            	</table>
+            </p>
+            <p>
+	            <table class="table table-hover table-bordered table-condensed">
+	            	<thead ng-show="policyResults.length">
+	            		<tr>
+	            			<th><input type="checkbox" ng-click="toggleallresults()" /></th>
+	            			<th>Policy</th>
+	            		</tr>
+	            	</thead>
+	            	<tbody>
+	            		<tr ng-repeat="policy in paged.policyResults">
+	            			<td><input type="checkbox" ng-model="policy.bSelected" /></td>
+	            			<td>{{policy.Name}}</td>
+	            		</tr>
+	            	</tbody>
+	            </table>
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="selectPolicies()">Select Policies</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+<div ng-controller="Ctrl_EditFilingStatuses"> 
+	<script type="text/ng-template" id="EditFilingStatuses.html">
+	        <div class="modal-header">
+	            <h3 class="modal-title">Mass Edit Policy Filing Status Fields</h3>
+	        </div>
+	        <div class="modal-body">
+	        	<table class="table table-condensed">
+		        	<tr ng-repeat="field in policystatusaggr.Fields">
+		        		<td>{{policystatusaggr.FieldLabelMap[field]}}:</td>
+		        		<td>
+		        			<!-- Text Fields Rendered -->
+		        			<input ng-disabled="policystatusaggr.isMultiValueMap[field] && !policystatusaggr.isEditableMap[field]" ng-show="{{policystatusaggr.FieldTypeMap[field] == 'STRING'}}" ng-disabled="false" ng-model="policystatusaggr.FieldValueMap[field]" ng-change="policystatusaggr.isEditedMap[field]=true" type="text" />
+
+		        			<!-- Text Area Fields Rendered -->
+		        			<textarea rows="4" cols="30" ng-disabled="policystatusaggr.isMultiValueMap[field] && !policystatusaggr.isEditableMap[field]" ng-show="{{policystatusaggr.FieldTypeMap[field] == 'TEXTAREA'}}" ng-disabled="false" ng-model="policystatusaggr.FieldValueMap[field]" ng-change="policystatusaggr.isEditedMap[field]=true">
+		        			</textarea>
+
+		        			<!-- Date Fields Rendered -->
+	        				<input ng-disabled="policystatusaggr.isMultiValueMap[field] && !policystatusaggr.isEditableMap[field]" ng-show="{{policystatusaggr.FieldTypeMap[field] == 'DATE'}}" ng-disabled="false" ng-model="policystatusaggr.FieldValueMap[field]" ng-change="policystatusaggr.isEditedMap[field]=true" placeholder="mm/dd/yyyy" type="text" ui-mask="99/99/9999" />
+		        			
+		        			<!-- Pick List Fields Rendered -->
+							<select ng-disabled="policystatusaggr.isMultiValueMap[field] && !policystatusaggr.isEditableMap[field]" ng-show="{{policystatusaggr.FieldTypeMap[field] == 'PICKLIST'}}" ng-model="policystatusaggr.FieldValueMap[field]" ng-options="pickval for pickval in policystatusaggr.FieldPicklistMap[field]" ng-change="policystatusaggr.isEditedMap[field]=true" >
+								<option value="">-- Choose a Selection --</option>
+							</select>
+							<span ng-show="policystatusaggr.isMultiValueMap[field]" ng-click="override(field)" class="pointer"><h1>...</h1></span>
+                                
+                                
+							<!--							
+							&nbsp;<span>Multival:{{policystatusaggr.isMultiValueMap[field]}}</span>
+							&nbsp;<span>Edit:{{policystatusaggr.isEditedMap[field]}}</span>
+							&nbsp;<span>Editable:{{policystatusaggr.isEditedMap[field]}}</span>
+
+							<br/><br/>
+							<span>{{policystatusaggr.FieldValueMap[field]}}</span>
+							-->
+		        		</td>
+		        	</tr>
+	        	</table>
+	        </div>
+	        <div class="modal-footer">
+	            <button class="btn btn-primary" ng-click="updateFilings()">Update Filings</button>
+	            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	        </div>
+	    </script> 
+</div>
+</apex:page>

@@ -1,0 +1,7 @@
+This Project was rejected by {!ApprovalRequest.Process_Approver}  for the following reason:
+
+{!ApprovalRequest.Comments}
+
+Please click on the link for more detail:
+
+{!Project__c.Link}

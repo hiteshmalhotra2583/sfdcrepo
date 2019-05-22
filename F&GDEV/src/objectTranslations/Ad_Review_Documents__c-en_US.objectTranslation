@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ad Review Documents</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ad Review Documents</value>
+    </caseValues>
+    <fields>
+        <label><!-- Marketing Materials --></label>
+        <name>MarketingMaterial__c</name>
+        <relationshipLabel><!-- Ad Review Documents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Ad Review Comments</masterLabel>
+            <translation><!-- Ad Review Comments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final Approved</masterLabel>
+            <translation><!-- Final Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original Submission</masterLabel>
+            <translation><!-- Original Submission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revised Submission</masterLabel>
+            <translation><!-- Revised Submission --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Ad Review Documents Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

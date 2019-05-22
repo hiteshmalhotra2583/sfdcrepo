@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Marketing Materials</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Marketing Materials</value>
+    </caseValues>
+    <fields>
+        <label><!-- ARROminus1 --></label>
+        <name>ARROminus1__c</name>
+    </fields>
+    <fields>
+        <label><!-- AR_AnnActTotalDays --></label>
+        <name>AR_AnnActTotalDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- AR_AnnAct --></label>
+        <name>AR_AnnAct__c</name>
+    </fields>
+    <fields>
+        <label><!-- AdReview_CC_Email --></label>
+        <name>AdReview_CC_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Changes Requested --></label>
+        <name>Ad_Review_Changes_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Combined Name --></label>
+        <name>Ad_Review_Combined_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Contact --></label>
+        <name>Ad_Review_Contact__c</name>
+        <relationshipLabel><!-- Marketing Materials (Ad Review Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Document Status --></label>
+        <name>Ad_Review_Document_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review - File Only --></label>
+        <name>Ad_Review_File_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review In Progress --></label>
+        <name>Ad_Review_In_Progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Number --></label>
+        <name>Ad_Review_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Approvals Outstanding --></label>
+        <name>Ad_Review_Outstanding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Priority --></label>
+        <name>Ad_Review_Priority__c</name>
+        <picklistValues>
+            <masterLabel>1 - Urgent</masterLabel>
+            <translation><!-- 1 - Urgent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - High</masterLabel>
+            <translation><!-- 2 - High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Normal</masterLabel>
+            <translation><!-- 3 - Normal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Required --></label>
+        <name>Ad_Review_Required_1__c</name>
+        <picklistValues>
+            <masterLabel>Actuarial Annuity</masterLabel>
+            <translation><!-- Actuarial Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actuarial Life</masterLabel>
+            <translation><!-- Actuarial Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Compliance</masterLabel>
+            <translation><!-- Product Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Required --></label>
+        <name>Ad_Review_Required__c</name>
+        <picklistValues>
+            <masterLabel>Product Compliance, Legal</masterLabel>
+            <translation><!-- Product Compliance, Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Compliance, Legal, Actuarial</masterLabel>
+            <translation><!-- Product Compliance, Legal, Actuarial --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Reviews Outstanding --></label>
+        <name>Ad_Review_Reviews_Outstanding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Status --></label>
+        <name>Ad_Review_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Submitter Email --></label>
+        <name>Ad_Review_Submitter_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- AR1 Complete --></label>
+        <name>Ad_Reviewer_1_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Reviewer 1 --></label>
+        <name>Ad_Reviewer_1__c</name>
+        <relationshipLabel><!-- Marketing Materials (Ad Reviewer 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ad Type --></label>
+        <name>Ad_Type__c</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Correspondence</masterLabel>
+            <translation><!-- Correspondence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Literature</masterLabel>
+            <translation><!-- Sales Literature --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Additional Notes --></label>
+        <name>Additional_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assign to Ad Review Admin --></label>
+        <name>Assign_to_Ad_Review_Admin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancel Date --></label>
+        <name>Cancel_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- This material is Void/Cancelled and was never used. --></help>
+        <label><!-- Cancelled --></label>
+        <name>Cancelled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Annuity</masterLabel>
+            <translation><!-- Fixed Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life</masterLabel>
+            <translation><!-- Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Variable Annuity</masterLabel>
+            <translation><!-- Variable Annuity --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approval Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commit Date --></label>
+        <name>Commit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Consumer Ad --></label>
+        <name>Consumer_Ad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Ad Reviewer --></label>
+        <name>Current_Ad_Reviewer__c</name>
+        <picklistValues>
+            <masterLabel>Actuarial - Annuity</masterLabel>
+            <translation><!-- Actuarial - Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actuarial - Life</masterLabel>
+            <translation><!-- Actuarial - Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Admin</masterLabel>
+            <translation><!-- Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Compliance</masterLabel>
+            <translation><!-- Product Compliance --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Expiration --></label>
+        <name>Current_Expiration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Review Due --></label>
+        <name>Current_Review_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date 1st Revisions Sent --></label>
+        <name>Date_1st_Revisions_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Due Actuarial --></label>
+        <name>Date_Due_Actuarial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Due Ad Administrator --></label>
+        <name>Date_Due_Ad_Administrator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Due Legal --></label>
+        <name>Date_Due_Legal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Due Marcom --></label>
+        <name>Date_Due_Marcom__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Due Product Compliance --></label>
+        <name>Date_Due_Product_Compliance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Due --></label>
+        <name>Date_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Latest Changes Received --></label>
+        <name>Date_Latest_Changes_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Revisions Sent --></label>
+        <name>Date_Revisions_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Submitted --></label>
+        <name>Date_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- DaysToApprove --></label>
+        <name>DaysToApprove__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department - Legacy --></label>
+        <name>Department_Legacy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description of Change --></label>
+        <name>Description_of_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disapproval Date --></label>
+        <name>Disapproval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disapproval Notice Sent --></label>
+        <name>Disapproval_Notice_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Area --></label>
+        <name>Distribution_Area__c</name>
+        <picklistValues>
+            <masterLabel>Conference</masterLabel>
+            <translation><!-- Conference --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Site</masterLabel>
+            <translation><!-- Internet Site --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National</masterLabel>
+            <translation><!-- National --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Web Site</masterLabel>
+            <translation><!-- Public Web Site --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Puerto Rico</masterLabel>
+            <translation><!-- Puerto Rico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Press</masterLabel>
+            <translation><!-- Trade Press --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show Booth Banner</masterLabel>
+            <translation><!-- Trade Show Booth Banner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United States</masterLabel>
+            <translation><!-- United States --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web (Financial Advisor Publication)</masterLabel>
+            <translation><!-- Web (Financial Advisor Publication) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website</masterLabel>
+            <translation><!-- Website --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Estimated Distribution Number --></label>
+        <name>Estimated_Distribution_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expedited Review Requested --></label>
+        <name>Expedited_Review_Requested__c</name>
+    </fields>
+    <fields>
+        <label><!-- For Agent Use Only --></label>
+        <name>For_Agent_Use_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form Description --></label>
+        <name>Form_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form Type --></label>
+        <name>Form_Type__c</name>
+        <picklistValues>
+            <masterLabel>Agent Ad</masterLabel>
+            <translation><!-- Agent Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent Highlights</masterLabel>
+            <translation><!-- Agent Highlights --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent Product Guide</masterLabel>
+            <translation><!-- Agent Product Guide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent Training Manual</masterLabel>
+            <translation><!-- Agent Training Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Annuity Calculator</masterLabel>
+            <translation><!-- Annuity Calculator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application</masterLabel>
+            <translation><!-- Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brochure</masterLabel>
+            <translation><!-- Brochure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cert of App</masterLabel>
+            <translation><!-- Cert of App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer (Family)</masterLabel>
+            <translation><!-- Consumer (Family) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer - No App</masterLabel>
+            <translation><!-- Consumer - No App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Overview</masterLabel>
+            <translation><!-- Consumer Overview --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer with App &amp; Cert of App</masterLabel>
+            <translation><!-- Consumer with App &amp; Cert of App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Features &amp; Application</masterLabel>
+            <translation><!-- Features &amp; Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fillable Template - Pre-Approved</masterLabel>
+            <translation><!-- Fillable Template - Pre-Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flyer</masterLabel>
+            <translation><!-- Flyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Form</masterLabel>
+            <translation><!-- Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illustration</masterLabel>
+            <translation><!-- Illustration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life Application</masterLabel>
+            <translation><!-- Life Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MYGA Fillable – pre approved</masterLabel>
+            <translation><!-- MYGA Fillable – pre approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailer</masterLabel>
+            <translation><!-- Mailer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newsletter</masterLabel>
+            <translation><!-- Newsletter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Powerpoint</masterLabel>
+            <translation><!-- Powerpoint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product at a Glance</masterLabel>
+            <translation><!-- Product at a Glance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate Guide</masterLabel>
+            <translation><!-- Rate Guide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Statement of Understanding</masterLabel>
+            <translation><!-- Statement of Understanding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Video/Audio</masterLabel>
+            <translation><!-- Video/Audio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Webinar</masterLabel>
+            <translation><!-- Webinar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Webinar Evite</masterLabel>
+            <translation><!-- Webinar Evite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website</masterLabel>
+            <translation><!-- Website --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Intended Use --></label>
+        <name>Intended_Use__c</name>
+    </fields>
+    <fields>
+        <label><!-- LastReminderSent --></label>
+        <name>LastReminderSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy PD Database Ad Review ID --></label>
+        <name>Legacy_PD_Database_Ad_Review_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy PD Mkt Mat ID --></label>
+        <name>Legacy_PD_Mkt_Mat_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Ad Review Priority --></label>
+        <name>Marketing_Ad_Review_Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Production Date --></label>
+        <name>Marketing_Production_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Missing Ad Review Number Only --></label>
+        <name>Missing_Ad_Review_Number_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Missing Data --></label>
+        <name>Missing_Data2__c</name>
+    </fields>
+    <fields>
+        <label><!-- MktCombinedFormNumber --></label>
+        <name>MktCombinedFormNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- MktFormNumberSuffix --></label>
+        <name>MktFormNumberSuffix__c</name>
+    </fields>
+    <fields>
+        <label><!-- MktFormNumber --></label>
+        <name>MktFormNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- MktFormPrefixSearch --></label>
+        <name>MktFormPrefixSearch__c</name>
+    </fields>
+    <fields>
+        <label><!-- MktMatAdditional Notes --></label>
+        <name>MktMatAdditional_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- MktMatFormType --></label>
+        <name>MktMatFormType__c</name>
+        <picklistValues>
+            <masterLabel>Agent Ad</masterLabel>
+            <translation><!-- Agent Ad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent Highlights</masterLabel>
+            <translation><!-- Agent Highlights --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent Product Guide</masterLabel>
+            <translation><!-- Agent Product Guide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agent Training Manual</masterLabel>
+            <translation><!-- Agent Training Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application</masterLabel>
+            <translation><!-- Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cert of App</masterLabel>
+            <translation><!-- Cert of App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer - no app</masterLabel>
+            <translation><!-- Consumer - no app --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Overview</masterLabel>
+            <translation><!-- Consumer Overview --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer with App &amp; Cert of App</masterLabel>
+            <translation><!-- Consumer with App &amp; Cert of App --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Features &amp; Application</masterLabel>
+            <translation><!-- Features &amp; Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flyer</masterLabel>
+            <translation><!-- Flyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Form</masterLabel>
+            <translation><!-- Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life Application</masterLabel>
+            <translation><!-- Life Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailer</masterLabel>
+            <translation><!-- Mailer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product at a Glance</masterLabel>
+            <translation><!-- Product at a Glance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate Guide</masterLabel>
+            <translation><!-- Rate Guide --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mkt Form Prefix --></label>
+        <name>Mkt_Form_Prefix__c</name>
+        <picklistValues>
+            <masterLabel>AAPP</masterLabel>
+            <translation><!-- AAPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADLF</masterLabel>
+            <translation><!-- ADLF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADMIN</masterLabel>
+            <translation><!-- ADMIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADTJ</masterLabel>
+            <translation><!-- ADTJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADV</masterLabel>
+            <translation><!-- ADV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG</masterLabel>
+            <translation><!-- FG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FGNY</masterLabel>
+            <translation><!-- FGNY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICC11</masterLabel>
+            <translation><!-- ICC11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICC14</masterLabel>
+            <translation><!-- ICC14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICC15</masterLabel>
+            <translation><!-- ICC15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICC18</masterLabel>
+            <translation><!-- ICC18 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAPP</masterLabel>
+            <translation><!-- LAPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LMG</masterLabel>
+            <translation><!-- LMG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NYAD</masterLabel>
+            <translation><!-- NYAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NYCO</masterLabel>
+            <translation><!-- NYCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OM</masterLabel>
+            <translation><!-- OM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMAD</masterLabel>
+            <translation><!-- OMAD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMCO</masterLabel>
+            <translation><!-- OMCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PORT</masterLabel>
+            <translation><!-- PORT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Obsolete Date --></label>
+        <name>Obsolete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orig Date - Month --></label>
+        <name>Orig_Date_Month__c</name>
+        <picklistValues>
+            <masterLabel>Apr</masterLabel>
+            <translation><!-- Apr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aug</masterLabel>
+            <translation><!-- Aug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dec</masterLabel>
+            <translation><!-- Dec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feb</masterLabel>
+            <translation><!-- Feb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jan</masterLabel>
+            <translation><!-- Jan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jul</masterLabel>
+            <translation><!-- Jul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jun</masterLabel>
+            <translation><!-- Jun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mar</masterLabel>
+            <translation><!-- Mar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May</masterLabel>
+            <translation><!-- May --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nov</masterLabel>
+            <translation><!-- Nov --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oct</masterLabel>
+            <translation><!-- Oct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sep</masterLabel>
+            <translation><!-- Sep --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Orig Date - Year --></label>
+        <name>Orig_Date_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Approval Date --></label>
+        <name>Original_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Approval --></label>
+        <name>Original_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Material --></label>
+        <name>ParentMaterial__c</name>
+        <relationshipLabel><!-- Child Marketing Materials --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Proactive Renewal Review --></label>
+        <name>Proactive_Renewal_Review__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Association Confirm --></label>
+        <name>Product_Association_Confirm__c</name>
+        <picklistValues>
+            <masterLabel>Not Applicable</masterLabel>
+            <translation><!-- Not Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Association Confirmed</masterLabel>
+            <translation><!-- Product Association Confirmed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Line --></label>
+        <name>Product_Line__c</name>
+        <picklistValues>
+            <masterLabel>Annuity</masterLabel>
+            <translation><!-- Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life</masterLabel>
+            <translation><!-- Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life And Annuity</masterLabel>
+            <translation><!-- Life And Annuity --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Quick Association --></label>
+        <name>Product_Quick_Association__c</name>
+        <picklistValues>
+            <masterLabel>Accelerator Plus</masterLabel>
+            <translation><!-- Accelerator Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AdvanceMark</masterLabel>
+            <translation><!-- AdvanceMark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Accumulator Plus</masterLabel>
+            <translation><!-- FG Accumulator Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Guarantee-Platinum</masterLabel>
+            <translation><!-- FG Guarantee-Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Index Choice 10</masterLabel>
+            <translation><!-- FG Index Choice 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Life-Choice</masterLabel>
+            <translation><!-- FG Life-Choice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Life-Elite</masterLabel>
+            <translation><!-- FG Life-Elite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LegendMark</masterLabel>
+            <translation><!-- LegendMark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Pro</masterLabel>
+            <translation><!-- Performance Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prosperity Elite</masterLabel>
+            <translation><!-- Prosperity Elite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retirement Pro</masterLabel>
+            <translation><!-- Retirement Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safe Income Plus</masterLabel>
+            <translation><!-- Safe Income Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SpectraMark</masterLabel>
+            <translation><!-- SpectraMark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Synergy Global Advantage Freedom</masterLabel>
+            <translation><!-- Synergy Global Advantage Freedom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Synergy Global Advantage Gold</masterLabel>
+            <translation><!-- Synergy Global Advantage Gold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Type Quick Association --></label>
+        <name>Product_Type_Quick_Association__c</name>
+        <picklistValues>
+            <masterLabel>FIA</masterLabel>
+            <translation><!-- FIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIUL</masterLabel>
+            <translation><!-- FIUL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MYGA</masterLabel>
+            <translation><!-- MYGA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPIA</masterLabel>
+            <translation><!-- SPIA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Marketing Materials --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reason For Variation --></label>
+        <name>Reason_For_Variation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this check box to exclude this record from the Ad Review Expiration Report --></help>
+        <label><!-- Renewed Approval Not Needed --></label>
+        <name>Renewed_Approval_Not_Needed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Ad Review No --></label>
+        <name>Request_Ad_Review_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request MM No. --></label>
+        <name>Request_MM_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Revisions --></label>
+        <name>Request_Revisions__c</name>
+        <picklistValues>
+            <masterLabel>Request Revisions</masterLabel>
+            <translation><!-- Request Revisions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_</masterLabel>
+            <translation><!-- _ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requested Review Date --></label>
+        <name>Requested_Review_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requester (Legacy) --></label>
+        <name>Requester_Legacy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requester --></label>
+        <name>Requester__c</name>
+        <relationshipLabel><!-- Marketing Materials --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Return to Ad Review Admin --></label>
+        <name>Return_to_Ad_Review_Admin__c</name>
+        <picklistValues>
+            <masterLabel>Return to Ad Review Admin</masterLabel>
+            <translation><!-- Return to Ad Review Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_</masterLabel>
+            <translation><!-- _ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rev Date - Month --></label>
+        <name>Rev_Date_Month__c</name>
+        <picklistValues>
+            <masterLabel>Apr</masterLabel>
+            <translation><!-- Apr --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aug</masterLabel>
+            <translation><!-- Aug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dec</masterLabel>
+            <translation><!-- Dec --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feb</masterLabel>
+            <translation><!-- Feb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jan</masterLabel>
+            <translation><!-- Jan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jul</masterLabel>
+            <translation><!-- Jul --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jun</masterLabel>
+            <translation><!-- Jun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mar</masterLabel>
+            <translation><!-- Mar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May</masterLabel>
+            <translation><!-- May --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nov</masterLabel>
+            <translation><!-- Nov --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oct</masterLabel>
+            <translation><!-- Oct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sep</masterLabel>
+            <translation><!-- Sep --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rev Date - Year --></label>
+        <name>Rev_Date_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReviewRecordsComplete# --></label>
+        <name>ReviewRecordsComplete__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReviewRecords# --></label>
+        <name>ReviewRecords__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revised Submission Date --></label>
+        <name>Revised_Submission_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revised Target Date --></label>
+        <name>Revised_Target_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revisions Requested Comments --></label>
+        <name>Revisions_Requested_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Date --></label>
+        <name>Status_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Additional Review</masterLabel>
+            <translation><!-- Additional Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expired</masterLabel>
+            <translation><!-- Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Initial Review</masterLabel>
+            <translation><!-- Initial Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recalled</masterLabel>
+            <translation><!-- Recalled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review Completed</masterLabel>
+            <translation><!-- Review Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisions Requested</masterLabel>
+            <translation><!-- Revisions Requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisions Submitted</masterLabel>
+            <translation><!-- Revisions Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>_</masterLabel>
+            <translation><!-- _ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submit to Ad Review --></label>
+        <name>Submit_to_Ad_Review_Pick__c</name>
+        <picklistValues>
+            <masterLabel>Submit to Ad Review</masterLabel>
+            <translation><!-- Submit to Ad Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submitted By (Legacy) --></label>
+        <name>Submitted_By_Legacy__c</name>
+    </fields>
+    <fields>
+        <label><!-- Temp - Requestor --></label>
+        <name>Temp_Requestor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Training Manual --></label>
+        <name>Training_Manual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variation States --></label>
+        <name>Variation_States2__c</name>
+        <picklistValues>
+            <masterLabel>Alabama</masterLabel>
+            <translation><!-- Alabama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alaska</masterLabel>
+            <translation><!-- Alaska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arizona</masterLabel>
+            <translation><!-- Arizona --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Arkansas</masterLabel>
+            <translation><!-- Arkansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>California</masterLabel>
+            <translation><!-- California --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Colorado</masterLabel>
+            <translation><!-- Colorado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Connecticut</masterLabel>
+            <translation><!-- Connecticut --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delaware</masterLabel>
+            <translation><!-- Delaware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>District of Columbia</masterLabel>
+            <translation><!-- District of Columbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florida</masterLabel>
+            <translation><!-- Florida --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Georgia</masterLabel>
+            <translation><!-- Georgia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hawaii</masterLabel>
+            <translation><!-- Hawaii --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idaho</masterLabel>
+            <translation><!-- Idaho --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illinois</masterLabel>
+            <translation><!-- Illinois --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indiana</masterLabel>
+            <translation><!-- Indiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iowa</masterLabel>
+            <translation><!-- Iowa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kansas</masterLabel>
+            <translation><!-- Kansas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kentucky</masterLabel>
+            <translation><!-- Kentucky --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana</masterLabel>
+            <translation><!-- Louisiana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maine</masterLabel>
+            <translation><!-- Maine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maryland</masterLabel>
+            <translation><!-- Maryland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Massachusetts</masterLabel>
+            <translation><!-- Massachusetts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Michigan</masterLabel>
+            <translation><!-- Michigan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minnesota</masterLabel>
+            <translation><!-- Minnesota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mississippi</masterLabel>
+            <translation><!-- Mississippi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missouri</masterLabel>
+            <translation><!-- Missouri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montana</masterLabel>
+            <translation><!-- Montana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nebraska</masterLabel>
+            <translation><!-- Nebraska --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nevada</masterLabel>
+            <translation><!-- Nevada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Hampshire</masterLabel>
+            <translation><!-- New Hampshire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Jersey</masterLabel>
+            <translation><!-- New Jersey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Mexico</masterLabel>
+            <translation><!-- New Mexico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Carolina</masterLabel>
+            <translation><!-- North Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Dakota</masterLabel>
+            <translation><!-- North Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ohio</masterLabel>
+            <translation><!-- Ohio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oklahoma</masterLabel>
+            <translation><!-- Oklahoma --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon</masterLabel>
+            <translation><!-- Oregon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pennsylvania</masterLabel>
+            <translation><!-- Pennsylvania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Puerto Rico</masterLabel>
+            <translation><!-- Puerto Rico --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rhode Island</masterLabel>
+            <translation><!-- Rhode Island --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Carolina</masterLabel>
+            <translation><!-- South Carolina --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Dakota</masterLabel>
+            <translation><!-- South Dakota --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennessee</masterLabel>
+            <translation><!-- Tennessee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas</masterLabel>
+            <translation><!-- Texas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utah</masterLabel>
+            <translation><!-- Utah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vermont</masterLabel>
+            <translation><!-- Vermont --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virginia</masterLabel>
+            <translation><!-- Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Washington</masterLabel>
+            <translation><!-- Washington --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Virginia</masterLabel>
+            <translation><!-- West Virginia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wisconsin</masterLabel>
+            <translation><!-- Wisconsin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wyoming</masterLabel>
+            <translation><!-- Wyoming --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Variation States --></label>
+        <name>Variation_States__c</name>
+    </fields>
+    <layouts>
+        <layout>External</layout>
+        <sections>
+            <label><!-- Ad Review Summary --></label>
+            <section>Ad Review Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>External - Admin</layout>
+        <sections>
+            <label><!-- Ad Review Summary --></label>
+            <section>Ad Review Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Internal</layout>
+        <sections>
+            <label><!-- Ad Review Summary --></label>
+            <section>Ad Review Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Material Classification --></label>
+            <section>Material Classification</section>
+        </sections>
+        <sections>
+            <label><!-- Mkt Material Additional Notes --></label>
+            <section>Mkt Material Additional Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Mkt Material Setup --></label>
+            <section>Mkt Material Setup</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Product Association - High Level --></label>
+            <section>Product Association - High Level</section>
+        </sections>
+        <sections>
+            <label><!-- Requester Information --></label>
+            <section>Requester Information</section>
+        </sections>
+        <sections>
+            <label><!-- Revision And/Or Variation Detail --></label>
+            <section>Revision And/Or Variation Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Submit To Ad Review --></label>
+            <section>Submit To Ad Review</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Internal - No Ad Review</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Communications --></label>
+            <section>Marketing Communications</section>
+        </sections>
+        <sections>
+            <label><!-- Mkt Material Additional Notes --></label>
+            <section>Mkt Material Additional Notes</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Internal AR View</layout>
+        <sections>
+            <label><!-- Ad Review Summary --></label>
+            <section>Ad Review Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing Communications --></label>
+            <section>Marketing Communications</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Legacy</layout>
+        <sections>
+            <label><!-- Ad Review Summary --></label>
+            <section>Ad Review Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marketing --></label>
+            <section>Marketing</section>
+        </sections>
+        <sections>
+            <label><!-- Mkt Material Additional Notes --></label>
+            <section>Mkt Material Additional Notes</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Submit To Ad Review --></label>
+            <section>Submit To Ad Review</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- External --></label>
+        <name>External</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal --></label>
+        <name>Internal</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal-No Ad Review Required --></label>
+        <name>Internal_No_Ad_Review_Required</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must select a Prefix for the Marketing Material Number. --></errorMessage>
+        <name>MM_Prefix_Must_be_Selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You Cannot Deselect this checkbox. --></errorMessage>
+        <name>Validate_Request_AdReview_Checkbox</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You Cannot Deselect this checkbox. --></errorMessage>
+        <name>Validate_Request_MM_Checkbox</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter year in YYYY format. --></errorMessage>
+        <name>Year_4_Digit</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Ad_Review_1</name>
+        <subject><!-- Product Compliance Review --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Ad_Review_Admin</name>
+        <subject><!-- Ad Review Admin --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Please_review</name>
+        <subject><!-- Please review --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

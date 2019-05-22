@@ -1,0 +1,9 @@
+Hi.  Your review of {!Marketing_Materials__c.Ad_Review_Number__c} - {!Marketing_Materials__c.MktCombinedFormNumber__c} - {!Marketing_Materials__c.Form_Description__c} has been requested.
+
+Please complete your review by {!Ad_Review_Detail__c.Review_Due__c}
+
+Ad Review priority is {!Ad_Review_Detail__c.Ad_Review_Priority__c}
+
+This piece is classified as:  {!Marketing_Materials__c.Form_Type__c}
+
+You can access the Salesforce marketing material at {!Marketing_Materials__c.Link}

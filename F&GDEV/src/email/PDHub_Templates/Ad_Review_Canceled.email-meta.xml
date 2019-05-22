@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Ad Review Canceled</name>
+    <style>none</style>
+    <subject>Ad Request {!Marketing_Materials__c.Ad_Review_Number__c} - {!Marketing_Materials__c.MktCombinedFormNumber__c} - {!Marketing_Materials__c.Form_Description__c} - Request Canceled</subject>
+    <type>text</type>
+</EmailTemplate>

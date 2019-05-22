@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Area of Focus</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Areas of Focus</value>
+    </caseValues>
+    <fields>
+        <label><!-- Parent Area of Focus --></label>
+        <name>Parent_Area_of_Focus__c</name>
+        <relationshipLabel><!-- Areas of Focus --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Area of Focus Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

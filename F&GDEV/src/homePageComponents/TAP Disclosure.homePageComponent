@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;P&gt;&lt;STRONG&gt;&lt;FONT color=#cc0000&gt;&lt;EM&gt;Agent TAP figures displayed throughout Salesforce are intended to provide&amp;nbsp;F&amp;amp;G Life&amp;nbsp;internal resources with an accurate picture of the amount and types of business an agent is writing with F&amp;amp;G Life.&amp;nbsp; These figures are not meant to be communicated externally or to be used as the basis for any commission or incentive programs.&lt;/EM&gt;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

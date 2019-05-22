@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Qtr Goal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Qtr Goals</value>
+    </caseValues>
+    <fields>
+        <label><!-- 1 Year Goal --></label>
+        <name>X1_Year_Goal__c</name>
+        <relationshipLabel><!-- Qtr Goals --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Qtr Goal Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

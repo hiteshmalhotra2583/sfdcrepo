@@ -1,0 +1,3385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Product_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object utilized for Product Development efforts</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Value_Structure__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Value Structure</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Additional_Commission_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Commission Detail</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Premium_Limitations__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Premium Limitations</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Bonus_Included__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Bonus Included</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Annual_Bonus_Inclusion_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Bonus Inclusion Details</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Annual_Bonus__c</fullName>
+        <externalId>false</externalId>
+        <label>Annual Bonus</label>
+        <length>500</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Annuitization_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Annuitization Amount</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Surrender Value</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Value</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Annuitization_Annuity_Types__c</fullName>
+        <externalId>false</externalId>
+        <label>Annuitization Annuity Types</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Bonus_Crediting_Mechanics__c</fullName>
+        <externalId>false</externalId>
+        <label>Bonus Crediting Mechanics</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Bonus_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Bonus Interest</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>COI__c</fullName>
+        <externalId>false</externalId>
+        <label>COI</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CVAT_Corridor_Factor__c</fullName>
+        <externalId>false</externalId>
+        <label>CVAT Corridor Factor</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Compact_States__c</fullName>
+        <externalId>false</externalId>
+        <label>Compact States</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_First_Income_Payment_SPIA__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of First Income Payment - SPIA</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Death_Benefit__c</fullName>
+        <externalId>false</externalId>
+        <label>Death Benefit</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Deductions_from_Account_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Deductions from Account Value</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Details_Version_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Details Version Description</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Distribution_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Distribution Channel</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Dist Channel Brokerage</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dist Channel Broker Dealer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dist Channel Bank</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Dist Channel Retail</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Face_Amount_Additional_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Face Amount Additional Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>First_Sale_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>First Sale Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fixed_Loans__c</fullName>
+        <externalId>false</externalId>
+        <label>Fixed Loans</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Free_Look_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Free Look Period</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMDB_Charge_Basis__c</fullName>
+        <externalId>false</externalId>
+        <label>GMDB Charge Basis</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMDB_Charge__c</fullName>
+        <externalId>false</externalId>
+        <label>GMDB Charge</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMDB_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>GMDB Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMDB_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>GMDB Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Accumulation_Period_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Accumulation Period Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMWB_Charge_Basis__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Charge Basis</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMWB_Charge__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Charge</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Example__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Example</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Excess_Withdrawals__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Excess Withdrawals</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMWB_Guaranteed_Withdrawal_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Guaranteed Withdrawal Percentage</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Impairment_Feature__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>GMWB Impairment Feature</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GMWB_Included__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Included</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Inclusion_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Inclusion Detail</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>GMWB_Income_Base_Initial_Rollup_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Income Base Initial Rollup Rate</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Income_Base_Interest_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Income Base - Interest Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Income_Base_Starting_Point__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Income Base - Starting Point</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Initial_Rollup_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Initial Rollup Period</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>GMWB_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GMWB_Restart_Available__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>GMWB Restart Available</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GMWB_Restart_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Restart Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMWB_Restart_Max_Charge__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Restart Max Charge</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GMWB_Restart_Min_Roll_Up_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Restart Min Roll-Up Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GMWB_Spousal_Continuation__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Spousal Continuation</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMWB_Step_up__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Step-up</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMWB_Termination__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Termination</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMWB_Withdrawal_Period_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Withdrawal Period Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GMWB_Withdrawal_Restrictions__c</fullName>
+        <externalId>false</externalId>
+        <label>GMWB Withdrawal Restrictions</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Guaranteed_Annuity_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Guaranteed Annuity Payments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Impairment_Feature_ADLs__c</fullName>
+        <externalId>false</externalId>
+        <label>Impairment Feature ADLs</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Impairment_Feature_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Impairment Feature Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Impairment_Feature__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Impairment Feature</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate_Bonus_Meth__c</fullName>
+        <externalId>false</externalId>
+        <label>Interest Rate Bonus Meth</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sample</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Interest_Rate_Bonus__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Interest Rate Bonus</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Age_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue Age Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Issue_Age_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue Age Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Age Last Birthday</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Age Nearest</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Issue_Age_Variations__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue Age Variations</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Sale_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Sale Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Life_Insurance_Qualification_Test__c</fullName>
+        <externalId>false</externalId>
+        <label>Life Insurance Qualification Test</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Limitations_on_Annuity_Types__c</fullName>
+        <externalId>false</externalId>
+        <label>Limitations on Annuity Types</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Liquidity__c</fullName>
+        <externalId>false</externalId>
+        <label>Liquidity</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Lite_Surrender_Charge_States__c</fullName>
+        <externalId>false</externalId>
+        <label>Lite Surrender Charge States</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NC, CT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OK, NC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AK, CT, DE, FL(65+), MA, NV, OH, OK, SC, TX, UT</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MGA_Override__c</fullName>
+        <externalId>false</externalId>
+        <label>MGA Override</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MGSV_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>MGSV Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MGSV__c</fullName>
+        <externalId>false</externalId>
+        <label>MGSV</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>100% @ 3% less surrender charges</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>100% of premium, growing at 3%</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>87.5% @ floating rate</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Market_Value_Adjustment__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Market Value Adjustment</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Maturity_Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Maturity Age</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Maturity_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Maturity Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Max_Age_for_Face_Increase__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Age for Face Increase</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Annuitization_Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Annuitization Age</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Issue_Age_Non_Qualified__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Issue Age - Non-Qualified</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Issue_Age_Qualified__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Issue Age - Qualified</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Premium_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Premium Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Max_Premium_w_o_Home_Office_Approva__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Premium w/o Home Office Approval</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Max_Premium_without_HOA__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Premium without HOA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Max_Variable_Loan_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Variable Loan Rate</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Maximum_Face_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Maximum Face Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Min_Issue_Age_Non_Qualified__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Issue Age - Non-Qualified</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Issue_Age_Qualified__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Issue Age - Qualified</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Minimum_Face_Amount_After_Issue__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Face Amount - After Issue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Minimum_Face_Amount_At_Issue__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Face Amount - At Issue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Minimum_Initial_Premium_Non_Qualified__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Initial Premium - Non-Qualified</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Minimum_Initial_Premium_Qualified__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Initial Premium - Qualified</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Minimum_Payout_Amount_SPIA__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Payout Amount - SPIA</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Minimum_Premium_Account_Value_Option__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum Premium that can be allocated to each Account Value Option</inlineHelpText>
+        <label>Minimum Premium - Account Value Option</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Policy_Charge__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Policy Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Net_Amount_at_Risk__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Amount at Risk</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>No_Lapse_Guarantee_Basic__c</fullName>
+        <externalId>false</externalId>
+        <label>No Lapse Guarantee - Basic</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_Lapse_Guarantee_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>No Lapse Guarantee Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Optional_Benefits__c</fullName>
+        <externalId>false</externalId>
+        <label>Optional Benefits</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>WMD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ADB</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UIR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PIT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ADB-TI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PITLIR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>STLIR</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Order_of_Operations__c</fullName>
+        <externalId>false</externalId>
+        <label>Order of Operations</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PAIR_Eligible__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PAIR Eligible</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Partial_Index_Credit__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Partial Index Credit upon strategy surrender</inlineHelpText>
+        <label>Partial Index Credit</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Partial_Index_Credit_at_Death__c</fullName>
+        <externalId>false</externalId>
+        <label>Partial Index Credit at Death</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Load_Duration_Current__c</fullName>
+        <externalId>false</externalId>
+        <label>Per Unit Load Duration - Current</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Per_Unit_Load_Duration_Guaranteed__c</fullName>
+        <externalId>false</externalId>
+        <label>Per Unit Load Duration - Guaranteed</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Policy_Changes__c</fullName>
+        <externalId>false</externalId>
+        <label>Policy Changes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Premium_Bonus_Included__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Bonus Included</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Premium_Bonus_Inclusion_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Bonus Inclusion Details</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Premium_Bonus__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Bonus</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Premium_Loads_Excess__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Loads - Excess</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Premium_Loads_Target__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Loads - Target</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Premium_Taxes__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Taxes</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Premium_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Flexible</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Single</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Family__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Family</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Performance Pro</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Synergy Global Advantage Gold</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG Immediate-Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG Life-Heritage</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_SeriesX__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Series</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Hub Product</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Series_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Series Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Product_Series__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Series</label>
+        <referenceTo>Product_Series__c</referenceTo>
+        <relationshipName>Product_Specifications</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed Deferred Annuity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Fixed Indexed Deferred Annuity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Indexed Deferred Annuity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Indexed Universal Life</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SPIA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Term Life</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Universal Life</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Compliance Filing Package</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Project_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Project ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project</label>
+        <referenceTo>Project__c</referenceTo>
+        <relationshipName>Product_Specs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Qualified_Options__c</fullName>
+        <externalId>false</externalId>
+        <label>Qualified Options</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>IRA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Roth IRA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TSA</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reallocation_of_Account_Values__c</fullName>
+        <externalId>false</externalId>
+        <label>Reallocation of Account Values</label>
+        <length>500</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reinstatement__c</fullName>
+        <externalId>false</externalId>
+        <label>Reinstatement</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Return_of_Premium__c</fullName>
+        <externalId>false</externalId>
+        <label>Return of Premium</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SPIA_Accelerated_Benefit_Feature__c</fullName>
+        <externalId>false</externalId>
+        <label>SPIA Accelerated Benefit Feature</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SPIA_Amount_and_Frequency_of_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>SPIA Amount and Frequency of Payment</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SPIA_Load__c</fullName>
+        <externalId>false</externalId>
+        <label>SPIA Load</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subsequent_Premium__c</fullName>
+        <externalId>false</externalId>
+        <label>Subsequent Premium</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Surrender_Charge_Free_Partial_Withdrawal__c</fullName>
+        <externalId>false</externalId>
+        <label>Surrender Charge Free Partial Withdrawal</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Surrender_Charge_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Surrender Charge Period</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Surrender_Charges_Compact__c</fullName>
+        <externalId>false</externalId>
+        <label>Surrender Charges -Compact</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Surrender_Charges_Life__c</fullName>
+        <externalId>false</externalId>
+        <label>Surrender Charges - Life</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Surrender_Charges_Lite__c</fullName>
+        <externalId>false</externalId>
+        <label>Surrender Charges - Lite</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Surrender_Charges_Standard__c</fullName>
+        <externalId>false</externalId>
+        <label>Surrender Charges - Standard</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Surrender_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Surrender Value</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Termination__c</fullName>
+        <externalId>false</externalId>
+        <label>Termination</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type_of_Underwriting_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Underwriting Detail</label>
+        <length>10000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type_of_Underwriting__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Underwriting</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Underwriting_Classes__c</fullName>
+        <externalId>false</externalId>
+        <label>Underwriting Classes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Preferred Non-tobacco</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Non-tobacco</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Preferred Tobacco</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Underwriting_Requirements__c</fullName>
+        <externalId>false</externalId>
+        <label>Underwriting Requirements</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Variable_Loans__c</fullName>
+        <externalId>false</externalId>
+        <label>Variable Loans</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Vesting_Bonus_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Vesting Bonus Amount</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Vesting_Bonus_Included__c</fullName>
+        <externalId>false</externalId>
+        <label>Vesting Bonus Included</label>
+        <length>15</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vesting_Bonus_Inclusion_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Vesting Bonus Inclusion Details</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Vesting_Duration_years__c</fullName>
+        <externalId>false</externalId>
+        <label>Vesting Duration (years)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vesting_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <label>Vesting Schedule</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Waiver_of_SC__c</fullName>
+        <externalId>false</externalId>
+        <label>Waiver of SC</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Terminal Illness</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Nursing Home</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Death of Owner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Home Health Care</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <label>Product</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Project__c</columns>
+        <columns>GMWB_Restart_Min_Roll_Up_Rate__c</columns>
+        <columns>GMWB_Restart_Max_Charge__c</columns>
+        <columns>GMDB_Charge__c</columns>
+        <columns>Annual_Bonus__c</columns>
+        <columns>PAIR_Eligible__c</columns>
+        <columns>First_Sale_Date__c</columns>
+        <columns>Lite_Surrender_Charge_States__c</columns>
+        <columns>Bonus_Interest__c</columns>
+        <columns>Maturity_Detail__c</columns>
+        <columns>No_Lapse_Guarantee_Basic__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Termination__c</columns>
+        <columns>Vesting_Schedule__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Recently_Created</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY,YESTERDAY</value>
+        </filters>
+        <label>Recently Created</label>
+    </listViews>
+    <nameField>
+        <label>Product Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Products</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>FIA</fullName>
+        <active>true</active>
+        <label>FIA</label>
+        <picklistValues>
+            <picklist>Annual_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Annuitization_Amount__c</picklist>
+            <values>
+                <fullName>Account Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surrender Value</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Distribution_Channel__c</picklist>
+            <values>
+                <fullName>Dist Channel Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Broker Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Brokerage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Retail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interest_Rate_Bonus_Meth__c</picklist>
+            <values>
+                <fullName>Sample</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue_Age_Type__c</picklist>
+            <values>
+                <fullName>Age Last Birthday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Age Nearest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lite_Surrender_Charge_States__c</picklist>
+            <values>
+                <fullName>AK%2C CT%2C DE%2C FL%2865%2B%29%2C MA%2C NV%2C OH%2C OK%2C SC%2C TX%2C UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC%2C CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK%2C NC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MGSV__c</picklist>
+            <values>
+                <fullName>100%25 %40 3%25 less surrender charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%25 of premium%2C growing at 3%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>87%2E5%25 %40 floating rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Optional_Benefits__c</picklist>
+            <values>
+                <fullName>ADB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADB-TI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PITLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WMD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Type__c</picklist>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Family__c</picklist>
+            <values>
+                <fullName>FG Immediate-Income</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FG Life-Heritage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synergy Global Advantage Gold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_SeriesX__c</picklist>
+            <values>
+                <fullName>New Hub Product</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>Compliance Filing Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Universal Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Universal Life</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualified_Options__c</picklist>
+            <values>
+                <fullName>IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roth IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TSA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Underwriting_Classes__c</picklist>
+            <values>
+                <fullName>Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Waiver_of_SC__c</picklist>
+            <values>
+                <fullName>Death of Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terminal Illness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>IUL</fullName>
+        <active>true</active>
+        <label>IUL</label>
+        <picklistValues>
+            <picklist>Annual_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Annuitization_Amount__c</picklist>
+            <values>
+                <fullName>Account Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surrender Value</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Distribution_Channel__c</picklist>
+            <values>
+                <fullName>Dist Channel Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Broker Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Brokerage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Retail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interest_Rate_Bonus_Meth__c</picklist>
+            <values>
+                <fullName>Sample</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue_Age_Type__c</picklist>
+            <values>
+                <fullName>Age Last Birthday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Age Nearest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lite_Surrender_Charge_States__c</picklist>
+            <values>
+                <fullName>AK%2C CT%2C DE%2C FL%2865%2B%29%2C MA%2C NV%2C OH%2C OK%2C SC%2C TX%2C UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC%2C CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK%2C NC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MGSV__c</picklist>
+            <values>
+                <fullName>100%25 %40 3%25 less surrender charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%25 of premium%2C growing at 3%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>87%2E5%25 %40 floating rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Optional_Benefits__c</picklist>
+            <values>
+                <fullName>ADB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADB-TI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PITLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WMD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Type__c</picklist>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Family__c</picklist>
+            <values>
+                <fullName>FG Immediate-Income</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FG Life-Heritage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synergy Global Advantage Gold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_SeriesX__c</picklist>
+            <values>
+                <fullName>New Hub Product</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>Compliance Filing Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Universal Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Universal Life</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualified_Options__c</picklist>
+            <values>
+                <fullName>IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roth IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TSA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Underwriting_Classes__c</picklist>
+            <values>
+                <fullName>Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Waiver_of_SC__c</picklist>
+            <values>
+                <fullName>Death of Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terminal Illness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SPIA</fullName>
+        <active>true</active>
+        <label>SPIA</label>
+        <picklistValues>
+            <picklist>Annual_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Annuitization_Amount__c</picklist>
+            <values>
+                <fullName>Account Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surrender Value</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Distribution_Channel__c</picklist>
+            <values>
+                <fullName>Dist Channel Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Broker Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Brokerage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Retail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interest_Rate_Bonus_Meth__c</picklist>
+            <values>
+                <fullName>Sample</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue_Age_Type__c</picklist>
+            <values>
+                <fullName>Age Last Birthday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Age Nearest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lite_Surrender_Charge_States__c</picklist>
+            <values>
+                <fullName>AK%2C CT%2C DE%2C FL%2865%2B%29%2C MA%2C NV%2C OH%2C OK%2C SC%2C TX%2C UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC%2C CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK%2C NC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MGSV__c</picklist>
+            <values>
+                <fullName>100%25 %40 3%25 less surrender charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%25 of premium%2C growing at 3%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>87%2E5%25 %40 floating rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Optional_Benefits__c</picklist>
+            <values>
+                <fullName>ADB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADB-TI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PITLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WMD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Type__c</picklist>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Family__c</picklist>
+            <values>
+                <fullName>FG Immediate-Income</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FG Life-Heritage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synergy Global Advantage Gold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_SeriesX__c</picklist>
+            <values>
+                <fullName>New Hub Product</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>Compliance Filing Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Universal Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Universal Life</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualified_Options__c</picklist>
+            <values>
+                <fullName>IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roth IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TSA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Underwriting_Classes__c</picklist>
+            <values>
+                <fullName>Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Waiver_of_SC__c</picklist>
+            <values>
+                <fullName>Death of Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terminal Illness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SPIUL</fullName>
+        <active>true</active>
+        <label>SPIUL</label>
+        <picklistValues>
+            <picklist>Annual_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Annuitization_Amount__c</picklist>
+            <values>
+                <fullName>Account Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surrender Value</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Distribution_Channel__c</picklist>
+            <values>
+                <fullName>Dist Channel Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Broker Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Brokerage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Retail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interest_Rate_Bonus_Meth__c</picklist>
+            <values>
+                <fullName>Sample</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue_Age_Type__c</picklist>
+            <values>
+                <fullName>Age Last Birthday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Age Nearest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lite_Surrender_Charge_States__c</picklist>
+            <values>
+                <fullName>AK%2C CT%2C DE%2C FL%2865%2B%29%2C MA%2C NV%2C OH%2C OK%2C SC%2C TX%2C UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC%2C CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK%2C NC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MGSV__c</picklist>
+            <values>
+                <fullName>100%25 %40 3%25 less surrender charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%25 of premium%2C growing at 3%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>87%2E5%25 %40 floating rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Optional_Benefits__c</picklist>
+            <values>
+                <fullName>ADB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADB-TI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PITLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WMD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Type__c</picklist>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Family__c</picklist>
+            <values>
+                <fullName>FG Immediate-Income</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FG Life-Heritage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synergy Global Advantage Gold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_SeriesX__c</picklist>
+            <values>
+                <fullName>New Hub Product</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>Compliance Filing Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Universal Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Universal Life</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualified_Options__c</picklist>
+            <values>
+                <fullName>IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roth IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TSA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Underwriting_Classes__c</picklist>
+            <values>
+                <fullName>Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Waiver_of_SC__c</picklist>
+            <values>
+                <fullName>Death of Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terminal Illness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>TradAnn</fullName>
+        <active>true</active>
+        <label>TradAnn</label>
+        <picklistValues>
+            <picklist>Annual_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Annuitization_Amount__c</picklist>
+            <values>
+                <fullName>Account Value</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Surrender Value</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Distribution_Channel__c</picklist>
+            <values>
+                <fullName>Dist Channel Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Broker Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Brokerage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dist Channel Retail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Interest_Rate_Bonus_Meth__c</picklist>
+            <values>
+                <fullName>Sample</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue_Age_Type__c</picklist>
+            <values>
+                <fullName>Age Last Birthday</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Age Nearest</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lite_Surrender_Charge_States__c</picklist>
+            <values>
+                <fullName>AK%2C CT%2C DE%2C FL%2865%2B%29%2C MA%2C NV%2C OH%2C OK%2C SC%2C TX%2C UT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NC%2C CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OK%2C NC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>MGSV__c</picklist>
+            <values>
+                <fullName>100%25 %40 3%25 less surrender charges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100%25 of premium%2C growing at 3%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>87%2E5%25 %40 floating rate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Optional_Benefits__c</picklist>
+            <values>
+                <fullName>ADB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADB-TI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PITLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STLIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UIR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WMD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Bonus_Included__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Premium_Type__c</picklist>
+            <values>
+                <fullName>Flexible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Single</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Family__c</picklist>
+            <values>
+                <fullName>FG Immediate-Income</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FG Life-Heritage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performance Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synergy Global Advantage Gold</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_SeriesX__c</picklist>
+            <values>
+                <fullName>New Hub Product</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product_Type__c</picklist>
+            <values>
+                <fullName>Compliance Filing Package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fixed Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Deferred Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indexed Universal Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Term Life</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Universal Life</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Qualified_Options__c</picklist>
+            <values>
+                <fullName>IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Roth IRA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TSA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Underwriting_Classes__c</picklist>
+            <values>
+                <fullName>Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Non-tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferred Tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Waiver_of_SC__c</picklist>
+            <values>
+                <fullName>Death of Owner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursing Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terminal Illness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Project__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
+        <listViewButtons>Create_Product_Associations</listViewButtons>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>Product_Type_Not_Null</fullName>
+        <active>false</active>
+        <description>Prevent the Product Ype being left blank when creating or editing a Product record</description>
+        <errorConditionFormula>AND (
+  $User.ByPassValidation__c = false, 
+  ISBLANK(TEXT( Product_Type__c ))
+)</errorConditionFormula>
+        <errorDisplayField>Product_Type__c</errorDisplayField>
+        <errorMessage>Product Type may not be left blank.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Create_Product_Associations</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Product Associations</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>lightning/n/Create_Product_Associations</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Product_Specification</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Product Specification</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/loop__looplus?eid={!Product_Specification__c.Id}&amp;sessionid={!$Api.Session_ID}</url>
+    </webLinks>
+</CustomObject>

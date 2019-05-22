@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Product</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Products</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Value Structure --></label>
+        <name>Account_Value_Structure__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Commission Detail --></label>
+        <name>Additional_Commission_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Premium Limitations --></label>
+        <name>Additional_Premium_Limitations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Bonus Included --></label>
+        <name>Annual_Bonus_Included__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Annual Bonus Inclusion Details --></label>
+        <name>Annual_Bonus_Inclusion_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Bonus --></label>
+        <name>Annual_Bonus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annuitization Amount --></label>
+        <name>Annuitization_Amount__c</name>
+        <picklistValues>
+            <masterLabel>Account Value</masterLabel>
+            <translation><!-- Account Value --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surrender Value</masterLabel>
+            <translation><!-- Surrender Value --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Annuitization Annuity Types --></label>
+        <name>Annuitization_Annuity_Types__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bonus Crediting Mechanics --></label>
+        <name>Bonus_Crediting_Mechanics__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bonus Interest --></label>
+        <name>Bonus_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- COI --></label>
+        <name>COI__c</name>
+    </fields>
+    <fields>
+        <label><!-- CVAT Corridor Factor --></label>
+        <name>CVAT_Corridor_Factor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compact States --></label>
+        <name>Compact_States__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of First Income Payment - SPIA --></label>
+        <name>Date_of_First_Income_Payment_SPIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Death Benefit --></label>
+        <name>Death_Benefit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deductions from Account Value --></label>
+        <name>Deductions_from_Account_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Details Version Description --></label>
+        <name>Details_Version_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Channel --></label>
+        <name>Distribution_Channel__c</name>
+        <picklistValues>
+            <masterLabel>Dist Channel Bank</masterLabel>
+            <translation><!-- Dist Channel Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dist Channel Broker Dealer</masterLabel>
+            <translation><!-- Dist Channel Broker Dealer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dist Channel Brokerage</masterLabel>
+            <translation><!-- Dist Channel Brokerage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dist Channel Retail</masterLabel>
+            <translation><!-- Dist Channel Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Face Amount Additional Detail --></label>
+        <name>Face_Amount_Additional_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Sale Date --></label>
+        <name>First_Sale_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fixed Loans --></label>
+        <name>Fixed_Loans__c</name>
+    </fields>
+    <fields>
+        <label><!-- Free Look Period --></label>
+        <name>Free_Look_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMDB Charge Basis --></label>
+        <name>GMDB_Charge_Basis__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMDB Charge --></label>
+        <name>GMDB_Charge__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMDB Description --></label>
+        <name>GMDB_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMDB Name --></label>
+        <name>GMDB_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Accumulation Period Details --></label>
+        <name>GMWB_Accumulation_Period_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Charge Basis --></label>
+        <name>GMWB_Charge_Basis__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Charge --></label>
+        <name>GMWB_Charge__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Example --></label>
+        <name>GMWB_Example__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Excess Withdrawals --></label>
+        <name>GMWB_Excess_Withdrawals__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Guaranteed Withdrawal Percentage --></label>
+        <name>GMWB_Guaranteed_Withdrawal_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Impairment Feature --></label>
+        <name>GMWB_Impairment_Feature__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Included --></label>
+        <name>GMWB_Included__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Inclusion Detail --></label>
+        <name>GMWB_Inclusion_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Income Base Initial Rollup Rate --></label>
+        <name>GMWB_Income_Base_Initial_Rollup_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Income Base - Interest Type --></label>
+        <name>GMWB_Income_Base_Interest_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Income Base - Starting Point --></label>
+        <name>GMWB_Income_Base_Starting_Point__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Initial Rollup Period --></label>
+        <name>GMWB_Initial_Rollup_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Name --></label>
+        <name>GMWB_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Restart Available --></label>
+        <name>GMWB_Restart_Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Restart Detail --></label>
+        <name>GMWB_Restart_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Restart Max Charge --></label>
+        <name>GMWB_Restart_Max_Charge__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Restart Min Roll-Up Rate --></label>
+        <name>GMWB_Restart_Min_Roll_Up_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Spousal Continuation --></label>
+        <name>GMWB_Spousal_Continuation__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Step-up --></label>
+        <name>GMWB_Step_up__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Termination --></label>
+        <name>GMWB_Termination__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Withdrawal Period Details --></label>
+        <name>GMWB_Withdrawal_Period_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- GMWB Withdrawal Restrictions --></label>
+        <name>GMWB_Withdrawal_Restrictions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Guaranteed Annuity Payments --></label>
+        <name>Guaranteed_Annuity_Payments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impairment Feature ADLs --></label>
+        <name>Impairment_Feature_ADLs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impairment Feature Description --></label>
+        <name>Impairment_Feature_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impairment Feature --></label>
+        <name>Impairment_Feature__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate Bonus Meth --></label>
+        <name>Interest_Rate_Bonus_Meth__c</name>
+        <picklistValues>
+            <masterLabel>Sample</masterLabel>
+            <translation><!-- Sample --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate Bonus --></label>
+        <name>Interest_Rate_Bonus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Age Detail --></label>
+        <name>Issue_Age_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Age Type --></label>
+        <name>Issue_Age_Type__c</name>
+        <picklistValues>
+            <masterLabel>Age Last Birthday</masterLabel>
+            <translation><!-- Age Last Birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Age Nearest</masterLabel>
+            <translation><!-- Age Nearest --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Issue Age Variations --></label>
+        <name>Issue_Age_Variations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Sale Date --></label>
+        <name>Last_Sale_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life Insurance Qualification Test --></label>
+        <name>Life_Insurance_Qualification_Test__c</name>
+    </fields>
+    <fields>
+        <label><!-- Limitations on Annuity Types --></label>
+        <name>Limitations_on_Annuity_Types__c</name>
+    </fields>
+    <fields>
+        <label><!-- Liquidity --></label>
+        <name>Liquidity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lite Surrender Charge States --></label>
+        <name>Lite_Surrender_Charge_States__c</name>
+        <picklistValues>
+            <masterLabel>AK, CT, DE, FL(65+), MA, NV, OH, OK, SC, TX, UT</masterLabel>
+            <translation><!-- AK, CT, DE, FL(65+), MA, NV, OH, OK, SC, TX, UT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC, CT</masterLabel>
+            <translation><!-- NC, CT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK, NC</masterLabel>
+            <translation><!-- OK, NC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MGA Override --></label>
+        <name>MGA_Override__c</name>
+    </fields>
+    <fields>
+        <label><!-- MGSV Detail --></label>
+        <name>MGSV_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- MGSV --></label>
+        <name>MGSV__c</name>
+        <picklistValues>
+            <masterLabel>100% @ 3% less surrender charges</masterLabel>
+            <translation><!-- 100% @ 3% less surrender charges --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100% of premium, growing at 3%</masterLabel>
+            <translation><!-- 100% of premium, growing at 3% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>87.5% @ floating rate</masterLabel>
+            <translation><!-- 87.5% @ floating rate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market Value Adjustment --></label>
+        <name>Market_Value_Adjustment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maturity Age --></label>
+        <name>Maturity_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maturity Detail --></label>
+        <name>Maturity_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Age for Face Increase --></label>
+        <name>Max_Age_for_Face_Increase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Annuitization Age --></label>
+        <name>Max_Annuitization_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Issue Age - Non-Qualified --></label>
+        <name>Max_Issue_Age_Non_Qualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Issue Age - Qualified --></label>
+        <name>Max_Issue_Age_Qualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Premium Detail --></label>
+        <name>Max_Premium_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Premium w/o Home Office Approval --></label>
+        <name>Max_Premium_w_o_Home_Office_Approva__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Premium without HOA --></label>
+        <name>Max_Premium_without_HOA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Variable Loan Rate --></label>
+        <name>Max_Variable_Loan_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maximum Face Amount --></label>
+        <name>Maximum_Face_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Issue Age - Non-Qualified --></label>
+        <name>Min_Issue_Age_Non_Qualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Issue Age - Qualified --></label>
+        <name>Min_Issue_Age_Qualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Face Amount - After Issue --></label>
+        <name>Minimum_Face_Amount_After_Issue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Face Amount - At Issue --></label>
+        <name>Minimum_Face_Amount_At_Issue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Initial Premium - Non-Qualified --></label>
+        <name>Minimum_Initial_Premium_Non_Qualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Initial Premium - Qualified --></label>
+        <name>Minimum_Initial_Premium_Qualified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum Payout Amount - SPIA --></label>
+        <name>Minimum_Payout_Amount_SPIA__c</name>
+    </fields>
+    <fields>
+        <help><!-- Minimum Premium that can be allocated to each Account Value Option --></help>
+        <label><!-- Minimum Premium - Account Value Option --></label>
+        <name>Minimum_Premium_Account_Value_Option__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Policy Charge --></label>
+        <name>Monthly_Policy_Charge__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Amount at Risk --></label>
+        <name>Net_Amount_at_Risk__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Lapse Guarantee - Basic --></label>
+        <name>No_Lapse_Guarantee_Basic__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Lapse Guarantee Detail --></label>
+        <name>No_Lapse_Guarantee_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Optional Benefits --></label>
+        <name>Optional_Benefits__c</name>
+        <picklistValues>
+            <masterLabel>ADB</masterLabel>
+            <translation><!-- ADB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADB-TI</masterLabel>
+            <translation><!-- ADB-TI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CT</masterLabel>
+            <translation><!-- CT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FT</masterLabel>
+            <translation><!-- FT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PIT</masterLabel>
+            <translation><!-- PIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PITLIR</masterLabel>
+            <translation><!-- PITLIR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STLIR</masterLabel>
+            <translation><!-- STLIR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UIR</masterLabel>
+            <translation><!-- UIR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VL</masterLabel>
+            <translation><!-- VL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WMD</masterLabel>
+            <translation><!-- WMD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Order of Operations --></label>
+        <name>Order_of_Operations__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAIR Eligible --></label>
+        <name>PAIR_Eligible__c</name>
+    </fields>
+    <fields>
+        <help><!-- Partial Index Credit upon strategy surrender --></help>
+        <label><!-- Partial Index Credit --></label>
+        <name>Partial_Index_Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Index Credit at Death --></label>
+        <name>Partial_Index_Credit_at_Death__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Load Duration - Current --></label>
+        <name>Per_Unit_Load_Duration_Current__c</name>
+    </fields>
+    <fields>
+        <label><!-- Per Unit Load Duration - Guaranteed --></label>
+        <name>Per_Unit_Load_Duration_Guaranteed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Changes --></label>
+        <name>Policy_Changes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Bonus Included --></label>
+        <name>Premium_Bonus_Included__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Premium Bonus Inclusion Details --></label>
+        <name>Premium_Bonus_Inclusion_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Bonus --></label>
+        <name>Premium_Bonus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Loads - Excess --></label>
+        <name>Premium_Loads_Excess__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Loads - Target --></label>
+        <name>Premium_Loads_Target__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Taxes --></label>
+        <name>Premium_Taxes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Premium Type --></label>
+        <name>Premium_Type__c</name>
+        <picklistValues>
+            <masterLabel>Flexible</masterLabel>
+            <translation><!-- Flexible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single</masterLabel>
+            <translation><!-- Single --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Family --></label>
+        <name>Product_Family__c</name>
+        <picklistValues>
+            <masterLabel>FG Immediate-Income</masterLabel>
+            <translation><!-- FG Immediate-Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Life-Heritage</masterLabel>
+            <translation><!-- FG Life-Heritage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Pro</masterLabel>
+            <translation><!-- Performance Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Synergy Global Advantage Gold</masterLabel>
+            <translation><!-- Synergy Global Advantage Gold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Series --></label>
+        <name>Product_SeriesX__c</name>
+        <picklistValues>
+            <masterLabel>New Hub Product</masterLabel>
+            <translation><!-- New Hub Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Series Description --></label>
+        <name>Product_Series_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Series --></label>
+        <name>Product_Series__c</name>
+        <relationshipLabel><!-- Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>Product_Type__c</name>
+        <picklistValues>
+            <masterLabel>Compliance Filing Package</masterLabel>
+            <translation><!-- Compliance Filing Package --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Deferred Annuity</masterLabel>
+            <translation><!-- Fixed Deferred Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Indexed Deferred Annuity</masterLabel>
+            <translation><!-- Fixed Indexed Deferred Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indexed Deferred Annuity</masterLabel>
+            <translation><!-- Indexed Deferred Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indexed Universal Life</masterLabel>
+            <translation><!-- Indexed Universal Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SPIA</masterLabel>
+            <translation><!-- SPIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Term Life</masterLabel>
+            <translation><!-- Term Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Universal Life</masterLabel>
+            <translation><!-- Universal Life --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project ID --></label>
+        <name>Project_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Products --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Qualified Options --></label>
+        <name>Qualified_Options__c</name>
+        <picklistValues>
+            <masterLabel>IRA</masterLabel>
+            <translation><!-- IRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roth IRA</masterLabel>
+            <translation><!-- Roth IRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TSA</masterLabel>
+            <translation><!-- TSA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reallocation of Account Values --></label>
+        <name>Reallocation_of_Account_Values__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reinstatement --></label>
+        <name>Reinstatement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return of Premium --></label>
+        <name>Return_of_Premium__c</name>
+    </fields>
+    <fields>
+        <label><!-- SPIA Accelerated Benefit Feature --></label>
+        <name>SPIA_Accelerated_Benefit_Feature__c</name>
+    </fields>
+    <fields>
+        <label><!-- SPIA Amount and Frequency of Payment --></label>
+        <name>SPIA_Amount_and_Frequency_of_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- SPIA Load --></label>
+        <name>SPIA_Load__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subsequent Premium --></label>
+        <name>Subsequent_Premium__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surrender Charge Free Partial Withdrawal --></label>
+        <name>Surrender_Charge_Free_Partial_Withdrawal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surrender Charge Period --></label>
+        <name>Surrender_Charge_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surrender Charges -Compact --></label>
+        <name>Surrender_Charges_Compact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surrender Charges - Life --></label>
+        <name>Surrender_Charges_Life__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surrender Charges - Lite --></label>
+        <name>Surrender_Charges_Lite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surrender Charges - Standard --></label>
+        <name>Surrender_Charges_Standard__c</name>
+    </fields>
+    <fields>
+        <label><!-- Surrender Value --></label>
+        <name>Surrender_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination --></label>
+        <name>Termination__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type of Underwriting Detail --></label>
+        <name>Type_of_Underwriting_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type of Underwriting --></label>
+        <name>Type_of_Underwriting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underwriting Classes --></label>
+        <name>Underwriting_Classes__c</name>
+        <picklistValues>
+            <masterLabel>Non-tobacco</masterLabel>
+            <translation><!-- Non-tobacco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Non-tobacco</masterLabel>
+            <translation><!-- Preferred Non-tobacco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferred Tobacco</masterLabel>
+            <translation><!-- Preferred Tobacco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Underwriting Requirements --></label>
+        <name>Underwriting_Requirements__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variable Loans --></label>
+        <name>Variable_Loans__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vesting Bonus Amount --></label>
+        <name>Vesting_Bonus_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vesting Bonus Included --></label>
+        <name>Vesting_Bonus_Included__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vesting Bonus Inclusion Details --></label>
+        <name>Vesting_Bonus_Inclusion_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vesting Duration (years) --></label>
+        <name>Vesting_Duration_years__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vesting Schedule --></label>
+        <name>Vesting_Schedule__c</name>
+    </fields>
+    <fields>
+        <label><!-- Waiver of SC --></label>
+        <name>Waiver_of_SC__c</name>
+        <picklistValues>
+            <masterLabel>Death of Owner</masterLabel>
+            <translation><!-- Death of Owner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Health Care</masterLabel>
+            <translation><!-- Home Health Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursing Home</masterLabel>
+            <translation><!-- Nursing Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Terminal Illness</masterLabel>
+            <translation><!-- Terminal Illness --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>FIA Product Specs Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Product Series Description --></label>
+            <section>Product Series Description</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FIA Product Specs Layout Full</layout>
+        <sections>
+            <label><!-- Bonus --></label>
+            <section>Bonus</section>
+        </sections>
+        <sections>
+            <label><!-- Commission --></label>
+            <section>Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- GMDB --></label>
+            <section>GMDB</section>
+        </sections>
+        <sections>
+            <label><!-- GMWB --></label>
+            <section>GMWB</section>
+        </sections>
+        <sections>
+            <label><!-- Issue Limits --></label>
+            <section>Issue Limits</section>
+        </sections>
+        <sections>
+            <label><!-- Liquidity --></label>
+            <section>Liquidity</section>
+        </sections>
+        <sections>
+            <label><!-- Product Series Description --></label>
+            <section>Product Series Description</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>IUL Product Specs Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Product Series Description --></label>
+            <section>Product Series Description</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>IUL Product Specs Layout Full</layout>
+        <sections>
+            <label><!-- Bonus --></label>
+            <section>Bonus</section>
+        </sections>
+        <sections>
+            <label><!-- Commission --></label>
+            <section>Commission</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Issue Limits --></label>
+            <section>Issue Limits</section>
+        </sections>
+        <sections>
+            <label><!-- Liquidity --></label>
+            <section>Liquidity</section>
+        </sections>
+        <sections>
+            <label><!-- Product Series Description --></label>
+            <section>Product Series Description</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Clone Product --></label>
+        <name>Clone_Product</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Delete Product States --></label>
+        <name>Delete_Product_States</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- FIA --></label>
+        <name>FIA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- IUL --></label>
+        <name>IUL</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SPIA --></label>
+        <name>SPIA</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- SPIUL --></label>
+        <name>SPIUL</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- TradAnn --></label>
+        <name>TradAnn</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Product Type may not be left blank. --></errorMessage>
+        <name>Product_Type_Not_Null</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Create_Product_Associations --></label>
+        <name>Create_Product_Associations</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Product_Specification --></label>
+        <name>Product_Specification</name>
+    </webLinks>
+</CustomObjectTranslation>

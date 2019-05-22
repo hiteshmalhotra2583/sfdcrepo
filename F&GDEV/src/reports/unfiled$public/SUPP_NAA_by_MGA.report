@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AgentID__c.AgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.AgentName__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Email__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.UplineAgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.MgaAgentID__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>((1 OR 2 OR 3 or 4) AND 5) AND 6</booleanFilter>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000296817 - SUPERIOR PERFORMERS INC DBA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000TJ2924 - SUPERIOR PERFORMERS INC DBA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>NAA100001 - SUPERIOR PERFORMERS INC DBA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SP1000001 - SUPERIOR PERFORMERS INC DBA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.Email__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.IsActive__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>SUPP - NAA by MGA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AgentID__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>AgentID__c.EffectiveDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

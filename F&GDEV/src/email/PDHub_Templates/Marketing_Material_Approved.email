@@ -1,0 +1,8 @@
+Please be advised that {!Marketing_Materials__c.MktCombinedFormNumber__c} -  {!Marketing_Materials__c.Form_Description__c} - has been approved for use through {!Marketing_Materials__c.Current_Expiration__c} or until applicable product change or regulatory development.  The approval number, {!Marketing_Materials__c.Ad_Review_Number__c}, should print in the bottom right corner of the ad.  Please reference this number on ALL correspondence relating to this piece.  The company reserves the right to revisit all approvals.  Additional comments (if provided) are as follows:
+
+{!ApprovalRequest.Comments}
+
+{!Marketing_Materials__c.Comments__c}
+
+Please click on the link for more detail:
+{!Marketing_Materials__c.Link}

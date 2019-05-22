@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Policy Form State</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Policy Form States</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actuarial Memo Variation Description --></label>
+        <name>Actuarial_Memo_Variation_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approval Notes --></label>
+        <name>Approval_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compact/Situs Approval Date --></label>
+        <name>Compact_Situs_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- How long (in days) did this take to get approved? --></help>
+        <label><!-- Days to Approve --></label>
+        <name>Days_to_Approve__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deemed --></label>
+        <name>Deemed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dependent Approval --></label>
+        <name>Dependent_Approval__c</name>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation><!-- Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ICC</masterLabel>
+            <translation><!-- ICC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Exempt --></label>
+        <name>Exempt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Next Response Date --></label>
+        <name>Expected_Next_Response_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Describe the variation detail that relates to the feature. --></help>
+        <label><!-- Feature Variation Description --></label>
+        <name>Feature_Variation_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- File Date (To Vendor) --></label>
+        <name>File_Date_To_Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filing Followup Date --></label>
+        <name>Filing_Followup_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Provide high-level comments for reporting purposes and for stakeholders to view quickly. --></help>
+        <label><!-- Filing Notes Summary --></label>
+        <name>Filing_Notes_Status_Notes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Provide detailed filing notes for internal purposes. This field provides additional information that may not be necessary to view in exported reports. --></help>
+        <label><!-- Filing Notes Detail --></label>
+        <name>Filing_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filing Objection --></label>
+        <name>Filing_Objection__c</name>
+        <relationshipLabel><!-- Policy Form States --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Filing Status --></label>
+        <name>Filing_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved - Compact</masterLabel>
+            <translation><!-- Approved - Compact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved - Dependent Group</masterLabel>
+            <translation><!-- Approved - Dependent Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved - Exempt</masterLabel>
+            <translation><!-- Approved - Exempt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filed</masterLabel>
+            <translation><!-- Filed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Filing</masterLabel>
+            <translation><!-- Not Filing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Objection</masterLabel>
+            <translation><!-- Objection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Act Support</masterLabel>
+            <translation><!-- Pending Act Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Compact</masterLabel>
+            <translation><!-- Pending Compact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Group</masterLabel>
+            <translation><!-- Pending Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawn</masterLabel>
+            <translation><!-- Withdrawn --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Filing Strategy --></label>
+        <name>Filing_Strategy__c</name>
+        <picklistValues>
+            <masterLabel>Compact Dependent</masterLabel>
+            <translation><!-- Compact Dependent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compact Filing</masterLabel>
+            <translation><!-- Compact Filing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exempt</masterLabel>
+            <translation><!-- Exempt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File &amp; Use</masterLabel>
+            <translation><!-- File &amp; Use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Dependent</masterLabel>
+            <translation><!-- Group Dependent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group Filing</masterLabel>
+            <translation><!-- Group Filing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Individual Filing</masterLabel>
+            <translation><!-- Individual Filing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Filing</masterLabel>
+            <translation><!-- Not Filing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Filing Withdrawn Date --></label>
+        <name>Filing_Withdrawn_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Describe the variation detail that relates to the form. --></help>
+        <label><!-- Form Variation Description --></label>
+        <name>Form_Variation_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Are there changes that are required to be made by Actuarial? --></help>
+        <label><!-- Is Actuarial Memo Variation? --></label>
+        <name>Is_Actuarial_Memo_Variation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Substantial variation - change feature of rider but could be tied to the language that is minor and potentially tied to form variation or SOV variation; important in that it is related to consumer brochure or form approval history. --></help>
+        <label><!-- Is Feature Variation? --></label>
+        <name>Is_Feature_Variation__c</name>
+    </fields>
+    <fields>
+        <help><!-- The page itself different in the form (i.e. need to point to a different form based off of this type of variation). --></help>
+        <label><!-- Is Form Variation? --></label>
+        <name>Is_Form_Variation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Are there variability changes requested by state? --></help>
+        <label><!-- Is SOV Variation? --></label>
+        <name>Is_SOV_Variation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Objection Deadline Date --></label>
+        <name>Min_Objection_Deadline_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Response Date --></label>
+        <name>Min_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Most Recent Objection Response Date --></label>
+        <name>Most_Recent_Objection_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Objections --></label>
+        <name>Number_of_Objections__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Objection Deadline --></label>
+        <name>Objection_Deadline_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection Received Date --></label>
+        <name>Objection_Received_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Most Recent Objection Response Date --></label>
+        <name>Objection_Response_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objections Outstanding --></label>
+        <name>Objections_Outstanding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Outstanding Objections --></label>
+        <name>Outstanding_Objections__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Form Description --></label>
+        <name>Policy_Form_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Form State --></label>
+        <name>Policy_Form_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Form --></label>
+        <name>Policy_Form__c</name>
+        <relationshipLabel><!-- Policy Form States --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter the informational filing State Id, date of informational filing submission, close date of informational filing, informational filing details, and anything relevant to understand this post-approval filing. --></help>
+        <label><!-- Post-Approval Filing Detail --></label>
+        <name>Post_Approval_Filing_Detail__c</name>
+    </fields>
+    <fields>
+        <help><!-- Ensure that when this post-approval filing is closed, uncheck this box. --></help>
+        <label><!-- Post-Approval Filing In Progress --></label>
+        <name>Post_Approval_Filing_In_Progress__c</name>
+    </fields>
+    <fields>
+        <label><!-- SOV Variation Description --></label>
+        <name>SOV_Variation_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is the situs/compact state for the dependency? --></help>
+        <label><!-- Situs/Compact State --></label>
+        <name>Situs_State__c</name>
+        <picklistValues>
+            <masterLabel>AK</masterLabel>
+            <translation><!-- AK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation><!-- AR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation><!-- AZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation><!-- CA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO</masterLabel>
+            <translation><!-- CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CT</masterLabel>
+            <translation><!-- CT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation><!-- DE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL</masterLabel>
+            <translation><!-- FL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA</masterLabel>
+            <translation><!-- GA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HI</masterLabel>
+            <translation><!-- HI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IA</masterLabel>
+            <translation><!-- IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IC</masterLabel>
+            <translation><!-- IC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID</masterLabel>
+            <translation><!-- ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation><!-- IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation><!-- IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KS</masterLabel>
+            <translation><!-- KS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KY</masterLabel>
+            <translation><!-- KY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation><!-- LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME</masterLabel>
+            <translation><!-- ME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI</masterLabel>
+            <translation><!-- MI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MN</masterLabel>
+            <translation><!-- MN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MO</masterLabel>
+            <translation><!-- MO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation><!-- MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation><!-- MT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC</masterLabel>
+            <translation><!-- NC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND</masterLabel>
+            <translation><!-- ND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NE</masterLabel>
+            <translation><!-- NE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NH</masterLabel>
+            <translation><!-- NH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ</masterLabel>
+            <translation><!-- NJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NM</masterLabel>
+            <translation><!-- NM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NV</masterLabel>
+            <translation><!-- NV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OH</masterLabel>
+            <translation><!-- OH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation><!-- OK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OR</masterLabel>
+            <translation><!-- OR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation><!-- PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR</masterLabel>
+            <translation><!-- PR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RI</masterLabel>
+            <translation><!-- RI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation><!-- SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation><!-- SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN</masterLabel>
+            <translation><!-- TN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TX</masterLabel>
+            <translation><!-- TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation><!-- UT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VT</masterLabel>
+            <translation><!-- VT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA</masterLabel>
+            <translation><!-- WA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WI</masterLabel>
+            <translation><!-- WI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WV</masterLabel>
+            <translation><!-- WV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WY</masterLabel>
+            <translation><!-- WY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This should be completed if Exempt or Approved. --></help>
+        <label><!-- State Approval Date --></label>
+        <name>State_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- State Filing ID --></label>
+        <name>State_Filing_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- State Name --></label>
+        <name>State_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+        <picklistValues>
+            <masterLabel>AK</masterLabel>
+            <translation><!-- AK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation><!-- AR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation><!-- AZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation><!-- CA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CO</masterLabel>
+            <translation><!-- CO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CT</masterLabel>
+            <translation><!-- CT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DC</masterLabel>
+            <translation><!-- DC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DE</masterLabel>
+            <translation><!-- DE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL</masterLabel>
+            <translation><!-- FL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GA</masterLabel>
+            <translation><!-- GA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HI</masterLabel>
+            <translation><!-- HI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IA</masterLabel>
+            <translation><!-- IA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IC</masterLabel>
+            <translation><!-- IC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ID</masterLabel>
+            <translation><!-- ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation><!-- IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation><!-- IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KS</masterLabel>
+            <translation><!-- KS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KY</masterLabel>
+            <translation><!-- KY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation><!-- LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME</masterLabel>
+            <translation><!-- ME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI</masterLabel>
+            <translation><!-- MI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MN</masterLabel>
+            <translation><!-- MN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MO</masterLabel>
+            <translation><!-- MO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS</masterLabel>
+            <translation><!-- MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT</masterLabel>
+            <translation><!-- MT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NC</masterLabel>
+            <translation><!-- NC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND</masterLabel>
+            <translation><!-- ND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NE</masterLabel>
+            <translation><!-- NE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NH</masterLabel>
+            <translation><!-- NH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NJ</masterLabel>
+            <translation><!-- NJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NM</masterLabel>
+            <translation><!-- NM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NV</masterLabel>
+            <translation><!-- NV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OH</masterLabel>
+            <translation><!-- OH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation><!-- OK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OR</masterLabel>
+            <translation><!-- OR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PA</masterLabel>
+            <translation><!-- PA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR</masterLabel>
+            <translation><!-- PR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RI</masterLabel>
+            <translation><!-- RI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SC</masterLabel>
+            <translation><!-- SC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SD</masterLabel>
+            <translation><!-- SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TN</masterLabel>
+            <translation><!-- TN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TX</masterLabel>
+            <translation><!-- TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation><!-- UT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VA</masterLabel>
+            <translation><!-- VA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VT</masterLabel>
+            <translation><!-- VT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA</masterLabel>
+            <translation><!-- WA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WI</masterLabel>
+            <translation><!-- WI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WV</masterLabel>
+            <translation><!-- WV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WY</masterLabel>
+            <translation><!-- WY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submitted to State Date --></label>
+        <name>Submitted_to_State_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target File Date --></label>
+        <name>Target_File_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variation Pages --></label>
+        <name>Variation_Pages__c</name>
+    </fields>
+    <layouts>
+        <layout>Policy Form State Layout</layout>
+        <sections>
+            <label><!-- Approval Notes --></label>
+            <section>Approval Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Filing Notes --></label>
+            <section>Filing Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Post-Approval Filings --></label>
+            <section>Post-Approval Filings</section>
+        </sections>
+        <sections>
+            <label><!-- Variation Notes --></label>
+            <section>Variation Notes</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Approval date is required for Group filing and Compact filing --></errorMessage>
+        <name>Approval_Date_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Once the status is approved you cannot modify the status --></errorMessage>
+        <name>Cannot_Edit_Approved_Policy_State</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If Is Feature Variation is checked, then Feature Variation Description must be filled out. --></errorMessage>
+        <name>Feature_Variation_Description_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If Is Form Variation is checked, then Form Variation Description must be filled out. --></errorMessage>
+        <name>Form_Variation_Description_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- To change the Status to Approved for individual filing state or situs/compact filing states, enter the State Approval Date first. --></errorMessage>
+        <name>Status_is_Approved_Require_Approval_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Filing Withdrawn Date in order to change the filing status to &quot;Withdrawn&quot;. --></errorMessage>
+        <name>Withdrawn_Date_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

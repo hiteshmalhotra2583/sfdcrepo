@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Monthly Goal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Monthly Goals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Date Completed --></label>
+        <name>Date_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Focus --></label>
+        <name>Focus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Qtr Goal --></label>
+        <name>Qtr_Goal__c</name>
+        <relationshipLabel><!-- Monthly Goals --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Monthly Goal Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

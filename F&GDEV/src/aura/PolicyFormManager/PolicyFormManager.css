@@ -1,0 +1,152 @@
+.THIS .main-container{
+     background-color:#fff;
+}
+.THIS .policyStatusBlock{
+    cursor:pointer;
+}
+.THIS .statesPolicyNameBlock{
+      cursor:pointer;
+}
+.THIS .main-header{
+    margin: 0px 0px 10px 0px;
+    font-size:20px;
+    font-weight: 500;
+}
+.THIS .button-section{
+    margin:32px 0px;
+}
+.THIS .btn-sub-div{
+    margin-left:165px;
+}
+.THIS .statescolumn {
+    margin-top: 0px;
+    width:15%;
+    overflow-x: auto;
+}
+.THIS .statescolumn table tr th{
+    background-color:#DDDDDD;
+    font-weight: 800;
+    border-right:1px solid #ddd;
+}
+.THIS .statescolumn table tr td{
+    border-right:1px solid #ddd;
+}
+
+.THIS .stateTable {
+    margin-top: 0px;
+    width: 85%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.THIS .stateTable table tr th{
+    border-right:1px solid #ddd;
+    font-weight: 800;
+    background-color:#DDDDDD;
+}
+.THIS .stateTable table tr td{
+    border-right:1px solid #ddd;
+}
+
+.THIS .productTable{
+    margin:10px;
+    border: 1px solid #ddd;
+    width: 435px;
+    margin:0px 6px;
+    overflow: auto;
+}
+.THIS .productTable table tr th{
+    border-right:1px solid #ddd;
+    font-weight: 800;
+    background-color:#DDDDDD;
+}
+.THIS .productTable table tr td{
+    border-right:1px solid #ddd;
+}
+.THIS .glyphicon-fgl-ban-circle {
+    background: url(/resource/1412001594000/fgl_icons/circlex.png) no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    height: 12px;
+    width:12px;
+}
+.THIS .glyphicon-fgl-ok {
+    background: url(/resource/1412001594000/fgl_icons/check.png) no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    height: 12px;
+    width:12px;
+}
+.THIS .selected {
+    background-color: #ECBE13;
+}
+
+.THIS .slds-table tbody tr {
+    height: 30px !important;
+}
+
+.THIS .slds-table thead tr {
+    height: 30px !important;
+}
+
+
+.THIS .demo-only .slds-fade-in-open{
+    z-index:998 !important;
+}
+.THIS .demo-only .slds-backdrop_open{
+    z-index:997 !important;
+}
+
+.THIS .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.THIS .tooltip .tooltiptext2 {
+  visibility: hidden;
+  width: 120px;
+  background-color: none;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.THIS .tooltip:hover .tooltiptext2 {
+  visibility: visible;
+}
+
+.THIS .tooltiptext2 {
+    visibility: hidden;
+    width: 120px;
+    background-color: none;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top:15px;
+}
+.THIS .chosen-container{
+    width: 320px!important;
+}
+.THIS .chosen-choices{
+    height: 40px!important;
+    overflow: auto!important;
+}
+.THIS .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+    position: absolute;
+    top: 4px;
+    right: 3px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(/resource/MultiSelect/chosen-sprite.png) -42px 1px no-repeat;
+    font-size: 1px;
+}

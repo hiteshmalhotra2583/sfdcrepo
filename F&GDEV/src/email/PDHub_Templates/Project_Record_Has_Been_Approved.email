@@ -1,0 +1,5 @@
+This Project was approved by {!ApprovalRequest.Process_Approver}. 
+
+Please click on the link for more detail:
+
+{!Project__c.Link}

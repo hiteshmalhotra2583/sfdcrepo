@@ -1,0 +1,265 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" controller="CTRL_PolicyFormManagerLtng">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+ 
+    <aura:attribute name="recordId" type="String" default="" />
+    <aura:attribute name="states" type="Object[]" default="[]" />
+    <aura:attribute name="statepolicyselectcount" type="Integer" default="0" />
+    <aura:attribute name="prodstatepolicyeditcount" type="Integer" default="0" />
+    <aura:attribute name="message" type="String" default="" />
+    <aura:attribute name="iserror" type="Boolean" default="false" />
+    <aura:attribute name="project" type="Object" default="{}" />
+    <aura:attribute name="products" type="Object[]" default="[]" />
+    <aura:attribute name="productsCopy" type="Object[]" default="[]" />
+    <aura:attribute name="prodstatepolicystatestatmap" type="Object" default="{}" />
+    <aura:attribute name="policyidlist" type="Object[]" default="[]" />
+    <aura:attribute name="policies" type="Object[]" default="[]" />
+    <aura:attribute name="policiesCopy" type="Object[]" default="[]" />
+    <aura:attribute name="statepolicymap" type="Object" default="{}"/>
+    <aura:attribute name="policyUpdateAccess" type="boolean" default="true" />
+    <aura:attribute name="productpolicies" type="Object[]" default="[]" />
+    <aura:attribute name="isDoubleClicked" type="boolean" default="false"/>
+    
+    <aura:attribute name="isSelected" type="String" default=""/>
+    <aura:attribute name="policycolumns" type="Object[]"/>
+    <aura:attribute name="policycolselcount" type="Integer" default="0"/>
+    
+    <!-- Add Policy Logic -->
+    <aura:attribute name="isPolicyAddStatus" type="boolean" default="false"/>
+    <aura:attribute name="serPolicyColumns" type="List"/>
+    <aura:attribute name="serPolicyData" type="Object"/>
+    <aura:attribute name="selectedRows" type="List" /> 
+    <aura:attribute name="selectedPolicyIds" type="List" />
+    <!-- Add Policy Logic -->
+    
+    <!-- Edit Filings -->
+    <aura:attribute name="isEditFilings" type="boolean" default="false"/>
+    <aura:attribute name="policystatusaggr" type="Object" default="{}"/>
+    <aura:attribute name="policyrows" type="Object[]" default="[]" />
+    <aura:attribute name="prodcolumns" type="Object" />
+    <aura:attribute name="hasRelation" type="boolean" default="false"/>
+    <!-- Edit Filings -->
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    
+    <!-- paggination logic -->
+    <aura:attribute name="pageSize" type="Integer" default="15"/>
+    <aura:attribute name="totalSize" type="Integer"/> 
+    <aura:attribute name="start" type="Integer" />
+    <aura:attribute name="end" type="Integer"/>
+    <aura:attribute name="paged" type="Object" default="{}"/>
+    <aura:attribute name="statess" type="Object[]" default="[]" />
+    <!-- paggination logic -->
+    <aura:attribute name="refereshCmp" type="boolean" default="true"/>
+    <aura:attribute name="refPolicies" type="Object[]" default="[]" />
+    <aura:attribute name="refProducts" type="Object[]" default="[]" />
+    
+     <!-- navigate to sobject -->
+    <aura:handler event="force:navigateToSObject" action="{!c.navigateToRecord}"/>
+    <aura:attribute name="policyFormStateList" type="String[]" />
+    <aura:attribute name="policyFormStateVal" type="String" default=""/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.refreshCmp}"/> 
+    <aura:attribute name="options" type="List" default="[]"/>
+    <aura:attribute name="selctedProduct" type="String"/>
+    <aura:attribute name="policyFormTypeList" type="String[]"/>
+    <aura:attribute name="selctedPolicyFormType" type="String"/>
+    
+    <!-- selected states multi dropdown -->
+    <aura:attribute name="selectedOptionsList" type="String[]"/>
+     <!-- selected states multi dropdown -->
+    <div class="slds slds-box" style="background-color:#fff;">
+        <!--  ===== Main Header Section  ===== -->
+        <div>
+            <div class="slds-float_left slds-size_2-of-6 ">
+                <h2 class="main-header">
+                    Project Product State Records
+                </h2>
+            </div>
+            <div class="slds-float_left slds-size_4-of-6">
+                <button class="slds-button slds-button_brand" onclick="{!c.saveProdStatePolicyStatuss}" disabled="{!v.prodstatepolicyeditcount==0}">Save Product State Records</button>
+                <button class="slds-button slds-button_brand" onclick="{!c.deSelectProdStatePolicyStatuss}" disabled="{!v.prodstatepolicyeditcount==0}">De-Select All</button>
+                <button class="slds-button slds-button_brand"  disabled="{!!v.refPolicies.length>0}" onclick="{!c.undoHidePolicy}">Restore Policy Form</button>
+                <button class="slds-button slds-button_brand"  disabled="{!!v.refProducts.length>0}" onclick="{!c.undoHideProduct}">Restore Product</button>
+                <button class="slds-button slds-button_brand"  disabled="{!and(v.refPolicies.length==0,v.isDoubleClicked==false)}" onclick="{!c.refreshPage}">Refresh</button>
+                <button class="slds-button slds-button_brand" disabled="{!and(and(v.selctedProduct=='',v.policyFormStateVal==''),and(v.selctedPolicyFormType=='',v.selectedOptionsList.length==0))}" onclick="{!c.resetAllFilter}">Reset Filter</button>
+                <button class="slds-button slds-button_brand"   onclick="{!c.redirectToHome}">Close Tool </button>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+         <div class="slds-page-header" style="cursor: pointer;" onclick="{!c.filterSection}">
+            <section class="slds-clearfix">
+                <div class="slds-float--left ">
+                    <lightning:icon class="slds-show" aura:id="filterOne" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                    <lightning:icon class="slds-hide" aura:id="filterOne" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                </div>
+                <div class="slds-m-left--large">Filters</div>
+            </section>
+        </div>
+        <div class="slds-hide slds-p-around--medium" aura:id="filterOne">
+            <div>
+                <div class="slds-float_left slds-size_3-of-6 ">
+                    <div class="slds-size_4-of-6">
+                        <aura:if isTrue="{!v.products.length>0}">
+                            <lightning:select name="policyformState" label="Policy Form Status" value="{!v.policyFormStateVal}" onchange="{!c.policyFormStateChange}">
+                                <option text="-- Select --" value=""></option>
+                                <aura:iteration items="{!v.policyFormStateList}" var="policyFormState" >
+                                    <option text="{!policyFormState}" value="{!policyFormState}"></option>
+                                </aura:iteration>
+                            </lightning:select>
+                            <br/>
+                            <lightning:dualListbox id="MultiSelect"   
+                                                   label= "Select States" 
+                                                   sourceLabel="Available" 
+                                                   selectedLabel="Selected" 
+                                                   fieldLevelHelp="This is a dual listbox" 
+                                                   options="{!v.options}" 
+                                                   size="5"
+                                                   onchange="{!c.handleChange }"/>
+                        </aura:if>
+                    </div>
+                </div>
+                <div class="slds-float_left slds-size_3-of-6">
+                    <div class="slds-size_4-of-6">
+                        <lightning:select name="productSelection" label="Product" value="{!v.selctedProduct}" onchange="{!c.productChange}">
+                            <option text="-- Select --" value=""></option>
+                            <aura:iteration items="{!v.productsCopy}" var="product">
+                                <option text="{!product.Name}" value="{!product.Id}"></option>
+                            </aura:iteration>
+                        </lightning:select>
+                        <br/>
+                        <lightning:select name="policyFormType" label="Policy Form Type" value="{!v.selctedPolicyFormType}" onchange="{!c.PolicyFormTypeChange}">
+                            <option text="-- Select --" value=""></option>
+                            <aura:iteration items="{!v.policyFormTypeList}" var="pofoty">
+                                <option text="{!pofoty}" value="{!pofoty}"></option>
+                            </aura:iteration> 
+                        </lightning:select>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <hr/>
+        <!--  ===== Main Header Section  ===== -->
+     
+        <!--  ===== Main Container Section ===== -->
+        
+        <div class="main-container slds-size_12-of-12">
+            <div class="slds-float_left statescolumn">
+                <!-- ===== State column ===== -->
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th class="statesBlock">States</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.statess}" var="state" indexVar="index">
+                            <aura:if isTrue="{!state!=null}">
+                                <tr>
+                                    <td data-value="{!state.StateCode__c}" class="stateName"> {!state.Name} </td> <!-- onclick="{!c.selectRow}"  -->
+                                </tr>
+                            </aura:if>
+                        </aura:iteration>
+                    </tbody>
+                   <tfoot>
+                        <tr>
+                            <td>
+                                <lightning:button label="Prev" disabled="{!v.start == 0}"  onclick="{!c.previousPage}" />
+                                <lightning:button label="Next" disabled="{!v.end >= v.totalSize}" onclick="{!c.nextPage}" />
+                            </td>
+                        </tr>
+                    </tfoot> 
+                </table>
+                <!-- ===== State column ===== -->
+            </div>
+            <div class="slds-float_left productTable">
+                <!--  ===== Product Table  ===== -->
+                <aura:if isTrue="{!and(v.policies.length>0,v.products.length>0)}">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                        <thead>
+                            <tr>
+                                <aura:if isTrue="{!v.products.length>0}">
+                                    <aura:iteration items="{!v.products}" var="product" indexVar="index">
+                                        <th class="productBlock table_header_1"  colspan="{!v.policies.length}" data-value="{!product.Id}" ondblclick="{!c.redirectToProduct}">
+                                           <span>{!product.Name}</span> 
+                                           <span style="margin-left:10px;color: red;" data-value="{!product.Id}" onclick="{!c.hideProduct}">X</span>
+                                        </th> 
+                                    </aura:iteration>
+                                </aura:if>
+                            </tr>
+                            <tr>
+                                <aura:if isTrue="{!v.policies.length>0}">
+                                    <aura:iteration items="{!v.productpolicies}" var="productpolicy" indexVar="index">
+                                        <th ondblclick="{!c.redirectToSobject}" data-value="{!productpolicy.PolicyId}" class="productPolicyNameBlock">
+                                            <div class="tooltip">
+                                                <span data-value="{!index}" onclick="{!c.selProdCol}">{!productpolicy.PolicyName}</span>
+                                                <span style="margin-left:10px;color: red;" data-value="{!productpolicy.PolicyId}" onclick="{!c.hideColumns}">X</span>
+                                                <span class="tooltiptext2">
+                                                    <div class="slds-popover slds-popover--tooltip toggle" role="tooltip" id="help" style="background:#fff;" aura:id="tooltip">
+                                                        <div class="slds-popover__body" style="color:#000!important;">
+                                                            <aura:if isTrue="{!and(productpolicy.PolicyFormType!='',productpolicy.PolicyFormType!=null)}"> 
+                                                                {!productpolicy.PolicyFormType}
+                                                                <aura:set attribute="else">
+                                                                    Other
+                                                                </aura:set>
+                                                            </aura:if>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>  
+                                        </th>
+                                    </aura:iteration>
+                                </aura:if>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.statess}" var="state" indexVar="index"> 
+                                <aura:if isTrue="{!state!=null}">
+                                    <tr>
+                                        <aura:if isTrue="{!index==-1}">
+                                            <td colspan="{!v.products.length}" rowspan="{!v.states.length}">&nbsp;</td>
+                                        </aura:if>
+                                        <aura:iteration items="{!v.productpolicies}" var="productpolicy" indexVar="index">
+                                            <td data-value="{!productpolicy.ProductId+','+state.StateCode__c+','+productpolicy.PolicyId}" ondblclick="{!c.redirectToSobject2}" onclick="{!c.setProdStateStatus}" class="{!'policyStatusBlock '+productpolicy.ProductId+' '+productpolicy.PolicyId+' '+state.StateCode__c }" > 
+                                                <center>
+                                                    <c:ProductPoliciesDynamicTd statepolicymap="{!v.statepolicymap}" 
+                                                                                prodstatepolicystatestatmap="{!v.prodstatepolicystatestatmap}"
+                                                                                productId="{!productpolicy.ProductId}" 
+                                                                                stateCode="{!state.StateCode__c}"
+                                                                                policyId="{!productpolicy.PolicyId}"/>
+                                                </center>
+                                            </td> 
+                                        </aura:iteration>
+                                    </tr>
+                                </aura:if>
+                            </aura:iteration> 
+                        </tbody>
+                    </table>
+                    <aura:set attribute="else">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <tr>
+                                <th colspan="4" >
+                                    <center> No Policy Records Found !</center>  
+                                </th>
+                            </tr>
+                        </table>
+                    </aura:set>
+                </aura:if>
+                <!--  ===== Product Table  ===== -->
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        
+        <!--  ===== Main Container Section  ===== -->
+        <!--  ==== Spinner Section  ==== -->
+        <aura:if isTrue="{!v.Spinner}">
+            <div class="demo-only" style="height: 6rem; z-index: 999; !important">
+                <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand slds-spinner--brand   slds-spinner_inverse">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+                <div class="slds-backdrop slds-backdrop_open" ></div>
+            </div> 
+        </aura:if>
+        <!--  ==== Spinner Section  ==== -->
+    </div>
+</aura:component>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Marketing_Materials__c$Name</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Date_Submitted__c</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Ad_Review_Submitter_Email__c</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Form_Description__c</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Form_Type__c</field>
+    </columns>
+    <description>Report for WA State Audit</description>
+    <filter>
+        <criteriaItems>
+            <column>Marketing_Materials__c$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Marketing_Materials__c.External</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>WA State Audit - External Ad Review</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Ad_Review__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Marketing_Materials__c$Name</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Marketing_Materials__c$Date_Submitted__c</dateColumn>
+        <endDate>2017-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-06-01</startDate>
+    </timeFrameFilter>
+</Report>

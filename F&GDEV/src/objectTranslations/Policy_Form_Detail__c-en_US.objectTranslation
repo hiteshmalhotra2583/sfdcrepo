@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Policy Form</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Policy Forms</value>
+    </caseValues>
+    <fields>
+        <label><!-- Annuity --></label>
+        <name>Annuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved States --></label>
+        <name>Approved_States__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Status --></label>
+        <name>Approved_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved --></label>
+        <name>Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Policy Form --></label>
+        <name>Base_Policy_Form__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compact/Situs Approval Date --></label>
+        <name>Compact_Situs_Approval_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Analyst --></label>
+        <name>Current_Analyst__c</name>
+        <relationshipLabel><!-- Policy Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Filing Initiative --></label>
+        <name>Filing_Initiative__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filing Strategy --></label>
+        <name>Filing_Strategy__c</name>
+        <picklistValues>
+            <masterLabel>Group</masterLabel>
+            <translation><!-- Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IIPRC</masterLabel>
+            <translation><!-- IIPRC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation><!-- Individual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TBD</masterLabel>
+            <translation><!-- TBD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Insurance Type --></label>
+        <name>Insurance_Type__c</name>
+        <picklistValues>
+            <masterLabel>Annuity</masterLabel>
+            <translation><!-- Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life</masterLabel>
+            <translation><!-- Life --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Primary --></label>
+        <name>Is_Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy PD Database ID --></label>
+        <name>Legacy_PD_Database_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life --></label>
+        <name>Life__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of approvals for policy form states that were submitted for approval. --></help>
+        <label><!-- Number of Approvals --></label>
+        <name>Number_of_Approvals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Outstanding States --></label>
+        <name>Number_of_Outstanding_States__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of State Policy Forms that were submitted for approval. --></help>
+        <label><!-- Number of Policy Form States --></label>
+        <name>Number_of_Policy_Form_States__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of withdrawals for policy form states that were initially submitted for approval. --></help>
+        <label><!-- Number of Withdrawals --></label>
+        <name>Number_of_Withdrawals__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Form Description --></label>
+        <name>Policy_Form_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Form Name --></label>
+        <name>Policy_Form_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Form State --></label>
+        <name>Policy_Form_State__c</name>
+        <relationshipLabel><!-- Policy Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Policy Form Type Other --></label>
+        <name>Policy_Form_Type_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Form Type --></label>
+        <name>Policy_Form_Type__c</name>
+        <picklistValues>
+            <masterLabel>Application</masterLabel>
+            <translation><!-- Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Base Policy Form</masterLabel>
+            <translation><!-- Base Policy Form --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Endorsement</masterLabel>
+            <translation><!-- Endorsement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rider Policy Form</masterLabel>
+            <translation><!-- Rider Policy Form --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Policy Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Base Policy Form --></label>
+        <name>Related_Base_Policy_Form__c</name>
+        <relationshipLabel><!-- Related Rider Policy Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Base Policy Form(s) --></label>
+        <name>Related_Base_Policy_Form_s__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Policy Form (Same Features) --></label>
+        <name>Related_Policy_Form__c</name>
+        <relationshipLabel><!-- Related Policy Forms --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- State Specific --></label>
+        <name>State_Specific__c</name>
+        <picklistValues>
+            <masterLabel>AL</masterLabel>
+            <translation><!-- AL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AR</masterLabel>
+            <translation><!-- AR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AZ</masterLabel>
+            <translation><!-- AZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FL</masterLabel>
+            <translation><!-- FL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL</masterLabel>
+            <translation><!-- IL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation><!-- IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KS</masterLabel>
+            <translation><!-- KS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LA</masterLabel>
+            <translation><!-- LA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MA</masterLabel>
+            <translation><!-- MA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MD</masterLabel>
+            <translation><!-- MD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MN</masterLabel>
+            <translation><!-- MN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ND</masterLabel>
+            <translation><!-- ND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NH</masterLabel>
+            <translation><!-- NH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NY</masterLabel>
+            <translation><!-- NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OH</masterLabel>
+            <translation><!-- OH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK</masterLabel>
+            <translation><!-- OK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OR</masterLabel>
+            <translation><!-- OR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QW</masterLabel>
+            <translation><!-- QW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS</masterLabel>
+            <translation><!-- SS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TX</masterLabel>
+            <translation><!-- TX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UT</masterLabel>
+            <translation><!-- UT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VT</masterLabel>
+            <translation><!-- VT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA</masterLabel>
+            <translation><!-- WA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WI</masterLabel>
+            <translation><!-- WI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Whether state approvals have been provided or if the filing is still active and has not received state approvals. --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Policy Form State --></label>
+        <name>Total_Policy_Form_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Policy Form State in Approved --></label>
+        <name>Total_Policy_Form_State_in_Approved__c</name>
+    </fields>
+    <layouts>
+        <layout>Policy Form Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Clone Policy Form State --></label>
+        <name>Clone_Policy_Form_State</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Policy Form --></label>
+        <name>Create_Policy_Form</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Create Policy States --></label>
+        <name>Create_Policy_States</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Delete Policy States --></label>
+        <name>DeletePolicyStates</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_Policy_Form --></label>
+        <name>Create_Policy_Form</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Policies --></label>
+        <name>Manage_Policies</name>
+    </webLinks>
+</CustomObjectTranslation>

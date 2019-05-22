@@ -1,0 +1,10 @@
+Reminder - A revision has been requested for {!Marketing_Materials__c.Ad_Review_Number__c} - {!Marketing_Materials__c.Form_Description__c} - {!Marketing_Materials__c.MktCombinedFormNumber__c}.  Comments are as follows:
+
+{!Marketing_Materials__c.Revisions_Requested_Comments__c}
+
+
+Please submit revisions to Product.Compliance-Adreview@fglife.com, and reference {!Marketing_Materials__c.Ad_Review_Number__c}. 
+
+If revisions are not received within 45 days, this ad review request will be automatically closed as withdrawn.  Use of any unapproved ad is strictly prohibited.     
+
+Thanks!

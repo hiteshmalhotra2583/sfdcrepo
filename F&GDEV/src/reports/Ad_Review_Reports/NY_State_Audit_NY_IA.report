@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Marketing_Materials__c$Name</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Date_Submitted__c</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Original_Approval__c</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Ad_Review_Submitter_Email__c</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Form_Description__c</field>
+    </columns>
+    <columns>
+        <field>Marketing_Materials__c$Form_Type__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Marketing_Materials__c$RecordType</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Marketing_Materials__c.External</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>NY State Audit - NY &amp; IA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Ad_Review__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Marketing_Materials__c$Original_Approval__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Marketing_Materials__c$Original_Approval__c</dateColumn>
+        <endDate>2017-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2013-01-01</startDate>
+    </timeFrameFilter>
+</Report>

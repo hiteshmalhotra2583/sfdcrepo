@@ -1,0 +1,1572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Policy_Form_State_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object utilized for Product Development efforts</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>Policy_Mass_Edit</fullName>
+        <description>Fields available for update on the mass edit page.</description>
+        <displayedFields>
+            <field>Filing_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Filing_Strategy__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Submitted_to_State_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>State_Approval_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Objection_Deadline_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Objection_Received_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Filing_Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Filing_Notes_Status_Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Filing_Followup_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Target_File_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Approval_Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Variation_Pages__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Dependent_Approval__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Policy Mass Edit</label>
+    </fieldSets>
+    <fields>
+        <fullName>Actuarial_Memo_Variation_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Actuarial Memo Variation Description</label>
+        <length>131000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Approval_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Notes</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Compact_Situs_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Filing_Strategy__c, &quot;Compact Dependent&quot;)||ISPICKVAL(Filing_Strategy__c, &quot;Group Dependent&quot;) &amp;&amp; (NOT(ISPICKVAL( Filing_Status__c, &quot;Approved - Compact&quot;)) || NOT(ISPICKVAL( Filing_Status__c, &quot;Approved - Dependent Group&quot;))), Policy_Form__r.Compact_Situs_Approval_Date__c , null)</formula>
+        <label>Compact/Situs Approval Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Days_to_Approve__c</fullName>
+        <externalId>false</externalId>
+        <formula>State_Approval_Date__c - Submitted_to_State_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>How long (in days) did this take to get approved?</inlineHelpText>
+        <label>Days to Approve</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deemed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Deemed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dependent_Approval__c</fullName>
+        <externalId>false</externalId>
+        <label>Dependent Approval</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Group</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ICC</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Exempt__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Exempt</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Next_Response_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Next Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Feature_Variation_Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the variation detail that relates to the feature.</inlineHelpText>
+        <label>Feature Variation Description</label>
+        <length>131027</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>File_Date_To_Vendor__c</fullName>
+        <externalId>false</externalId>
+        <label>File Date (To Vendor)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Filing_Followup_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Filing Followup Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Filing_Notes_Status_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide high-level comments for reporting purposes and for stakeholders to view quickly.</inlineHelpText>
+        <label>Filing Notes Summary</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Filing_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide detailed filing notes for internal purposes. This field provides additional information that may not be necessary to view in exported reports.</inlineHelpText>
+        <label>Filing Notes Detail</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Filing_Objection__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Filing Objection</label>
+        <referenceTo>Filing_Objection__c</referenceTo>
+        <relationshipLabel>Policy Form States</relationshipLabel>
+        <relationshipName>Policy_Form_States</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Filing_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Filing Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Started</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending Act Support</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Filed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Objection</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Withdrawn</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Filing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending Compact</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pending Group</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Approved - Dependent Group</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Approved - Compact</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Approved - Exempt</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Approved - Dependent Compact</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Filed with DOI</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+                <value>
+                    <fullName>Targeted</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Filing_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <label>Filing Strategy</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Individual Filing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Compact Filing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Compact Dependent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Group Filing</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Group Dependent</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Exempt</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>File &amp; Use</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Not Filing</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Filing_Withdrawn_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Filing Withdrawn Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Form_Variation_Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Describe the variation detail that relates to the form.</inlineHelpText>
+        <label>Form Variation Description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Is_Actuarial_Memo_Variation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Are there changes that are required to be made by Actuarial?</inlineHelpText>
+        <label>Is Actuarial Memo Variation?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Feature_Variation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Substantial variation - change feature of rider but could be tied to the language that is minor and potentially tied to form variation or SOV variation; important in that it is related to consumer brochure or form approval history.</inlineHelpText>
+        <label>Is Feature Variation?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Form_Variation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>The page itself different in the form (i.e. need to point to a different form based off of this type of variation).</inlineHelpText>
+        <label>Is Form Variation?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_SOV_Variation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Are there variability changes requested by state?</inlineHelpText>
+        <label>Is SOV Variation?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Min_Objection_Deadline_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Objection Deadline Date</label>
+        <summarizedField>Filing_Objection__c.Objection_Response_Required_By__c</summarizedField>
+        <summaryFilterItems>
+            <field>Filing_Objection__c.Objection_Response_Submitted__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>Filing_Objection__c.Policy_Form_State__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Min_Response_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Response Date</label>
+        <summarizedField>Filing_Objection__c.Objection_Response_Submitted__c</summarizedField>
+        <summaryFilterItems>
+            <field>Filing_Objection__c.Objection_Response_Submitted__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>Filing_Objection__c.Policy_Form_State__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Most_Recent_Objection_Response_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Most Recent Objection Response Date</label>
+        <summarizedField>Filing_Objection__c.Objection_Received__c</summarizedField>
+        <summaryForeignKey>Filing_Objection__c.Policy_Form_State__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Objections__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Objections</label>
+        <summaryForeignKey>Filing_Objection__c.Policy_Form_State__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Objection_Deadline_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Objection Deadline</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Objection_Received_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Objection Received Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Objection_Response_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Most Recent Objection Response Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Objections_Outstanding__c</fullName>
+        <externalId>false</externalId>
+        <label>Objections Outstanding</label>
+        <summaryFilterItems>
+            <field>Filing_Objection__c.Objection_Response_Submitted__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>Filing_Objection__c.Policy_Form_State__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Outstanding_Objections__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Outstanding Objections</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Policy_Form_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>Policy_Form__r.Policy_Form_Description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Policy Form Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Policy_Form_State__c</fullName>
+        <externalId>false</externalId>
+        <formula>Policy_Form__r.Policy_Form_Name__c &amp;&quot; - &quot; &amp; TEXT( State__c )</formula>
+        <label>Policy Form State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Policy_Form__c</fullName>
+        <externalId>false</externalId>
+        <label>Policy Form</label>
+        <referenceTo>Policy_Form_Detail__c</referenceTo>
+        <relationshipLabel>Policy Form States</relationshipLabel>
+        <relationshipName>Filing_Statuses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Post_Approval_Filing_Detail__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the informational filing State Id, date of informational filing submission, close date of informational filing, informational filing details, and anything relevant to understand this post-approval filing.</inlineHelpText>
+        <label>Post-Approval Filing Detail</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Post_Approval_Filing_In_Progress__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Ensure that when this post-approval filing is closed, uncheck this box.</inlineHelpText>
+        <label>Post-Approval Filing In Progress</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SOV_Variation_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>SOV Variation Description</label>
+        <length>131000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Situs_State__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the situs/compact state for the dependency?</inlineHelpText>
+        <label>Situs/Compact State</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ID</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ME</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ND</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TX</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IC</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>State_Approval_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This should be completed if Exempt or Approved.</inlineHelpText>
+        <label>State Approval Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>State_Filing_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>State Filing ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(  State__c  , 
+&quot;AL&quot;,&quot;Alabama&quot;, 
+&quot;AK&quot;,&quot;Alaska&quot;, 
+&quot;AZ&quot;,&quot;Arizona&quot;, 
+&quot;AR&quot;,&quot;Arkansas&quot;,
+&quot;CA&quot;,&quot;California&quot;,
+&quot;CO&quot;,&quot;Colorado&quot;,
+&quot;CT&quot;,&quot;Connecticut&quot;,
+&quot;DC&quot;,&quot;District of Columbia&quot;,
+&quot;DE&quot;,&quot;Delaware&quot;,
+&quot;FL&quot;,&quot;Florida&quot;,
+&quot;GA&quot;,&quot;Georgia&quot;,
+&quot;HI&quot;,&quot;Hawaii&quot;,
+&quot;ID&quot;,&quot;Idaho&quot;,
+&quot;IL&quot;,&quot;Illinois&quot;,
+&quot;IN&quot;,&quot;Indiana&quot;,
+&quot;IA&quot;,&quot;Iowa&quot;,
+&quot;KS&quot;,&quot;Kansas&quot;,
+&quot;KY&quot;,&quot;Kentucky&quot;,
+&quot;LA&quot;,&quot;Louisiana&quot;,
+&quot;ME&quot;,&quot;Maine&quot;,
+&quot;MD&quot;,&quot;Maryland&quot;,
+&quot;MA&quot;,&quot;Massachusetts&quot;,
+&quot;MI&quot;,&quot;Michigan&quot;,
+&quot;MN&quot;,&quot;Minnesota&quot;,
+&quot;MS&quot;,&quot;Mississippi&quot;,
+&quot;MO&quot;,&quot;Missouri&quot;,
+&quot;MT&quot;,&quot;Montana&quot;,
+&quot;NE&quot;,&quot;Nebraska&quot;,
+&quot;NV&quot;,&quot;Nevada&quot;,
+&quot;NH&quot;,&quot;New Hampshire&quot;,
+&quot;NJ&quot;,&quot;New Jersey&quot;,
+&quot;NM&quot;,&quot;New Mexico&quot;,
+&quot;NY&quot;,&quot;New York&quot;,
+&quot;NC&quot;,&quot;North Carolina&quot;,
+&quot;ND&quot;,&quot;North Dakota&quot;,
+&quot;OH&quot;,&quot;Ohio&quot;,
+&quot;OK&quot;,&quot;Oklahoma&quot;,
+&quot;OR&quot;,&quot;Oregon&quot;,
+&quot;PA&quot;,&quot;Pennsylvania&quot;,
+&quot;PR&quot;,&quot;Puerto Rico&quot;,
+&quot;RI&quot;,&quot;Rhode Island&quot;,
+&quot;SC&quot;,&quot;South Carolina&quot;,
+&quot;SD&quot;,&quot;South Dakota&quot;,
+&quot;TN&quot;,&quot;Tennessee&quot;,
+&quot;TX&quot;,&quot;Texas&quot;,
+&quot;UT&quot;,&quot;Utah&quot;,
+&quot;VT&quot;,&quot;Vermont&quot;,
+&quot;VA&quot;,&quot;Virginia&quot;,
+&quot;WA&quot;,&quot;Washington&quot;,
+&quot;WV&quot;,&quot;West Virginia&quot;,
+&quot;WI&quot;,&quot;Wisconsin&quot;,
+&quot;WY&quot;,&quot;Wyoming&quot;,
+&quot;IC&quot;,&quot;Compact&quot;,
+null)</formula>
+        <label>State Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AZ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>AR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>CT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>DE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>GA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>HI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ID</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IL</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>KY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ME</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MS</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MO</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>MT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NE</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NJ</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>ND</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OH</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OK</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>OR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PR</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>RI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SC</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>SD</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TN</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TX</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>UT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WA</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WV</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WI</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>WY</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>IC</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Submitted_to_State_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitted to State Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Target_File_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Target File Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Variation_Pages__c</fullName>
+        <externalId>false</externalId>
+        <label>Variation Pages</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Policy Form State</label>
+    <listViews>
+        <fullName>API_1074_01_15_Form_Filings</fullName>
+        <columns>NAME</columns>
+        <columns>State_Name__c</columns>
+        <columns>Filing_Strategy__c</columns>
+        <columns>Filing_Status__c</columns>
+        <columns>Submitted_to_State_Date__c</columns>
+        <columns>Objection_Deadline_Date__c</columns>
+        <columns>State_Approval_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>API-1074(01-15)</value>
+        </filters>
+        <label>API-1074(01-15) Form Filings</label>
+    </listViews>
+    <listViews>
+        <fullName>API_1074_01_15_Form_Filings_Active</fullName>
+        <columns>NAME</columns>
+        <columns>State_Name__c</columns>
+        <columns>Filing_Strategy__c</columns>
+        <columns>Filing_Status__c</columns>
+        <columns>Submitted_to_State_Date__c</columns>
+        <columns>Objection_Deadline_Date__c</columns>
+        <columns>Filing_Notes_Status_Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>API-1074(01-15)</value>
+        </filters>
+        <filters>
+            <field>Filing_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Withdrawn,Closed,Approved,Not Filing,Pending Compact,Pending Group</value>
+        </filters>
+        <filters>
+            <field>Filing_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved - Dependent Group,Approved - Compact,Approved - Exempt</value>
+        </filters>
+        <label>API-1074(01-15) Form Filings - Active</label>
+    </listViews>
+    <listViews>
+        <fullName>ARI_2002_10_18_Form_Filings</fullName>
+        <columns>NAME</columns>
+        <columns>State_Name__c</columns>
+        <columns>State_Filing_ID__c</columns>
+        <columns>Filing_Strategy__c</columns>
+        <columns>Filing_Status__c</columns>
+        <columns>Submitted_to_State_Date__c</columns>
+        <columns>Objection_Deadline_Date__c</columns>
+        <columns>Objection_Response_Date__c</columns>
+        <columns>State_Approval_Date__c</columns>
+        <columns>Is_Feature_Variation__c</columns>
+        <columns>Is_Form_Variation__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-2002(10-18)</value>
+        </filters>
+        <label>ARI-2002(10-18) Form Filings</label>
+    </listViews>
+    <listViews>
+        <fullName>ARI_2002_10_18_Form_Filings_Active</fullName>
+        <columns>NAME</columns>
+        <columns>State_Name__c</columns>
+        <columns>Filing_Strategy__c</columns>
+        <columns>Filing_Status__c</columns>
+        <columns>Submitted_to_State_Date__c</columns>
+        <columns>Objection_Deadline_Date__c</columns>
+        <columns>Filing_Notes_Status_Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-2002(10-18)</value>
+        </filters>
+        <filters>
+            <field>Filing_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Withdrawn,Closed,Approved,Not Filing,Pending Compact,Pending Group</value>
+        </filters>
+        <filters>
+            <field>Filing_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved - Dependent Group,Approved - Compact,Approved - Exempt</value>
+        </filters>
+        <label>ARI-2002(10-18) Form Filings - Active</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>State__c</columns>
+        <columns>Filing_Status__c</columns>
+        <columns>Filing_Strategy__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Variation_Pages__c</columns>
+        <columns>Is_Actuarial_Memo_Variation__c</columns>
+        <columns>Is_Feature_Variation__c</columns>
+        <columns>Is_Form_Variation__c</columns>
+        <columns>Is_SOV_Variation__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>EMGWB_Rider_Policy_Form_Filings</fullName>
+        <booleanFilter>(1 OR 2 OR 3 OR 4 or 5) and 6</booleanFilter>
+        <columns>NAME</columns>
+        <columns>State_Name__c</columns>
+        <columns>Filing_Strategy__c</columns>
+        <columns>Filing_Status__c</columns>
+        <columns>Submitted_to_State_Date__c</columns>
+        <columns>Objection_Deadline_Date__c</columns>
+        <columns>State_Approval_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-1065(07-18)</value>
+        </filters>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-1065(07-18)FL</value>
+        </filters>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ICC18-1065(04-18)</value>
+        </filters>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-1065(07-18)GMWB</value>
+        </filters>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-1065(07-18)EGMWB</value>
+        </filters>
+        <filters>
+            <field>Filing_Strategy__c</field>
+            <operation>notEqual</operation>
+            <value>Not Filing</value>
+        </filters>
+        <label>EGMWB Rider Policy Form Filings</label>
+    </listViews>
+    <listViews>
+        <fullName>EMGWB_Rider_Policy_Form_Filings_Active</fullName>
+        <booleanFilter>(1 OR 2 OR 3 OR 4 or 7) and 5 and 6</booleanFilter>
+        <columns>NAME</columns>
+        <columns>State_Name__c</columns>
+        <columns>Filing_Strategy__c</columns>
+        <columns>Filing_Status__c</columns>
+        <columns>Objection_Deadline_Date__c</columns>
+        <columns>Submitted_to_State_Date__c</columns>
+        <columns>Filing_Notes_Status_Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-1065(07-18)</value>
+        </filters>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-1065(07-18)FL</value>
+        </filters>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ICC18-1065(04-18)</value>
+        </filters>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-1065(07-18)GMWB</value>
+        </filters>
+        <filters>
+            <field>Filing_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Withdrawn,Closed,Approved,Not Filing,Pending Compact,Pending Group</value>
+        </filters>
+        <filters>
+            <field>Filing_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved - Dependent Group,Approved - Compact,Approved - Exempt</value>
+        </filters>
+        <filters>
+            <field>Policy_Form__c</field>
+            <operation>equals</operation>
+            <value>ARI-1065(07-18)EGMWB</value>
+        </filters>
+        <label>EGMWB Rider Policy Form Filings_Active</label>
+    </listViews>
+    <listViews>
+        <fullName>Filings_In_Progress</fullName>
+        <columns>NAME</columns>
+        <columns>State_Name__c</columns>
+        <columns>Filing_Strategy__c</columns>
+        <columns>Filing_Status__c</columns>
+        <columns>Submitted_to_State_Date__c</columns>
+        <columns>Objection_Deadline_Date__c</columns>
+        <columns>Filing_Notes_Status_Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Submitted_to_State_Date__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Filing_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Withdrawn,Closed,Approved</value>
+        </filters>
+        <filters>
+            <field>Filing_Strategy__c</field>
+            <operation>notEqual</operation>
+            <value>Compact Dependent,Group Dependent,Not Filing</value>
+        </filters>
+        <label>Filings In Progress</label>
+    </listViews>
+    <nameField>
+        <label>Policy Form State Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Policy Form States</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Policy_Form__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Filing_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Filing_Strategy__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Submitted_to_State_Date__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Approval_Date_is_required</fullName>
+        <active>false</active>
+        <description>The approval date is required and</description>
+        <errorConditionFormula>AND (OR( ISPICKVAL(Filing_Strategy__c, &apos;Group Filing&apos;),
+      ISPICKVAL(Filing_Strategy__c, &apos;Compact Filing&apos;)
+     ),
+     ISBLANK( State_Approval_Date__c )
+     )</errorConditionFormula>
+        <errorDisplayField>Filing_Strategy__c</errorDisplayField>
+        <errorMessage>Approval date is required for Group filing and Compact filing</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_Edit_Approved_Policy_State</fullName>
+        <active>true</active>
+        <description>Once the filing_status__c is approved you cannot edit it</description>
+        <errorConditionFormula>AND(ISPICKVAL(PRIORVALUE(Filing_Status__c), &quot;Approved&quot;),
+    ISCHANGED(Filing_Status__c)
+)</errorConditionFormula>
+        <errorDisplayField>Filing_Status__c</errorDisplayField>
+        <errorMessage>Once the status is approved you cannot modify the status</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Feature_Variation_Description_Required</fullName>
+        <active>true</active>
+        <description>Variation Description is required if Is Variation is checked.</description>
+        <errorConditionFormula>AND(
+$User.ByPassValidation__c == false,      
+Is_Feature_Variation__c  = true,
+    LEN(  Feature_Variation_Description__c ) = 0)</errorConditionFormula>
+        <errorDisplayField>Feature_Variation_Description__c</errorDisplayField>
+        <errorMessage>If Is Feature Variation is checked, then Feature Variation Description must be filled out.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Form_Variation_Description_Required</fullName>
+        <active>true</active>
+        <description>Variation Description is required if Is Variation is checked.</description>
+        <errorConditionFormula>AND(
+    $User.ByPassValidation__c == false,
+    Is_Form_Variation__c = true,
+    LEN( Form_Variation_Description__c) = 0)</errorConditionFormula>
+        <errorDisplayField>Form_Variation_Description__c</errorDisplayField>
+        <errorMessage>If Is Form Variation is checked, then Form Variation Description must be filled out.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_is_Approved_Require_Approval_Date</fullName>
+        <active>false</active>
+        <description>If the policy form state status is approved, require the state approval date if empty UNLESS dependent approval exists.</description>
+        <errorConditionFormula>((ISPICKVAL(Filing_Status__c,&quot;Approved&quot;)) 
+
+&amp;&amp;  (ISNULL(State_Approval_Date__c )) &amp;&amp; (NOT (ISPICKVAL(  Filing_Strategy__c , &quot;Compact Dependent&quot; )) || (ISPICKVAL(  Filing_Strategy__c , &quot;Group Dependent&quot; ))))</errorConditionFormula>
+        <errorDisplayField>State_Approval_Date__c</errorDisplayField>
+        <errorMessage>To change the Status to Approved for individual filing state or situs/compact filing states, enter the State Approval Date first.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Withdrawn_Date_Required</fullName>
+        <active>true</active>
+        <description>If Withdrawn status is entered manually, require withdrawn date</description>
+        <errorConditionFormula>ISPICKVAL(Filing_Status__c, &quot;Withdrawn&quot;) &amp;&amp;  ISBLANK( Filing_Withdrawn_Date__c ) &amp;&amp;  ( Number_of_Objections__c  &gt; 0)&amp;&amp; (Filing_Objection__r.Will_Not_Be_Responding__c = TRUE)</errorConditionFormula>
+        <errorDisplayField>Filing_Withdrawn_Date__c</errorDisplayField>
+        <errorMessage>Please enter a Filing Withdrawn Date in order to change the filing status to &quot;Withdrawn&quot;.</errorMessage>
+    </validationRules>
+</CustomObject>

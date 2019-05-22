@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Enhancement Idea</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Enhancement Ideas</value>
+    </caseValues>
+    <fields>
+        <help><!-- What category best aligns with your request? If &quot;Other&quot; is chosen, please enter a word that describes the area/object/feature within Salesforce that relates to your request. --></help>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Accounts</masterLabel>
+            <translation><!-- Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Activities</masterLabel>
+            <translation><!-- Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Review</masterLabel>
+            <translation><!-- Ad Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AgentIDs</masterLabel>
+            <translation><!-- AgentIDs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chatter</masterLabel>
+            <translation><!-- Chatter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacts</masterLabel>
+            <translation><!-- Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dashboards</masterLabel>
+            <translation><!-- Dashboards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emails</masterLabel>
+            <translation><!-- Emails --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estimates</masterLabel>
+            <translation><!-- Estimates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expenses</masterLabel>
+            <translation><!-- Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filings/Forms</masterLabel>
+            <translation><!-- Filings/Forms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrations</masterLabel>
+            <translation><!-- Integrations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Notifications</masterLabel>
+            <translation><!-- Notifications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products</masterLabel>
+            <translation><!-- Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Projects</masterLabel>
+            <translation><!-- Projects --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reports</masterLabel>
+            <translation><!-- Reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subprojects</masterLabel>
+            <translation><!-- Subprojects --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Closed Date --></label>
+        <name>Closed_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Explain your request in as much detail as possible. If related to a current issue, please provide steps to replicate the issue in order for us to address your request. --></help>
+        <label><!-- Enhancement Idea Detail --></label>
+        <name>Enhancement_Idea_Detail__c</name>
+    </fields>
+    <fields>
+        <help><!-- Briefly define your request in a few words. --></help>
+        <label><!-- Enhancement Idea --></label>
+        <name>Enhancement_Idea__c</name>
+    </fields>
+    <fields>
+        <help><!-- If the category &quot;Other&quot; was selected above, then this field is required to be filled. This helps us to understand other or new category values should be included in the main Category dropdown field. --></help>
+        <label><!-- Other Category --></label>
+        <name>Other_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urgent</masterLabel>
+            <translation><!-- Urgent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Enhancement Ideas --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The current status of the request. --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escalated</masterLabel>
+            <translation><!-- Escalated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Who submitted this enhancement request? At times this may be the same user as the &quot;Creator&quot; of the request. --></help>
+        <label><!-- Submitter --></label>
+        <name>Submitter__c</name>
+        <relationshipLabel><!-- Enhancement Ideas --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Subproject --></label>
+        <name>Subproject__c</name>
+        <relationshipLabel><!-- Enhancement Ideas --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Admin Enhancement Ideas Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Enhancement Ideas Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter a category in the &quot;Other Category&quot; field that describes the category relating to your request. This helps us add new values to &quot;Category&quot; from which you can select in the future. --></errorMessage>
+        <name>Other_Requires_Other_Category</name>
+    </validationRules>
+</CustomObjectTranslation>

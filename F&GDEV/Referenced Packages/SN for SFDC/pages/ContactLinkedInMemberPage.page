@@ -1,0 +1,42 @@
+<apex:page StandardController="Contact" showHeader="false" standardStylesheets="false" sidebar="false" extensions="LID.LinkedInWidgetController">
+    <body>
+        <!--
+        <div id="sn-widget-support" style="background-color:#FF0000;color:#FFFFFF;font-weight:bold;font-size:16px;font-family:Helvetica,sans-serif;width:100%;padding:5px;text-align:center">
+        Your version of Sales Navigator for Salesforce will no longer be supported effective 7/31. To install the new version, please ask your Salesforce admin to visit <a href="https://appexchange.salesforce.com/listingDetail?listingId=a0N3A00000EnfsaUAB" style="font-color:#FFFFFF">AppExchange</a> for the latest version. 
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.4/js.cookie.min.js"></script>
+        <script type="text/javascript">
+            var cookieName = 'snWidgetSupportSeenTest10';
+            var snWidgetSupportSeenCookie = Cookies.get(cookieName);
+            if( typeof snWidgetSupportSeenCookie === 'undefined' ) {
+                Cookies.set(cookieName, 'value', { expires: 1 });
+            } else {
+                document.getElementById('sn-widget-support').style.display = 'none';
+            }
+        </script>
+        -->
+
+        <!--  Includes the linkedin callback action scripts
+        <c:LinkedInJSComponent ObjectType="Contact" SalesforceRecordId="{!Contact.Id}"/>
+        -->
+    
+        <!--  Includes the linkedin widgets
+        <c:LinkedInIframeMemberComponent MemberToken="{!Contact.LinkedIn_Member_Token__c}"  
+            FirstName="{!Contact.FirstName}" 
+            LastName="{!Contact.LastName}" 
+            EmailAddress="{!Contact.Email}" 
+            CompanyName="{!Contact.Account.Name}" 
+            Title="{!Contact.Title}" 
+            ObjectType="Contact" 
+            InstanceURL="{!$Api.Partner_Server_URL_220}" 
+            SessionId="{!UserSessionId}" 
+            SalesforceRecordId="{!Contact.Id}" 
+            UserLoginId="{!$User.Username}" 
+            UserLocale="{!UserLocale}"/>
+        -->
+        
+        <a href="https://www.linkedin.com/help/linkedin/answer/50318?query=widget" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/whodat-aws/404.png" width="1049" height="574" border="0"></img></a>
+        
+        <img width="0" height="0" src="https://www.linkedin.com/sales/widget/contract/track?orgId={!JSENCODE($Organization.Id)}"></img>
+    </body>
+</apex:page>

@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="statepolicymap" type="Object" />
+    <aura:attribute name="stateCode" type="string"/>
+    <aura:attribute name="policyId" type="string"/>
+    <aura:attribute name="imgName" type="String"/>
+    <aura:attribute name="statusMsg" type="String"/>
+    <aura:attribute name="isdefined" type="boolean" default="false"/>
+     <aura:attribute name="tooltipStatus" type="boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    
+    <!-- ====== Display tooltip ====== -->
+    <center>
+        <div class="tooltip">
+            <img src="{!'/resource/1412001594000/fgl_icons/'+v.imgName+'.png'}" width="20" height="20"></img>
+            <span class="tooltiptext"><div class="slds-popover slds-popover--tooltip toggle" role="tooltip" id="help" style="background:#fff;" aura:id="tooltip">
+                <div class="slds-popover__body" style="color:#000!important;"> Status : {!v.statusMsg}</div>
+                </div> 
+            </span>
+        </div>
+    </center>
+    <!-- ====== Display tooltip ====== --> 
+</aura:component>

@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <inlineHelpText>If blank, find and/or enter the name of the person to which this task is related.</inlineHelpText>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>Approval</fullName>
+        <active>true</active>
+        <label>Approval</label>
+        <picklistValues>
+            <picklist>Call_Outcome__c</picklist>
+            <values>
+                <fullName>Contacted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Left Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Illustration Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Policy_Type__c</picklist>
+            <values>
+                <fullName>Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>BRD Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Concept Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feasibility Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Policy Form Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Plan Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Results Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellanous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>General</fullName>
+        <active>true</active>
+        <label>General</label>
+        <picklistValues>
+            <picklist>Call_Outcome__c</picklist>
+            <values>
+                <fullName>Contacted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Left Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Illustration Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Policy_Type__c</picklist>
+            <values>
+                <fullName>Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Calculator Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checking Tool Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commission %E2%80%93 Update External System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commission Matrix updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Summary Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create BRD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Commission Matrix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Plan Code</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Policy Form%28s%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Test Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Work Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execute Test %26 Results</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiate Policy Print Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan Code Update External System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Propose New Plan Codes%2FPlan Code Options</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Publish new Plan Codes%2FPlan Code Options %28Acctg%2C Actuarial%2C IT%2C Rptg %26 CCL via PD database%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule Project Kickoff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submit First Estimate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update IPad App</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Illustration Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Marketing Materials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Product Notebook</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inbound Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Miscellanous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>PD_Ops_Task_Layout</fullName>
+        <active>true</active>
+        <label>PD Ops Task Layout</label>
+        <picklistValues>
+            <picklist>Call_Outcome__c</picklist>
+            <values>
+                <fullName>Contacted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Left Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Illustration Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Information</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Materials</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Policy_Type__c</picklist>
+            <values>
+                <fullName>Annuity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Life</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>BRD Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Calculator Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Checking Tool Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commission %E2%80%93 Update External System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commission Matrix updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Concept Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contract Summary Updates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create BRD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Commission Matrix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Plan Code</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Policy Form%28s%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Test Plan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Create Work Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enter Subject Here</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Execute Test %26 Results</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feasibility Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Initiate Policy Print Process</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Plan Code Update External System</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Policy Form Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Propose New Plan Codes%2FPlan Code Options</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Publish new Plan Codes%2FPlan Code Options %28Acctg%2C Actuarial%2C IT%2C Rptg %26 CCL via PD database%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schedule Project Kickoff</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submit First Estimate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Plan Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Results Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update IPad App</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Illustration Software</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Marketing Materials</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update Product Notebook</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Miscellanous</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Call_Outcome_Required_if_Type_is_Call</fullName>
+        <active>true</active>
+        <description>The call outcome is required if the type is a call.</description>
+        <errorConditionFormula>((ISPICKVAL(Type, &quot;Outbound Call&quot;))|| (ISPICKVAL(Type, &quot;Inbound Call&quot;))) &amp;&amp;  (ISBLANK (TEXT(Call_Outcome__c )))</errorConditionFormula>
+        <errorDisplayField>Call_Outcome__c</errorDisplayField>
+        <errorMessage>Since the type of activity is Call, choose a value for Call Outcome.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Ensure_Notes_Are_Entered</fullName>
+        <active>false</active>
+        <description>Notes must be entered (not N/A) in tasks.</description>
+        <errorConditionFormula>ISNEW() &amp;&amp; IsBlank( Notes__c )</errorConditionFormula>
+        <errorDisplayField>Notes__c</errorDisplayField>
+        <errorMessage>Notes must be completed and not contain solely &quot;N/A&quot;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Ensure_Notes_Are_Entered2</fullName>
+        <active>false</active>
+        <description>Notes must be entered (not N/A) in tasks.</description>
+        <errorConditionFormula>ISNEW() &amp;&amp; IsBlank( Notes__c )</errorConditionFormula>
+        <errorDisplayField>Notes__c</errorDisplayField>
+        <errorMessage>Notes must be completed and not contain solely &quot;N/A&quot;.</errorMessage>
+    </validationRules>
+</CustomObject>

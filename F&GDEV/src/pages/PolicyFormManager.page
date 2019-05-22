@@ -1,0 +1,803 @@
+<apex:page controller="CTRL_PolicyFormManager" sidebar="true" showHeader="true">
+        
+        <apex:sectionHeader title="Manage Project Filings" subtitle="Project Product and Policy Updates">
+            <apex:pageBlock title="Mass Update Grid" mode="detail" >
+
+                <html ng-app="policyFormManager" lang="en">
+
+                    <head>
+                        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+
+                        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+                        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular.min.js"></script>
+                        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular-route.js"></script>
+                        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+                        <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>  
+
+                        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script> 
+
+                        <script type="text/javascript">
+                            var app = angular.module('policyFormManager', ['ngRoute', 'ui.bootstrap', 'ui.utils']);
+
+                            app.config(['$routeProvider', function($routeProvider){       
+                                $routeProvider.
+                                    when('/', {
+                                        templateUrl: '/apex/PolicyFormGrid',
+                                        controller: 'Ctrl_PolicyFormGrid',
+                                        resolve: {
+                                          delay: function($q, $timeout) {
+                                            var delay = $q.defer();
+                                            $timeout(delay.resolve, 1000);
+                                            return delay.promise;
+                                          }
+                                        }
+                                    })
+                                    .when('/Project/:projectId', {
+                                        templateUrl: '/apex/PolicyFormGrid',
+                                        controller: 'Ctrl_PolicyFormGrid'
+                                    })
+                                    .when('/Policy/:policyId', {
+                                        templateUrl: '/apex/PolicyFormGrid',
+                                        controller: 'Ctrl_PolicyFormGrid'
+                                    })
+                                    .otherwise({
+                                        redirectTo: '/'
+                                    });
+                            }]);
+
+                            app.controller('Ctrl_PolicyFormGrid', ['$scope', '$route', '$routeParams', '$location', '$window', '$modal', 'PolicyFormService', '$filter', function($scope, $route, $routeParams, $location, $window, $modal, PolicyFormService, $filter)
+                            {
+                                $scope.projectId = $routeParams.projectId;
+                                $scope.policyId = $routeParams.policyId;
+
+                                $scope.policies = [];
+                                $scope.statepolicymap = {};
+                                $scope.statepolicyselectcount = 0;
+
+                                $scope.products = [];
+                                $scope.productpolicies = [];
+
+                                $scope.prodstatepolicystatestatmap = {};
+                                $scope.prodstatepolicyeditcount = 0;
+
+                                $scope.policyidlist = [];
+
+                                $scope.policycolumns = [];
+                                $scope.policycolselcount = 0;
+                                $scope.policyrows = [];
+
+                                $scope.prodcolumns = [];
+
+                                //  Main Grid State Row Paging
+                                $scope.currentPage = 1;
+                                $scope.itemsPerPage = 17;
+                                $scope.maxPagingSize = 4;
+
+                                $scope.paged = {};
+                                
+                                //  Retrieve List of States
+                                var retvalStates = PolicyFormService.getStates();
+                                retvalStates.then( function(retvalStates) {
+                                    $scope.states = $filter('orderBy')(retvalStates, 'Name', false);
+
+                                    $scope.noOfPages = $scope.states.length / $scope.itemsPerPage;
+                                    $scope.setCurrentPage($scope.currentPage);
+                                });
+
+                                $scope.setCurrentPage = function(currentPage){
+                                    var begin = (currentPage - 1) * $scope.itemsPerPage;
+                                    var end = begin + $scope.itemsPerPage;
+
+                                      $scope.paged = {
+                                        states: $scope.states.slice(begin, end)
+                                      }
+                                }
+
+                                if($scope.projectId != null){
+                                    var promise = PolicyFormService.getProducts($scope.projectId);
+                                    promise.then( function(retVal) {
+                                        $scope.message = retVal.sMessage;
+                                        $scope.iserror = retVal.bIsError;
+
+                                        $scope.project = retVal.oProject;
+                                        $scope.products = retVal.oProducts;
+                                        $scope.prodstatepolicystatestatmap = retVal.oProdStatePolicyStateStatMap;
+                                        $scope.policyidlist = retVal.oPolicyIdSet;
+
+                                        if($scope.policyidlist.length>0){
+                                            PolicyFormService.getPolicies($scope.policyidlist).then(function(policyret) {
+                                                $scope.message = policyret.sMessage;
+                                                $scope.iserror = policyret.bIsError;
+
+                                                $scope.policies = policyret.oPolicyList;
+                                                $scope.statepolicymap = policyret.oStatePolicyMap;
+                                                $scope.policyUpdateAccess = policyret.bPolicyUpdateAccess;
+
+                                                //  create product policies array
+                                                $scope.productpolicies = [];
+                                                if($scope.products.length>0){
+                                                    for(i=0;i<$scope.products.length;i++){
+                                                        for(j=0;j<$scope.policies.length;j++){
+                                                            $scope.productpolicies.push({ProductId:$scope.products[i].Id, PolicyId: $scope.policies[j].Id, PolicyName: $scope.policies[j].Name});
+                                                        }
+                                                    }
+                                                }                                               
+                                            });
+                                        }
+                                    });
+                                }else if($scope.policyId != null){
+                                    $scope.policyidlist = [$scope.policyId];
+
+                                    var promise = PolicyFormService.getPolicies($scope.policyidlist);
+                                    promise.then( function(retVal) {
+                                        $scope.message = retVal.sMessage;
+                                        $scope.iserror = retVal.bIsError;
+
+                                        $scope.policies = retVal.oPolicyList;
+                                        $scope.statepolicymap = retVal.oStatePolicyMap;
+                                    });
+                                }else{
+                                    $scope.message = 'No Id Provided!';
+                                    $scope.iserror = true;
+                                }
+
+                                var Ctrl_PolicySelector = function ($scope, $modalInstance, projectid) {
+                                    $scope.policyResults = [];
+                                    $scope.searchPolicyString = '';
+                                    $scope.bselectall = false;
+                                    $scope.projectid = projectid;
+
+                                    $scope.currentPage = 1;
+                                    $scope.itemsPerPage = 10;
+                                    $scope.maxSize = 5;
+
+                                    $scope.paged = {};
+
+                                    $scope.noOfPages = $scope.policyResults.length / $scope.itemsPerPage;
+
+                                    $scope.setCurrentPage = function(currentPage){
+                                        var begin = (currentPage - 1) * $scope.itemsPerPage;
+                                        var end = begin + $scope.itemsPerPage;
+
+                                          $scope.paged = {
+                                            policyResults: $scope.policyResults.slice(begin, end)
+                                          }
+                                    }
+
+                                    $scope.searchPolicies = function(searchPolicyString){
+                                        var promise = PolicyFormService.searchPolicies(searchPolicyString);
+                                        
+                                        promise.then( function(retVal) {
+                                            $scope.policyResults = retVal.oPolicySearchResults;
+                                            
+                                            var begin = ($scope.currentPage - 1) * $scope.itemsPerPage;
+                                            var end = begin + $scope.itemsPerPage;
+
+                                            $scope.paged = {
+                                                policyResults: $scope.policyResults.slice(begin, end)
+                                            }
+
+                                        });
+                                    }
+
+                                    $scope.selectPolicies = function () {
+                                        var policyids = [];
+                                        if($scope.policyResults != null){
+                                            for(i=0;i<$scope.policyResults.length;i++){
+                                                var policyresult = $scope.policyResults[i];
+                                                if(policyresult.bSelected){
+                                                    policyids.push(policyresult.Id);
+                                                }
+                                            }
+                                        }
+console.log('@@policyids: ' + policyids)
+                                        PolicyFormService.createPolicyFormProject($scope.projectid, policyids).then(
+                                            function(retVal){
+console.log('@@policyids: ' + policyids)
+                                                $modalInstance.close(policyids);
+                                            },
+                                            function(retVal){
+                                                console.log(retVal);
+                                            }
+                                        )
+                                    };
+
+                                    $scope.cancel = function () {
+                                        $modalInstance.dismiss('cancel');
+                                    };
+
+                                    $scope.toggleallresults = function(){
+                                        $scope.bselectall = !$scope.bselectall;
+                                        for(i=0;i<$scope.policyResults.length;i++){
+                                            $scope.policyResults[i].bSelected = $scope.bselectall;
+                                        }
+                                    }
+                                };
+
+                                $scope.addPolicies = function () {
+                                    var modalInstance = $modal.open({
+                                      templateUrl: 'AddPolicyModal.html',
+                                      controller: Ctrl_PolicySelector,
+                                      size: 'md',
+                                      resolve: {
+                                          projectid: function() {
+                                            return $scope.projectId;
+                                        }
+                                      }
+                                    });
+
+                                    modalInstance.result.then(function (policyIds) {
+console.log('@@policyIds: ' + policyIds);
+                                        var promise = PolicyFormService.getPolicies(policyIds);
+                                        promise.then( function(retVal) {
+                                            $scope.message = retVal.sMessage;
+                                            $scope.iserror = retVal.bIsError;
+
+                                            $scope.policies = retVal.oPolicyList;
+                                            $scope.statepolicymap = retVal.oStatePolicyMap;
+
+                                            //  create product policies array
+                                            $scope.productpolicies = [];
+                                            if($scope.products.length>0){
+                                                for(i=0;i<$scope.products.length;i++){
+                                                    for(j=0;j<$scope.policies.length;j++){
+                                                        $scope.productpolicies.push({ProductId:$scope.products[i].Id, PolicyId: $scope.policies[j].Id, PolicyName: $scope.policies[j].Name});
+                                                    }
+                                                }
+                                            }
+                                        });
+
+                                    }, function () {
+                                      console.log('Modal closed');
+                                    });
+                                };
+
+                                var Ctrl_EditFilingStatuses = function ($scope, $modalInstance, statepolicymap) {
+                                    $scope.policystatusaggr = {};
+
+                                    PolicyFormService.getPolicyFormStateAggr(statepolicymap).then( function(retVal) {
+                                        $scope.message = retVal.sMessage;
+                                        $scope.iserror = retVal.bIsError;
+
+                                        $scope.policystatusaggr = retVal.oPolicyFormStateAggr;
+
+                                        for(i=0;i<$scope.policystatusaggr.Fields.length;i++){
+                                            var field = $scope.policystatusaggr.Fields[i];
+                                            if($scope.policystatusaggr.FieldTypeMap[field] == 'DATE'){
+                                                var newDt = new Date($scope.policystatusaggr.FieldValueMap[field]);
+                                                if(newDt instanceof Date && !isNaN(newDt.valueOf())){
+                                                    var dateStr = ('0' + newDt.getUTCDate());
+                                                    var monthStr = ('0' + (newDt.getUTCMonth()+1));
+                                                    dateStr = dateStr.substring(dateStr.length - 2, dateStr.length);
+                                                    monthStr = monthStr.substring(monthStr.length - 2, monthStr.length);
+                                                    
+                                                    var yearStr = newDt.getUTCFullYear();
+                                                    
+                                                    console.log('@@dateStr:' + dateStr);
+                                                    console.log('@@monthStr:' + monthStr);
+                                                    console.log('@@yearStr:' + yearStr);
+                                                    
+                                                    var fullDtStr = monthStr + dateStr + yearStr;
+                                                    console.log('@@fullDtStr: ' + fullDtStr);
+                                                    $scope.policystatusaggr.FieldValueMap[field] = fullDtStr;
+                                                }
+                                            }
+                                            
+                                        }
+                                    });
+
+                                    $scope.override = function(field){
+                                        var message = 'The associated field has multiple values present.  Editing the field will cause all associated records to be overwritten.  Click OK to continue.';
+                                        //  var evalUndo = policystatusaggr.isEditableMap[field] && policystatusaggr.isEditedMap[field];
+                                        var enabled = true;
+
+                                        if($scope.policystatusaggr.isEditableMap[field]){
+                                            message = 'Click cancel to undo current field changes.  Click ok to continue editing.';
+                                        }
+
+                                        enabled = confirm(message);
+
+                                        //  Enable/Disable Field Based on User Selection
+                                        $scope.policystatusaggr.isEditableMap[field] = enabled;
+
+                                        //  Reverse Editable and Edited Values If Successfully Disabled
+                                        if($scope.policystatusaggr.isEditedMap[field] && !enabled){
+                                            $scope.policystatusaggr.FieldValueMap[field] = $scope.policystatusaggr.FieldOrigValueMap[field];
+                                            $scope.policystatusaggr.isEditedMap[field] = false;
+                                        }
+
+                                    }
+
+                                    $scope.updateFilings = function () {
+                                        $modalInstance.close($scope.policystatusaggr);
+                                    };
+
+                                    $scope.cancel = function () {
+                                        $modalInstance.dismiss('cancel');
+                                    };
+                                };
+
+                                $scope.editFilingStatuses = function () {
+
+                                    var modalInstance = $modal.open({
+
+                                        templateUrl: 'EditFilingStatuses.html',
+                                        controller: Ctrl_EditFilingStatuses,
+                                        size: 'md',
+                                        resolve: {
+                                            statepolicymap: function(){
+                                                return $scope.statepolicymap;
+                                            } 
+
+                                        }
+                                    });
+
+                                    modalInstance.result.then(function (policystatusaggr) {
+                                        PolicyFormService.saveStatePolicyStatus(policystatusaggr).then( function(retVal) {
+                                            $scope.message = retVal.sMessage;
+                                            $scope.iserror = retVal.bIsError;
+                                            
+                                            if(!($scope.iserror)){
+                                                
+                                                console.log('policyidlist: ' + $scope.policyidlist);
+                                                
+                                                PolicyFormService.getPolicies($scope.policyidlist).then(function(policyret) {
+                                                    $scope.message = policyret.sMessage;
+                                                    $scope.iserror = policyret.bIsError;
+                                                    
+                                                    $scope.policies = policyret.oPolicyList;
+                                                    $scope.statepolicymap = policyret.oStatePolicyMap;
+                                                    
+                                                    $scope.statepolicyselectcount = 0;
+                                                });
+                                                
+                                            }
+                                            
+                                            $scope.policystatusaggr = {};
+                                            
+                                        });
+
+                                    }, function () {
+                                      console.log('Modal closed');
+                                    });
+                                };
+
+                                $scope.appendforms = function(){
+                                    PolicyFormService.getPolicies($scope.policyidlist).then( function(retVal) {
+                                        $scope.message = retVal.sMessage;
+                                        $scope.iserror = retVal.bIsError;
+
+                                        $scope.policies = retVal.oPolicyList;
+                                        $scope.statepolicymap = retVal.oStatePolicyMap;
+
+                                        //  create product policies array
+                                        if($scope.products.length>0){
+                                            for(i=0;i<$scope.products.length;i++){
+                                                for(j=0;j<$scope.policies.length;j++){
+                                                    $scope.productpolicies.push($scope.policies[j].Name);
+                                                }
+                                            }
+                                        }
+
+                                    });
+
+                                }
+
+                                $scope.removePolicyForms = function () {
+                                    var policyids = [];
+                                    for(i=0; i<$scope.policycolumns.length; i++){
+                                        var policyid;
+
+                                        if($scope.policycolumns[i] == true){
+                                            policyids.push(Object.keys($scope.policycolumns)[i]);
+                                        }
+
+                                    }
+
+                                    PolicyFormService.deleteProjectPolicy($scope.projectid, policyids).then(
+                                        function(retVal){
+                                            $modalInstance.close(policyids);
+                                        },
+                                        function(retVal){
+                                            console.log(retVal);
+                                        }
+                                    )
+                                };
+
+                                $scope.selectCol = function(policyid){
+                                    if(!(policyid in $scope.policycolumns)){
+                                        $scope.policycolumns[policyid]  = false;
+                                    }
+                                    $scope.policycolumns[policyid]  = !$scope.policycolumns[policyid];
+                                    
+                                    for(i=0; i<$scope.states.length; i++){
+                                        var statecode = $scope.states[i].StateCode__c;
+                                        var isSelected = $scope.policycolumns[policyid];
+                                        $scope.select(statecode, policyid, isSelected);
+
+                                        $scope.policycolselcount += (isSelected ? 1 : -1);
+                                    }
+                                }
+
+                                $scope.selectRow = function(statecode){
+                                    if(!(statecode in $scope.policyrows)){
+                                        $scope.policyrows[statecode]    = false;
+                                    }
+                                    $scope.policyrows[statecode] = !$scope.policyrows[statecode];
+
+                                    for(i=0; i<$scope.policies.length; i++){
+                                        var policyid = $scope.policies[i].Id;
+                                        $scope.select(statecode, policyid, $scope.policyrows[statecode]);
+                                    }
+                                }
+
+                                $scope.select = function(state, policyid, currSelectVal){
+                                     console.log('before statepolicymap ',$scope.statepolicymap);
+                                    if(!(state in $scope.statepolicymap)){
+                                        $scope.statepolicymap[state] = {};
+                                    }
+
+                                    if(!(policyid in $scope.statepolicymap[state])){
+                                        //  $scope.statepolicymap[state][policyid]={Id:null, FilingStatusId:null, FilingStatusAvailId:null, Name:null, FormName:null, UISelected:false};
+                                        $scope.statepolicymap[state][policyid]={Id:null, FilingStatusId:null, FilingStatusAvailId:null, Name:null, FormName:null, UISelected:false, FilingStatusObj:{}};
+                                    }
+
+                                    if(currSelectVal == undefined){
+                                        currSelectVal = !$scope.statepolicymap[state][policyid].UISelected;
+                                    }
+
+                                    $scope.statepolicymap[state][policyid].UISelected = currSelectVal;
+                                    
+                                    //  Tally Selected Fields
+                                    var isSelected = $scope.statepolicymap[state][policyid].UISelected;
+                                    $scope.statepolicyselectcount += (isSelected ? 1 : -1);
+                                     console.log('after statepolicymap ',$scope.statepolicymap);
+                                };
+
+                                $scope.getStatus = function(state, policyid){
+                                    var status = null;
+
+                                    if(isPolicyStatCellDefined(state, policyid)){
+                                        status = $scope.statepolicymap[state][policyid].Status;
+                                    }
+
+                                    return status;                                  
+                                }
+
+                                $scope.getProdStateStatus = function(prodid, state, policyid){
+                                    var hasRelation = false;
+
+                                    if(isProdStatCellDefined(prodid, state, policyid)){
+                                        var stateavailid = Object.keys($scope.prodstatepolicystatestatmap[prodid][state])[0];
+                                        var prodstatestat = $scope.prodstatepolicystatestatmap[prodid][state][stateavailid].PolicytoProdStateStat[policyid];
+                                        //  if prodstatestatid exists and insertordelete is true, then releation to be removed (hasRelation--false), if insertordelete is false then relation untouched (hasRelation--true)
+                                        //  if prodstatestatid does not exists and insertordelete is true, then releation to be added (hasRelation--false), if insertordelete is false then relation does not exist (hasRelation--false)
+                                        hasRelation = ((prodstatestat.ProductStateStatusId == null && prodstatestat.InsertOrDelete) || 
+                                            (prodstatestat.ProductStateStatusId != null && !prodstatestat.InsertOrDelete));
+                                    }
+
+                                    return hasRelation;                                 
+                                }
+
+                                $scope.selProdCol = function(prodpolindex){
+                                    var prodid = $scope.productpolicies[prodpolindex].ProductId;
+                                    var policyid = $scope.productpolicies[prodpolindex].PolicyId;
+
+                                    if(!(prodid in $scope.prodcolumns)){
+                                        $scope.prodcolumns[prodid]  = {};
+                                    }
+                                    if(!(policyid in $scope.prodcolumns[prodid])){
+                                        $scope.prodcolumns[prodid][policyid] = false;
+                                    }
+
+                                    $scope.prodcolumns[prodid][policyid] = !$scope.prodcolumns[prodid][policyid];
+                                    var isSelected = $scope.prodcolumns[prodid][policyid];
+
+                                    for(i=0; i<$scope.states.length; i++){
+                                        var statecode = $scope.states[i].StateCode__c;
+                                        $scope.setProdStateStatus(prodid, statecode, policyid, isSelected);
+                                    }
+                                }
+
+                                $scope.setProdStateStatus = function(prodid, state, policyid, isselected){
+
+                                    //  Define Cell if it Does Not Exist (First ProdId to State Map, Then State to Policy Id Map, Then Policy to ProdStateStatusObject)
+                                    if(!(prodid in $scope.prodstatepolicystatestatmap)){
+                                        $scope.prodstatepolicystatestatmap[prodid] = {};
+                                    }
+
+                                    if(!(state in $scope.prodstatepolicystatestatmap[prodid])){
+                                        $scope.prodstatepolicystatestatmap[prodid][state] = {StateAvailId: null, PolicytoProdStateStat: {}};
+                                    }
+
+                                    var stateavailid = Object.keys($scope.prodstatepolicystatestatmap[prodid][state])[0];
+                                    if(!(policyid in $scope.prodstatepolicystatestatmap[prodid][state][stateavailid].PolicytoProdStateStat)){
+                                        //  Retrieve Filing Status Id If Available
+                                        var filingstatid;
+
+                                        if(isPolicyStatCellDefined(state, policyid)){
+                                            filingstatid = $scope.statepolicymap[state][policyid].FilingStatusId;
+                                        }
+
+                                        $scope.prodstatepolicystatestatmap[prodid][state][stateavailid].PolicytoProdStateStat[policyid] = 
+                                            {ProductStateStatusId: null, FilingStatusId: filingstatid, InsertOrDelete: false};
+
+                                    }
+
+                                    //  Toggle Value of Cell
+                                    var newInsertOrDel = !$scope.prodstatepolicystatestatmap[prodid][state][stateavailid].PolicytoProdStateStat[policyid].InsertOrDelete;
+                                    if(isselected != undefined){
+                                        newInsertOrDel = isselected;
+                                    }
+                                    $scope.prodstatepolicystatestatmap[prodid][state][stateavailid].PolicytoProdStateStat[policyid].InsertOrDelete = newInsertOrDel;
+
+                                    //  Tally Edit Fields
+                                    $scope.prodstatepolicyeditcount += (newInsertOrDel ? 1 : -1);
+
+                                    //  Capture Cell Edit
+                                    return $scope.getProdStateStatus(prodid, state, policyid);
+                                };
+
+                                $scope.saveProdStatePolicyStatus = function(){
+                                    var promise = PolicyFormService.saveProdStatePolicyStatus($scope.prodstatepolicystatestatmap);
+                                    promise.then( function(retVal) {
+                                        $scope.message = retVal.sMessage;
+                                        $scope.iserror = retVal.bIsError;
+
+                                        $scope.prodstatepolicyeditcount = 0;
+
+                                        
+                                        $scope.project = retVal.oProject;
+                                        $scope.products = retVal.oProducts;
+                                        $scope.prodstatepolicystatestatmap = retVal.oProdStatePolicyStateStatMap;
+                                        $scope.policyidlist = retVal.oPolicyIdSet;
+
+console.log('$scope.policyidlist:' + policyidlist);
+
+                                        if($scope.policyidlist.length>0){
+                                            PolicyFormService.getPolicies($scope.policyidlist).then(function(policyret) {
+                                                $scope.message = policyret.sMessage;
+                                                $scope.iserror = policyret.bIsError;
+
+                                                $scope.policies = policyret.oPolicyList;
+                                                $scope.statepolicymap = policyret.oStatePolicyMap;
+
+                                                //  create product policies array
+                                                $scope.productpolicies = [];
+                                                if($scope.products.length>0){
+                                                    for(i=0;i<$scope.products.length;i++){
+                                                        for(j=0;j<$scope.policies.length;j++){
+                                                            $scope.productpolicies.push({ProductId:$scope.products[i].Id, PolicyId: $scope.policies[j].Id, PolicyName: $scope.policies[j].Name});
+                                                        }
+                                                    }
+                                                }                                               
+                                            });
+                                        }
+                                    });                                 
+                                }
+
+                                $scope.isBgSet = function(state, policyid, evalstatus){
+                                    var uiselected = false;
+                                    var currstatus = null;
+
+                                    if(isPolicyStatCellDefined(state, policyid)){
+                                        uiselected = $scope.statepolicymap[state][policyid].UISelected;
+                                        currstatus = $scope.statepolicymap[state][policyid].Status;
+                                    }
+
+                                    return ((uiselected && evalstatus == 'Selected') || (!uiselected && (evalstatus==currstatus)));
+                                }
+
+                                $scope.getClassSelected = function(state, policyid){
+                                    var retClass = '';
+    
+                                    if(isPolicyStatCellDefined(state, policyid)){
+                                        if($scope.statepolicymap[state][policyid].UISelected){
+                                            retClass = 'selected';
+                                        }
+                                    }
+
+                                    return retClass;
+                                }
+
+                                isPolicyStatCellDefined = function(state, policyid){
+                                    var isdefined = false;
+
+                                    if((state in $scope.statepolicymap)){
+                                        isdefined = (policyid in $scope.statepolicymap[state]);
+                                    }
+
+                                    return isdefined;
+                                }
+
+                                isProdStatCellDefined = function(prodid, state, policyid){
+                                    var isdefined = false;
+
+                                    if(prodid in $scope.prodstatepolicystatestatmap){
+                                        if(state in $scope.prodstatepolicystatestatmap[prodid]){
+                                            var stateavailid = Object.keys($scope.prodstatepolicystatestatmap[prodid][state])[0];
+                                            isdefined = (policyid in $scope.prodstatepolicystatestatmap[prodid][state][stateavailid].PolicytoProdStateStat);
+                                        }
+                                    }
+
+                                    return isdefined;
+                                }
+
+
+                                $scope.getClassStatus = function(state, policyid){
+                                    var retClass = 'blank';
+    
+                                    if(isPolicyStatCellDefined(state, policyid)){
+                                        if($scope.statepolicymap[state][policyid].Status != undefined){
+                                            retClass = $scope.statepolicymap[state][policyid].Status.toLowerCase().replace(/ /g,'');
+                                        }
+                                    }
+
+                                    return retClass;
+                                }
+
+                                $scope.getStatusMessage = function(state, policyid){
+                                    var ret = '';
+    
+                                    if(isPolicyStatCellDefined(state, policyid)){
+                                        if($scope.statepolicymap[state][policyid].Status != undefined){
+                                            ret = $scope.statepolicymap[state][policyid].Status;
+                                            if($scope.statepolicymap[state][policyid].StatusDate != null){
+                                                ret += ' - ' + $scope.statepolicymap[state][policyid].StatusDate;
+                                            }
+                                        }else{
+                                            ret = 'Not Set';
+                                        }
+                                    }else{
+                                        ret = 'Not Set';
+                                    }
+
+                                    return ret;
+                                }
+/*
+                                $scope.getDivWidth = function(divName){
+                                    var tableWidth = ((screen.width * 0.80)/2);
+                                    var divWidth = {stateTable: tableWidth + 'px', productTable: tableWidth}
+
+                                    return divWidth[divName];
+                                }
+*/
+
+                            }]);
+
+                            app.service('PolicyFormService', function($rootScope, $q) {
+                                this.getProducts = function(projectId){
+                                    var deferred = $q.defer();
+
+                                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.getProducts}', projectId, function(retVal, e) {   
+                                        $rootScope.$apply(function() {
+                                            deferred.resolve(retVal);
+                                        });
+                                    }, {escape:true} );
+
+                                    return deferred.promise;
+                                };
+
+                                this.getPolicies = function(policyidlist){
+                                    var deferred = $q.defer();
+
+console.log('@@policyidlist: ' + policyidlist);
+
+                                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.getPolicies}', policyidlist, function(retVal, e) {   
+                                        $rootScope.$apply(function() {
+                                            deferred.resolve(retVal);
+                                        });
+                                    }, {escape:true} );
+
+                                    return deferred.promise;
+                                };
+
+                                this.getPolicyFormStateAggr = function(statepolicymap){
+                                    var deferred = $q.defer();
+									console.log('statepolicymap ',statepolicymap);
+                                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.getPolicyFormStateAggr}', statepolicymap, function(retVal, e) {   
+                                        $rootScope.$apply(function() {
+                                            deferred.resolve(retVal);
+                                        });
+                                    }, {escape:true} );
+
+                                    return deferred.promise;
+                                };
+
+                                this.getStates = function(){
+                                    var deferred = $q.defer();
+
+                                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.getStates}', function(retVal, e) {   
+                                        $rootScope.$apply(function() {
+                                            deferred.resolve(retVal);
+                                        });
+                                    }, {escape:true} );
+
+                                    return deferred.promise;
+                                };
+
+                                this.getFilingStatuses = function(){
+                                    var deferred = $q.defer();
+
+                                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.getFilingStatuses}', function(retVal, e) {   
+                                        $rootScope.$apply(function() {
+                                            deferred.resolve(retVal);
+                                        });
+                                    }, {escape:true} );
+
+                                    return deferred.promise;
+                                };
+
+                                this.searchPolicies = function(searchString){
+                                    var deferred = $q.defer();
+
+                                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.searchPolicies}', searchString, function(retVal, e) {   
+                                        $rootScope.$apply(function() {
+                                            deferred.resolve(retVal);
+                                        });
+                                    }, {escape:true} );
+
+                                    return deferred.promise;
+                                }                           
+
+                                this.createPolicyFormProject = function(projectId, policyIds){
+                                    var deferred = $q.defer();
+
+                                   Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.saveProjectPolicy}', projectId, policyIds, function(retVal, e) {   
+                                       $rootScope.$apply(function() {
+                                           deferred.resolve(retVal);
+                                       });
+                                   }, {escape:true} );
+
+                                   return deferred.promise;
+                               }
+
+                                this.deletePolicyFormProject = function(projectId, policyIds){
+                                    var deferred = $q.defer();
+/*
+                                   Visualforce.remoting.Manager.invokeAction('$RemoteAction.Ctrl_PolicyFormManager.deleteProjectPolicy', projectId, policyIds, function(retVal, e) {   
+                                       $rootScope.$apply(function() {
+                                           deferred.resolve(retVal);
+                                       });
+                                   }, {escape:true} );
+*/
+                                   return deferred.promise;
+                               }
+
+                                this.saveStatePolicyStatus = function(policystatusaggr){
+                                    var deferred = $q.defer();
+
+                                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.saveStatePolicyStatus}', policystatusaggr, function(retVal, e) {   
+                                        $rootScope.$apply(function() {
+                                            deferred.resolve(retVal);
+                                        });
+                                    }, {escape:true} );
+
+                                    return deferred.promise;
+                                }                           
+
+                                this.saveProdStatePolicyStatus = function(statestatprodmap){
+                                    var deferred = $q.defer();
+
+                                    Visualforce.remoting.Manager.invokeAction('{!$RemoteAction.CTRL_PolicyFormManager.saveProdStatePolicyStatus}', statestatprodmap, function(retVal, e) {   
+                                        $rootScope.$apply(function() {
+                                            deferred.resolve(retVal);
+                                        });
+                                    }, {escape:true} );
+
+                                    return deferred.promise;
+                                }                           
+
+                            });
+
+                        </script>
+                    </head>
+                    <body>
+                        <div class="ng-view"></div>
+                        <hr/>
+                    </body>
+                </html>
+            </apex:pageBlock>
+        </apex:sectionHeader>
+</apex:page>

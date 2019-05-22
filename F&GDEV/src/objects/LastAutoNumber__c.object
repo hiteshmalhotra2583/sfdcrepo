@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Keep track of last number in auto-number sequence.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Last_Number_Map__c</fullName>
+        <defaultValue>&quot;{}&quot;</defaultValue>
+        <description>Field which keeps track of auto-numbers and their prefixes in a JSON map format.  Numbers without prefixes have a default map.</description>
+        <externalId>false</externalId>
+        <label>Last Number Map</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Last Auto Number</label>
+    <visibility>Public</visibility>
+</CustomObject>

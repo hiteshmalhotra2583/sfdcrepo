@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This presentation explains how to max fund a life insurance contract given the TAMRA, GSP, and GLP limitations.</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Max Funding a Life Contract - The Doug Andrew Way</name>
+    <public>false</public>
+</Document>

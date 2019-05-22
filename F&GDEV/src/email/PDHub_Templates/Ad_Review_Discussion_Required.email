@@ -1,0 +1,1 @@
+{!Ad_Review_Detail__c.Reviewer__c} has requested discussion on {!Ad_Review_Detail__c.Ad_Review_Number__c} - {!Ad_Review_Detail__c.Form_Description__c}

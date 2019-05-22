@@ -1,0 +1,103 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="CTRL_CreateProductAssociation" >
+    <!--Aura Attribute declaration starts-->
+    <aura:attribute name="lstSelectedProducts" type="Product_Specification__c[]" default="[]" />
+    <aura:attribute name="lstSelectedForms" type="Policy_Form_Detail__c[]" default="[]" />
+    <aura:attribute name="lstStates" type="Object[]" default="[]" access="global" />
+    <aura:attribute name="lstStatesAll" type="Object[]" default="[]" access="global" />
+    <aura:attribute name="lstSelectedStates" type="Object[]" default="[]" access="global" />
+    <aura:attribute name="resultString" type="Object[]" default="[]" />
+    <aura:attribute name="resultStringErrors" type="Object[]" default="[]" />
+    <aura:attribute name="resultCols" type="List" />
+    <aura:attribute name="productCols" type="List" />
+    <aura:attribute name="formCols" type="List" />
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    <aura:attribute name="basePolicyFormSelectedId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:method name="parentMethod" action="{!c.basePolicyFormSelection}" access="PUBLIC" >
+        <aura:attribute name="selectedRecords" type="Object[]" />
+    </aura:method>
+    <!--<aura:handler name="change" value="{!v.lstSelectedForms}" action="{!c.basePolicyFormSelection}" />-->
+    <!--Aura Attribute declaration stops-->
+    <!--Spinner-->
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner alternativeText="Loading" />
+    </aura:if>
+    
+   
+    
+    <!--Search Grid start-->
+    <lightning:card title=''>
+        
+        <div class="slds-grid slds-wrap slds-gutters slds-m-left_medium">
+            <div class="slds-col slds-size_5-of-12">
+            </div>
+            <div class="slds-col slds-size_7-of-12"> 
+                  
+                <lightning:button variant="brand" label="Save" onclick="{!c.handleSubmit }" disabled="{! empty(v.lstSelectedStates) || empty(v.lstSelectedProducts) || empty(v.lstSelectedForms) }"/>
+                <lightning:button variant="brand" label="Clear All" onclick="{!c.clearForm }" disabled="{! empty(v.lstSelectedStates) || empty(v.lstSelectedProducts) || empty(v.lstSelectedForms) }"/>
+                <lightning:button variant="brand" label="Close Tool" onclick="{!c.goBack}" />
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap slds-gutters slds-m-left_medium">
+            <!--Product search section-->
+            
+            
+            <div class="slds-col slds-size_3-of-12">
+                <lightning:card title="Search Products">
+                    <c:customSearchByNameComponent  objectToSearchName = "Product_Specification__c" selectedRecordsResults = "{!v.lstSelectedProducts}"
+                                                   columns = "{!v.productCols}" aura:Id="prodSearch" resultsHeading="Selected Products" 
+                                                   removeAllText = "Products"/>
+                </lightning:card>
+            </div>
+            
+            <!--Policy form section-->
+            <div class="slds-col slds-size_5-of-12">
+                <lightning:card title="Search Policy Forms">
+                    <c:customSearchByNameComponent  objectToSearchName = "Policy_Form_Detail__c" selectedRecordsResults = "{!v.lstSelectedForms}"
+                                                   moreFieldsToQuery = "Base_Policy_Form__c" columns="{!v.formCols}" aura:Id="policyFormSearch" setValueExplicit="true" resultsHeading="Selected Policy Forms"
+                                                   parent="{! this }" removeAllText="Policy Forms" />
+                </lightning:card>
+            </div>
+            <!--Product search section-->
+            <div class="slds-col slds-size_3-of-12">
+                <lightning:card title="Select states"> 
+                    <ui:inputCheckbox aura:id="selectAll" label="Select All States" change="{!c.selectAll}"/>
+                    <lightning:dualListbox aura:id="stateList"
+                                           name="States"
+                                           sourceLabel="Available States" 
+                                           selectedLabel="Selected States" 
+                                           options="{!v.lstStates }"
+                                           value="{!v.lstSelectedStates}"
+                                           />
+                </lightning:card>
+            </div>
+            
+            <aura:if isTrue="{!not(empty(v.resultString))}" >
+                <div class="slds-col slds-size_1-of-1">
+                    <div class="slds-text-heading_small slds-m-top_medium slds-text-title_bold slds-text-color_success">
+                        Successes
+                    </div>
+                    <div class="slds-text-heading_small slds-m-top_medium ">
+                        <lightning:datatable  data="{! v.resultString }" columns="{!v.resultCols}" keyField="result" 
+                                             hideCheckboxColumn="true" />
+                    </div>
+                    
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!not(empty(v.resultStringErrors))}" >
+                <div class="slds-col slds-size_1-of-1">
+                    <div class="slds-text-heading_small slds-text-title_bold slds-m-top_medium slds-text-color_error">
+                        Errors
+                    </div>
+                    <div class="slds-text-heading_small slds-m-top_medium">
+                        <lightning:datatable  data="{! v.resultStringErrors }" columns="{!v.resultCols}" keyField="result" 
+                                             hideCheckboxColumn="true" />
+                    </div>
+                </div>
+            </aura:if>
+            
+        </div>
+    </lightning:card>
+    
+    
+</aura:component>

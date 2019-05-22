@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Projects</value>
+    </caseValues>
+    <fields>
+        <label><!-- ATI Approved --></label>
+        <name>ATI_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATI Number --></label>
+        <name>ATI_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- ATI Text --></label>
+        <name>ATI_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assessment Description --></label>
+        <name>Assessment_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assessment Due Date --></label>
+        <name>Assessment_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assessment Start Date --></label>
+        <name>Assessment_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill Code Prefix --></label>
+        <name>Bill_Code_Prefix__c</name>
+        <picklistValues>
+            <masterLabel>E</masterLabel>
+            <translation><!-- E --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G</masterLabel>
+            <translation><!-- G --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I</masterLabel>
+            <translation><!-- I --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bill Code --></label>
+        <name>Bill_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel Priority --></label>
+        <name>Channel_Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>L</masterLabel>
+            <translation><!-- L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>V</masterLabel>
+            <translation><!-- V --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>X</masterLabel>
+            <translation><!-- X --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Closed Subprojects --></label>
+        <name>Closed_Subprojects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company --></label>
+        <name>Company__c</name>
+        <picklistValues>
+            <masterLabel>Americom</masterLabel>
+            <translation><!-- Americom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bermuda</masterLabel>
+            <translation><!-- Bermuda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G</masterLabel>
+            <translation><!-- F&amp;G --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G &amp; Americom</masterLabel>
+            <translation><!-- F&amp;G &amp; Americom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G F&amp;GNY Americom</masterLabel>
+            <translation><!-- F&amp;G F&amp;GNY Americom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G Life</masterLabel>
+            <translation><!-- F&amp;G Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G Life Americom</masterLabel>
+            <translation><!-- F&amp;G Life Americom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G Life/F&amp;G Life NY</masterLabel>
+            <translation><!-- F&amp;G Life/F&amp;G Life NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G NY</masterLabel>
+            <translation><!-- F&amp;G NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G, F&amp;G NY, Americom</masterLabel>
+            <translation><!-- F&amp;G, F&amp;G NY, Americom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G, F&amp;GNY</masterLabel>
+            <translation><!-- F&amp;G, F&amp;GNY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G/Americom</masterLabel>
+            <translation><!-- F&amp;G/Americom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;G/F&amp;G NY</masterLabel>
+            <translation><!-- F&amp;G/F&amp;G NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FGNY/TJ</masterLabel>
+            <translation><!-- FGNY/TJ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMF</masterLabel>
+            <translation><!-- OMF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMF OMFNY</masterLabel>
+            <translation><!-- OMF OMFNY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMFL</masterLabel>
+            <translation><!-- OMFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMFLIC</masterLabel>
+            <translation><!-- OMFLIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMFLIC NY</masterLabel>
+            <translation><!-- OMFLIC NY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMFLIC OMFLICNY</masterLabel>
+            <translation><!-- OMFLIC OMFLICNY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OMFLNY</masterLabel>
+            <translation><!-- OMFLNY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Concept Proposed --></label>
+        <name>Concept_Proposed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmed Day 1 Target Date --></label>
+        <name>Confirmed_Day_1_Target_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Day 1 Target Date --></label>
+        <name>Current_Day_1_Target_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day 1 Complete Date --></label>
+        <name>Day_1_Complete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day 2 Complete Date --></label>
+        <name>Day_2_Complete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feasibility Comments --></label>
+        <name>Feasibility_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feasibility Complete Date --></label>
+        <name>Feasibility_Complete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feasibility Priority --></label>
+        <name>Feasibility_Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feasibility Start Date --></label>
+        <name>Feasibility_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feasibility Status Comment --></label>
+        <name>Feasibility_Status_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feasibility Status --></label>
+        <name>Feasibility_Status__c</name>
+        <picklistValues>
+            <masterLabel>Blue</masterLabel>
+            <translation><!-- Blue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Filing Priority --></label>
+        <name>Filing_Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filing Status Comments --></label>
+        <name>Filing_Status_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filing Status --></label>
+        <name>Filing_Status__c</name>
+        <picklistValues>
+            <masterLabel>Filing Completed</masterLabel>
+            <translation><!-- Filing Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filing In Progress</masterLabel>
+            <translation><!-- Filing In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filing Required</masterLabel>
+            <translation><!-- Filing Required --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Filing Required</masterLabel>
+            <translation><!-- No Filing Required --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Implementation Comments --></label>
+        <name>Implementation_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Start Date --></label>
+        <name>Implementation_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Status Comment --></label>
+        <name>Implementation_Status_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Implementation Status --></label>
+        <name>Implementation_Status__c</name>
+        <picklistValues>
+            <masterLabel>Blue</masterLabel>
+            <translation><!-- Blue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initial PM Tasks Generated --></label>
+        <name>Initial_PM_Tasks_Generated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy PD Database ID --></label>
+        <name>Legacy_PD_Database_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Launch Date --></label>
+        <name>Marketing_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mkt Launch Status Comment --></label>
+        <name>Mkt_Launch_Status_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mkt Launch Status --></label>
+        <name>Mkt_Launch_Status__c</name>
+        <picklistValues>
+            <masterLabel>Blue</masterLabel>
+            <translation><!-- Blue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Risk --></label>
+        <name>New_Risk__c</name>
+    </fields>
+    <fields>
+        <label><!-- Open Subprojects --></label>
+        <name>Open_Subprojects__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Resource --></label>
+        <name>Pricing_Resource__c</name>
+        <relationshipLabel><!-- Projects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project Bill Code ATI --></label>
+        <name>Project_Bill_Code_ATI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Category --></label>
+        <name>Project_Category__c</name>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate</masterLabel>
+            <translation><!-- Corporate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations</masterLabel>
+            <translation><!-- Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Development</masterLabel>
+            <translation><!-- Product Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Development Admin</masterLabel>
+            <translation><!-- Product Development Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Manager (Legacy) --></label>
+        <name>Project_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Phase --></label>
+        <name>Project_Phase__c</name>
+        <picklistValues>
+            <masterLabel>ATI Pending</masterLabel>
+            <translation><!-- ATI Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Assessment</masterLabel>
+            <translation><!-- Assessment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Concept</masterLabel>
+            <translation><!-- Concept --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feasibility</masterLabel>
+            <translation><!-- Feasibility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation - Day 1</masterLabel>
+            <translation><!-- Implementation - Day 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Implementation - Day 2</masterLabel>
+            <translation><!-- Implementation - Day 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawn</masterLabel>
+            <translation><!-- Withdrawn --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Subcategory --></label>
+        <name>Project_Subcategory__c</name>
+        <picklistValues>
+            <masterLabel>Conservation</masterLabel>
+            <translation><!-- Conservation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large Case</masterLabel>
+            <translation><!-- Large Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration</masterLabel>
+            <translation><!-- Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pull Product</masterLabel>
+            <translation><!-- Pull Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Summary --></label>
+        <name>Project_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Termination Date --></label>
+        <name>Project_Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Termination Reason --></label>
+        <name>Project_Termination_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Sample</masterLabel>
+            <translation><!-- Sample --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Type --></label>
+        <name>Project_Type__c</name>
+        <picklistValues>
+            <masterLabel>Enhancement</masterLabel>
+            <translation><!-- Enhancement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Product</masterLabel>
+            <translation><!-- New Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pulled from Feasibility Date --></label>
+        <name>Pulled_from_Feasibility_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request ATI No --></label>
+        <name>Request_ATI_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Bill Code --></label>
+        <name>Request_Bill_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requested Day 1 Complete Date --></label>
+        <name>Requested_Day_1_Complete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requestor --></label>
+        <name>Requestor__c</name>
+        <relationshipLabel><!-- Projects (Requestor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revised Implementation Date --></label>
+        <name>Revised_Implementation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Secondary Requestor --></label>
+        <name>Secondary_Requestor__c</name>
+        <relationshipLabel><!-- Projects (Secondary Requestor) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TPA Project Manager (Legacy) --></label>
+        <name>TPA_Project_Manager_Legacy__c</name>
+    </fields>
+    <fields>
+        <label><!-- TPA Project Manager --></label>
+        <name>TPA_Project_Manager__c</name>
+        <relationshipLabel><!-- Projects (TPA Project Manager Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TPA --></label>
+        <name>TPA__c</name>
+        <picklistValues>
+            <masterLabel>CIS</masterLabel>
+            <translation><!-- CIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NTT</masterLabel>
+            <translation><!-- NTT --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>PD Ops Project Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Project Categorization --></label>
+            <section>Project Categorization</section>
+        </sections>
+        <sections>
+            <label><!-- Project Closure --></label>
+            <section>Project Closure</section>
+        </sections>
+        <sections>
+            <label><!-- Project Summary --></label>
+            <section>Project Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Project Summary2 --></label>
+            <section>Project Summary2</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PD Ops Project Read Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Project Categorization --></label>
+            <section>Project Categorization</section>
+        </sections>
+        <sections>
+            <label><!-- Project Closure --></label>
+            <section>Project Closure</section>
+        </sections>
+        <sections>
+            <label><!-- Project Summary --></label>
+            <section>Project Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Project Summary2 --></label>
+            <section>Project Summary2</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Project Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Feasibility --></label>
+            <section>Feasibility</section>
+        </sections>
+        <sections>
+            <label><!-- Feasibility Comments --></label>
+            <section>Feasibility Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation --></label>
+            <section>Implementation</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation Comments --></label>
+            <section>Implementation Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Project Categorization --></label>
+            <section>Project Categorization</section>
+        </sections>
+        <sections>
+            <label><!-- Project Closure --></label>
+            <section>Project Closure</section>
+        </sections>
+        <sections>
+            <label><!-- Project Status --></label>
+            <section>Project Status</section>
+        </sections>
+        <sections>
+            <label><!-- Project Summary --></label>
+            <section>Project Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Project Summary2 --></label>
+            <section>Project Summary2</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- PD Ops Project --></label>
+        <name>PD_Ops_Project</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Project --></label>
+        <name>Project</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must select a Bill Code Prefix in order to request a Bill Code. --></errorMessage>
+        <name>Bill_Code_Prefix_Must_Be_Selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You Cannot Deselect This Checkbox. --></errorMessage>
+        <name>Validate_Request_ATI_Checkbox</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You Cannot Deselect This Checkbox. --></errorMessage>
+        <name>Validate_Request_Bill_Code_Checkbox</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Manage_Associations_Product_Policy_Forms --></label>
+        <name>Manage_Associations_Product_Policy_Forms</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Policies --></label>
+        <name>Manage_Policies</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Policies_Ltng --></label>
+        <name>Manage_Policies_Ltng</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Calculator_Updates</name>
+        <subject><!-- Calculator Updates --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Checking_Tool_Updates</name>
+        <subject><!-- Checking Tool Updates --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Commission_Matrix_Updates</name>
+        <subject><!-- Commission Matrix Updates --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Contract_Summary_Updates</name>
+        <subject><!-- Contract Summary Updates --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Create_Launch_Plan</name>
+        <subject><!-- Create Launch Plan --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Create_Subproject_Records</name>
+        <subject><!-- Create Subproject Records --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Prior to field being alerted of new products. --></description>
+        <name>Hold_Marketing_Launch_Status_Update_Mtg</name>
+        <subject><!-- Hold Marketing Launch/Status Update Mtg. --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Propose_New_Plan_Codes_Plan_Code_Options</name>
+        <subject><!-- Propose New Plan Codes/Plan Code Options --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- To Accounting, Actuarial, IT, Reporting &amp; CCL via PD database. --></description>
+        <name>Publish_New_Plan_Codes_Plan_Code_Options</name>
+        <subject><!-- Publish New Plan Codes/Plan Code Options --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Schedule_Project_Kickoff</name>
+        <subject><!-- Schedule Project Kickoff --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Schedule_Project_Team_Regroup</name>
+        <subject><!-- Schedule Project Team Regroup --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Send_Specimen_Contracts_to_Sales</name>
+        <subject><!-- Send Specimen Contracts to Sales --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Update_Illustration_Software</name>
+        <subject><!-- Update Illustration Software --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Update_Marketing_Materials</name>
+        <subject><!-- Update Marketing Materials --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Update_Product_Notebook</name>
+        <subject><!-- Update Product Notebook --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Update_Websites</name>
+        <subject><!-- Update Websites --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Update_iPad_App</name>
+        <subject><!-- Update iPad App --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

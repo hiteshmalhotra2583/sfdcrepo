@@ -1,0 +1,61 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="CTRL_CustomSearchByNameComponent">
+    <!--Attribute declaration start-->
+    <aura:attribute type="String" name="objectToSearchName" />
+    <aura:attribute type="Object[]" name="searchResults" />
+    <aura:attribute type="Object[]" name="selectedRecords" default="[]" />
+    <aura:attribute type="Object[]" name="selectedRecordsResults" default="[]" />
+    <aura:attribute type="String" name="moreFieldsToQuery" default=""/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="isSearching" type="Boolean" default="false"/>
+    <aura:attribute name="setValueExplicit" type="Boolean" default="false" />
+    <aura:attribute name="resultsHeading" type ="String" default="" />
+    <aura:attribute name="removeAllText" type ="String" />
+    <aura:method name="resetSearch" action="{!c.resetAll}" access="PUBLIC" />
+    <aura:method name="setSelectedRecords" action="{!c.setValueSelectedRecords}" access="PUBLIC" >
+        <aura:attribute name="newSelectedRecords" type="Object[]" />
+        <aura:attribute name="recordsToAddBack" type="Object[]" />
+    </aura:method>
+    <aura:attribute name="parent" type="Aura.Component" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--Attribute declaration stop-->
+    <div class="slds-grid slds-wrap">
+        <!--Search bar start-->
+        <div class="slds-size_1-of-1">
+            <div onkeyup="{! c.handleSearch }">
+                <lightning:input
+                                 aura:id="enter-search"
+                                 name="enter-search"
+                                 label="Enter the search string and hit enter"
+                                 isLoading="{! v.isSearching }"
+                                 type="search"
+                                 />
+            </div>
+        </div>
+        <!--Search bar stop-->
+        <!--Search results start-->
+        <aura:if isTrue="{!not(empty(v.searchResults))}">
+            <div class="slds-size_1-of-1 " style="height:250px;">
+                <lightning:datatable keyField="Id" data="{! v.searchResults }" columns="{! v.columns }"   hideCheckboxColumn="false"
+                                     onrowselection="{!c.onRowSelection}"  aura:id="dataTableDisplay" />
+            </div>
+        </aura:if>
+        <!--Search results stop-->
+        <div class="slds-hide slds-text-color_error slds-m-around_large slds-size_1-of-1" aura:id="resultNotFound">
+            No records found!!
+        </div>
+        <aura:if isTrue="{!not(empty(v.selectedRecordsResults))}">
+            <div class="slds-text-heading_small slds-m-top_medium">
+                {!v.resultsHeading}
+            </div>
+            <div  class="slds-m-top_large slds-size_1-of-1">
+                
+                <aura:iteration items="{!v.selectedRecordsResults}" var ="item">
+                    <lightning:pill label="{!item.Name}" name = "{!item.Id}" onremove="{!c.handleRemove}" />
+                </aura:iteration>
+            </div>
+                <div  class="slds-m-top_large slds-align_absolute-center slds-size_1-of-1">
+                    <lightning:button variant="brand" label="{! 'Remove '+v.removeAllText}" onclick="{! c.removeAll }" />
+                </div>                  
+        </aura:if>
+    </div>
+</aura:component>

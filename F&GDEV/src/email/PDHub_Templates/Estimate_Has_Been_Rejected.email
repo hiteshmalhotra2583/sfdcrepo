@@ -1,0 +1,7 @@
+Rejection Comments (if provided) are as follows:
+
+{!ApprovalRequest.Comments}
+
+Click on the link for more detail:
+
+{!Estimate__c.Link}

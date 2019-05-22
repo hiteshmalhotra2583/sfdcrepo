@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plan Code</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plan Codes</value>
+    </caseValues>
+    <fields>
+        <label><!-- NY Product --></label>
+        <name>IsNYProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Single Premium Product --></label>
+        <name>IsSinglePremiumProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Code --></label>
+        <name>PlanCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Type --></label>
+        <name>ProductType__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

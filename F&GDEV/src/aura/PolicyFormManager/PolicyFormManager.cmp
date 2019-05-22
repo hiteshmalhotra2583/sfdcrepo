@@ -1,0 +1,307 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,lightning:isUrlAddressable" access="global" controller="CTRL_PolicyFormManagerLtng">    
+    <!-- <ltng:require styles="{!$Resource.FGL_Styles}" /> -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+ 
+    <aura:attribute name="recordId" type="String" default="" />
+    <aura:attribute name="states" type="Object[]" default="[]" />
+    <aura:attribute name="statepolicyselectcount" type="Integer" default="0" />
+    <aura:attribute name="prodstatepolicyeditcount" type="Integer" default="0" />
+    <aura:attribute name="message" type="String" default="" />
+    <aura:attribute name="iserror" type="Boolean" default="false" />
+    <aura:attribute name="project" type="Object" default="{}" />
+    <aura:attribute name="products" type="Object[]" default="[]" />
+    <aura:attribute name="prodstatepolicystatestatmap" type="Object" default="{}" />
+    <aura:attribute name="policyidlist" type="Object[]" default="[]" />
+    <aura:attribute name="policies" type="Object[]" default="[]" />
+    <aura:attribute name="policiesCopy" type="Object[]" default="[]" />
+    <aura:attribute name="statepolicymap" type="Object" default="{}"/>
+    <aura:attribute name="policyUpdateAccess" type="boolean" default="true" />
+    <aura:attribute name="productpolicies" type="Object[]" default="[]" />
+    <aura:attribute name="policyFormStateList" type="String[]" />
+    <aura:attribute name="policyFormStateVal" type="String" default=""/>
+    <aura:attribute name="isDoubleClicked" type="boolean" default="false"/>
+    
+    <aura:attribute name="isSelected" type="String" default=""/>
+    <aura:attribute name="policycolumns" type="Object[]"/>
+    <aura:attribute name="policycolselcount" type="Integer" default="0"/>
+    
+    <!-- Add Policy Logic -->
+    <aura:attribute name="isPolicyAddStatus" type="boolean" default="false"/>
+    <aura:attribute name="serPolicyColumns" type="List"/>
+    <aura:attribute name="serPolicyData" type="Object"/>
+    <aura:attribute name="selectedRows" type="List" /> 
+    <aura:attribute name="selectedPolicyIds" type="List" />
+    <!-- Add Policy Logic -->
+    
+    <!-- Edit Filings -->
+    <aura:attribute name="isEditFilings" type="boolean" default="false"/>
+    <aura:attribute name="policystatusaggr" type="Object" default="{}"/>
+    <aura:attribute name="policyrows" type="Object[]" default="[]" />
+    <aura:attribute name="prodcolumns" type="Object[]" default="[]" />
+    <aura:attribute name="hasRelation" type="boolean" default="false"/>
+    <!-- Edit Filings -->
+    
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    
+    <!-- paggination logic -->
+    <aura:attribute name="pageSize" type="Integer" default="15"/>
+    <aura:attribute name="totalSize" type="Integer"/> 
+    <aura:attribute name="start" type="Integer" />
+    <aura:attribute name="end" type="Integer"/>
+    <aura:attribute name="paged" type="Object" default="{}"/>
+    <aura:attribute name="statess" type="Object[]" default="[]" />
+    <!-- paggination logic -->
+ 
+    
+    <aura:attribute name="refPolicies" type="Object[]" default="[]" />
+    <!-- navigate to sobject -->
+    <aura:handler event="force:navigateToSObject" action="{!c.navigateToRecord}"/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.refreshCmp}"/> 
+    <aura:attribute name="options" type="List" default="[]"/>
+    <aura:attribute name="policyFormTypeList" type="String[]"/>
+    <aura:attribute name="selctedPolicyFormType" type="String"/>
+    
+    <!-- selected states multi dropdown -->
+    <aura:attribute name="selectedOptionsList" type="String[]"/>
+    <!-- selected states multi dropdown -->
+    <div class="slds slds-box" style="background-color:#fff;">
+        <!--  ===== Main Header Section  ===== -->
+        <div>
+            <div class="slds-float_left slds-size_2-of-6 ">
+                <h2 class="main-header">
+                    Edit/Create Policy Form State Records
+                </h2>
+            </div>
+            <div class="slds-float_left slds-size_4-of-6">
+                <button class="slds-button slds-button_brand"  onclick="{!c.addPolicies}">Add Policies</button>
+                <button class="slds-button slds-button_brand"  disabled="{!v.statepolicyselectcount==0}" onclick="{!c.editFilingStatuses}">Edit Filings</button>
+                <button class="slds-button slds-button_brand"  disabled="{!v.statepolicyselectcount==0}" onclick="{!c.deSelectAllPolicy}">De-Select All</button>
+                <button class="slds-button slds-button_brand"  disabled="{!!v.refPolicies.length>0}" onclick="{!c.undoHidePolicy}">Restore Policy Form</button>
+                <button class="slds-button slds-button_brand"  disabled="{!and(v.statepolicyselectcount==0,v.isDoubleClicked==false)}" onclick="{!c.refreshPage}">Refresh</button>
+                <button class="slds-button slds-button_brand" disabled="{!and(and(v.selectedOptionsList.length==0,v.policyFormStateVal==''),v.selctedPolicyFormType=='')}" onclick="{!c.resetAllFilter}">Reset Filter</button>
+                <button class="slds-button slds-button_brand"   onclick="{!c.redirectToHome}">Close Tool </button> 
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div class="slds-page-header" style="cursor: pointer;" onclick="{!c.filterSection}">
+            <section class="slds-clearfix">
+                <div class="slds-float--left ">
+                    <lightning:icon class="slds-show" aura:id="filterOne" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                    <lightning:icon class="slds-hide" aura:id="filterOne" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                </div>
+                <div class="slds-m-left--large">Filters</div>
+            </section>
+        </div>
+        
+        <div class="slds-hide slds-p-around--medium" aura:id="filterOne">
+            <div>
+                <div class="slds-float_left slds-size_3-of-6 ">
+                    <div class="slds-size_4-of-6">
+                        <aura:if isTrue="{!v.products.length>0}">
+                            <lightning:select name="policyformState"  label="Policy Form Status" value="{!v.policyFormStateVal}" onchange="{!c.policyFormStateChange}">
+                                <option text="-- Select --" value=""></option>
+                                <aura:iteration items="{!v.policyFormStateList}" var="policyFormState" >
+                                    <option text="{!policyFormState}" value="{!policyFormState}"></option>
+                                </aura:iteration>
+                            </lightning:select>
+                            <br/>
+                            <lightning:dualListbox id="MultiSelect"   
+                                                   label= "Select States" 
+                                                   sourceLabel="Available" 
+                                                   selectedLabel="Selected" 
+                                                   fieldLevelHelp="This is a dual listbox" 
+                                                   options="{!v.options}" 
+                                                   size="5"
+                                                   onchange="{! c.handleChange }"/>
+                        </aura:if>
+                    </div>
+                </div>
+                <div class="slds-float_left slds-size_3-of-6">
+                    <div class="slds-size_4-of-6">
+                        <lightning:select name="policyFormType" label="Policy Form Type" value="{!v.selctedPolicyFormType}" onchange="{!c.PolicyFormTypeChange}">
+                            <option text="-- Select --" value=""></option>
+                            <aura:iteration items="{!v.policyFormTypeList}" var="pofoty">
+                                <option text="{!pofoty}" value="{!pofoty}"></option>
+                            </aura:iteration> 
+                        </lightning:select>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+        <hr/>
+        <!--  ===== Main Header Section  ===== -->
+     
+        <!--  ===== Main Container Section ===== -->
+        <div class="main-container slds-size_12-of-12">
+            <!-- ===== State column ===== -->
+            <div class="slds-float_left statescolumn">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                    <thead>
+                        <tr>
+                            <th class="statesBlock slds-truncate slds-cell-fixed">States</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.statess}" var="state" indexVar="index">
+                            <aura:if isTrue="{!state!=null}">
+                                <tr>
+                                    <td data-value="{!state.StateCode__c}" onclick="{!c.selectRow}" class="stateName"> {!state.Name} </td>
+                                </tr>
+                            </aura:if>
+                        </aura:iteration>
+                    </tbody>
+                    <tfoot>		
+                        <tr>		
+                            <td>		
+                                <lightning:button label="Prev" disabled="{!v.start == 0}"  onclick="{!c.previousPage}" />		
+                                <lightning:button label="Next" disabled="{!v.end >= v.totalSize}" onclick="{!c.nextPage}" />		
+                            </td>		
+                        </tr>		
+                    </tfoot> 
+                </table>
+            </div> 
+            <!-- ===== State column ===== -->
+            <!-- ===== State Table ===== -->
+            <div class="slds-float_left stateTable">
+                 <aura:if isTrue="{!and(v.policies.length>0,v.products.length>0)}">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <thead>
+                                 <aura:if isTrue="{!v.products.length>0}"> 
+                                    <tr > 
+                                        <aura:if isTrue="{!v.policies.length>0}">
+                                            <aura:iteration items="{!v.policies}" var="policy" indexVar="index">
+                                                <th ondblclick="{!c.redirectToSobject}" data-value="{!policy.Id}" class="{!'statesPolicyNameBlock '+policy.Id}">
+                                                    <div class="tooltip">
+                                                        <span data-value="{!policy.Id}" onclick="{!c.selectColumns}">{!policy.Name}</span> 
+                                                        <span style="margin-left:10px;cursor:pointer;color: red;" data-value="{!policy.Id}" onclick="{!c.hideColumns}">X</span>
+                                                        <span class="tooltiptext2">
+                                                            <div class="slds-popover slds-popover--tooltip toggle" role="tooltip" id="help" style="background:#fff;" aura:id="tooltip">
+                                                                <div class="slds-popover__body" style="color:#000!important;">
+                                                                   <aura:if isTrue="{!and(policy.PolicyFormType!='',policy.PolicyFormType!=null)}"> 
+                                                                       {!policy.PolicyFormType}
+                                                                        <aura:set attribute="else">
+                                                                            Other
+                                                                       </aura:set>
+                                                                    </aura:if>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>                
+                                                </th>
+                                            </aura:iteration>
+                                        </aura:if>
+                                    </tr>
+                              </aura:if> 
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.statess}" var="state" indexVar="index">
+                                    <aura:if isTrue="{!state!=null}">
+                                        <tr> 
+                                            <aura:if isTrue="{!v.products.length>0}">
+                                                <aura:iteration items="{!v.policies}" var="policy" indexVar="index">
+                                                    <td  data-value="{!state.StateCode__c+','+policy.Id}" ondblclick="{!c.redirectToSobject2}" onclick="{!c.selectColumn}" class="{!'policyStatusBlock '+policy.Id+' '+state.StateCode__c}" > 
+                                                        <c:PolicyFormManagerImgViewer statepolicymap="{!v.statepolicymap}" 
+                                                                                      stateCode="{!state.StateCode__c}" 
+                                                                                      policyId="{!policy.Id}"/>
+                                                    </td>
+                                                </aura:iteration>
+                                                <aura:set attribute="else">
+                                                    <td  rowspan="{!v.states.length}"><span>No Policies Have Been Associated</span></td>
+                                                </aura:set>
+                                            </aura:if>
+                                        </tr>
+                                    </aura:if>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                        <aura:set attribute="else">
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <tr>
+                                    <th scope="col" colspan="4" >
+                                        <center> No Policy Records Found !</center>  
+                                    </th>
+                                </tr>
+                            </table>
+                        </aura:set>
+                    </aura:if>
+            </div>
+            <!-- ===== State Table ===== -->
+            <div style="clear:both"></div>
+        </div>
+        <!--  ===== Main Container Section  ===== -->
+        <!--  ===== Popup/Modal Section  ===== -->
+        <aura:if isTrue="{!v.isPolicyAddStatus}">
+            <div class="demo-only" style="height: 640px;">
+                <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_Medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Select Policies to Add</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <p>Enter a search string to return policies to add to the current table.</p><br/>
+                            <lightning:input type="text" aura:id="searchPolicyName" name="searchPolicyName" label="Enter Policy Name"/><br/>
+                            <button class="slds-button slds-button_neutral" onclick="{!c.searchPolicy}">Search</button><br/>
+                            <lightning:datatable columns="{!v.serPolicyColumns}" data="{!v.serPolicyData}" 
+                                                 keyField="id"  selectedRows="{!v.selectedRows}" 
+                                                 onrowselection="{!c.setSelPolicyRowsData}"/>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.closePolicy}">Cancel</button>
+                            <button class="slds-button slds-button_brand" onclick="{!c.selectPolicies}">Select Policies</button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!v.isEditFilings}">
+            <div class="demo-only" style="height: 640px;">
+                <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_Medium" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Mass Edit Policy Filing Status Fields</h2>
+                        </header>
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <tbody>
+                                    <aura:if isTrue="{!and(v.policystatusaggr!=null,v.policystatusaggr.Fields.length>0)}">
+                                        <aura:iteration items="{!v.policystatusaggr.Fields}" var="field" indexVar="index">
+                                            <c:MassEditPolicyFilingStatus policystatusaggr="{!v.policystatusaggr}" field="{!field}" isEditFilings="{!v.isEditFilings}"/>
+                                        </aura:iteration>
+                                    </aura:if>
+                                </tbody>
+                            </table>
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <button class="slds-button slds-button_neutral" onclick="{!c.closeFilings}">Cancel</button>
+                            <button class="slds-button slds-button_brand" onclick="{!c.updateFilings}">Update Filings</button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </aura:if>
+        <!--  ===== Popup/Modal Section  ===== -->
+    </div>
+    <!--  ==== Spinner Section  ==== -->
+    <aura:if isTrue="{!v.Spinner}">
+        <div class="demo-only" style="height: 6rem; z-index: 999; !important">
+            <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand slds-spinner--brand   slds-spinner_inverse">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+            <div class="slds-backdrop slds-backdrop_open" ></div>
+        </div> 
+    </aura:if>
+    <!--  ==== Spinner Section  ==== -->
+    
+    
+</aura:component>

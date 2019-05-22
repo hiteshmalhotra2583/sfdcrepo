@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New PM admin project created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Send New Admin Project Email</name>
+    <style>none</style>
+    <subject>New admin project in the pipeline!</subject>
+    <type>text</type>
+</EmailTemplate>

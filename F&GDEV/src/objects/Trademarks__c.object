@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Class__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the class description listed on the certificate?</inlineHelpText>
+        <label>Class</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Continued_Use_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Continued Use End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Continued_Use_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Continued Use Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Filed__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Filed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>First_Use__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the first use and in commerce date found on the certificate?</inlineHelpText>
+        <label>First Use</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Marketing_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Marketing Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Product_Type_c__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accelerator Plus</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG AccumulatorPlus</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG Guarantee-Platinum</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG Immediate-Income</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG Index-Choice 0</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG Retirement Pro</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FGNY Index-Choice 10</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Performance Pro</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Prosperity Elite</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Safe Income Plus</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG Life-Choice</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>FG Life-Elite</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Synergy Global Advantage Freedom</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Synergy Global Advantage Gold</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>Accelerator Plus</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>FG AccumulatorPlus</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>FG Guarantee-Platinum</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>FG Immediate-Income</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>FG Index-Choice 0</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>FG Retirement Pro</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>FGNY Index-Choice 10</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>Performance Pro</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>Prosperity Elite</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Annuity</controllingFieldValue>
+                <valueName>Safe Income Plus</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Life</controllingFieldValue>
+                <valueName>FG Life-Choice</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Life</controllingFieldValue>
+                <valueName>FG Life-Elite</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Life</controllingFieldValue>
+                <valueName>Synergy Global Advantage Freedom</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Life</controllingFieldValue>
+                <valueName>Synergy Global Advantage Gold</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Owner_of_Reg_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner of Reg. No.</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Principal_Register__c</fullName>
+        <externalId>false</externalId>
+        <label>Principal Register</label>
+        <length>131000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Product_Type_c__c</fullName>
+        <externalId>false</externalId>
+        <label>Product_Type__c</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Registration_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annuity</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Life</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Product</controllingFieldValue>
+                <valueName>Annuity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Product</controllingFieldValue>
+                <valueName>Life</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Received_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Received Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Registration_Issued__c</fullName>
+        <externalId>false</externalId>
+        <label>Registration Issued</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Registration_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Registration Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Logo</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Product</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Renewal_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Serial_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Serial Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Text_Serial_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Serial_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Text Serial Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Trademark</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Trademark Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Trademarks</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

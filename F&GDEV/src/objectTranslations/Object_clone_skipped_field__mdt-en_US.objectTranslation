@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Object clone skipped field</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Object clone skipped fields</value>
+    </caseValues>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>Object_Name__c</name>
+        <picklistValues>
+            <masterLabel>Marketing_Materials__c</masterLabel>
+            <translation><!-- Marketing_Materials__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing_Name__c</masterLabel>
+            <translation><!-- Marketing_Name__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing_to_Product_State_Association__c</masterLabel>
+            <translation><!-- Marketing_to_Product_State_Association__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product_Specification__c</masterLabel>
+            <translation><!-- Product_Specification__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product_State_Status__c</masterLabel>
+            <translation><!-- Product_State_Status__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product_to_Plan_Code_Association__c</masterLabel>
+            <translation><!-- Product_to_Plan_Code_Association__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>State_Availability__c</masterLabel>
+            <translation><!-- State_Availability__c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Parent Object Name --></label>
+        <name>Parent_Object_Name__c</name>
+        <picklistValues>
+            <masterLabel>Product_Specification__c</masterLabel>
+            <translation><!-- Product_Specification__c --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

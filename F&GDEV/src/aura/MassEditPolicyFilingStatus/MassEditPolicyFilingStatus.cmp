@@ -1,0 +1,50 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="policystatusaggr" type="Object" default="{}"/>
+    <aura:attribute name="field" type="String"/>
+    <aura:attribute name="fieldName" type="String"/>
+    <aura:attribute name="fieldValue" type="Object"/>
+    <aura:attribute name="fieldType" type="String"/>
+    <aura:attribute name="fieldOptions" type="Object[]"/>
+    <aura:attribute name="isMultiValueMapFieldStatus" type="boolean" default="false"/>
+    <aura:attribute name="isEditableMapFieldStatus" type="boolean" default="false"/>
+    <aura:attribute name="isEditFilings" type="boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <tr> 
+        <td>{!v.fieldName}</td>
+        <td>
+            <!-- STRING Fields Rendered -->
+            <aura:if isTrue="{!v.fieldType=='STRING'}">
+                <lightning:input type="text" disabled="{!and(v.isMultiValueMapFieldStatus,v.isEditableMapFieldStatus==false)}" value="{!v.fieldValue}" onChange="{!c.updatePolicyStatus}"  />
+            </aura:if>
+            
+            <!-- TEXTAREA Fields Rendered -->
+            <aura:if isTrue="{!v.fieldType=='TEXTAREA'}">
+                <lightning:textarea  disabled="{!and(v.isMultiValueMapFieldStatus,v.isEditableMapFieldStatus==false)}" rows="4" cols="30" value="{!v.fieldValue}" onchange="{!c.updatePolicyStatus}"/>
+            </aura:if>
+            
+            <!-- Date Fields Rendered -->
+            <aura:if isTrue="{!v.fieldType=='DATE'}">
+              <lightning:input type="text" disabled="{!and(v.isMultiValueMapFieldStatus,v.isEditableMapFieldStatus==false)}" value="{!v.fieldValue}" placeholder="mmddyyyy" onchange="{!c.updatePolicyStatus}"/>
+            </aura:if>
+            
+            <!-- Pick List Fields Rendered -->
+            <aura:if isTrue="{!v.fieldType=='PICKLIST'}">
+                
+                <lightning:select disabled="{!and(v.isMultiValueMapFieldStatus,v.isEditableMapFieldStatus==false)}" value="{!v.fieldValue}" name="selectItem" onchange="{!c.updatePolicyStatus}" >
+                    <option value="">-- Choose a Selection --</option>
+                    <aura:iteration items="{!v.fieldOptions}" var="field" indexVar="index">
+                        <option value="{!field}">{!field}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </aura:if>
+        </td>
+        <aura:if isTrue="{!v.isMultiValueMapFieldStatus}">
+            <td data-value="{!'overrideField-'+v.field}" onclick="{!c.override}">
+                <span style="cursor:pointer" ><h1>...</h1></span>
+            </td>
+            <aura:set attribute="else">
+                <td></td>            
+            </aura:set>
+        </aura:if>
+    </tr>
+</aura:component>

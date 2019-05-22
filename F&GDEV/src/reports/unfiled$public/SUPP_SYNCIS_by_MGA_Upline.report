@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AgentID__c.AgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.AgentName__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Email__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.UplineAgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.MgaAgentID__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>((1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11) AND 12) AND 13</booleanFilter>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000271101 - SYNCIS INSURANCE SOLUTIONS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000274396 - SYNCIS INSURANCE SOLUTIONS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000296891 - SYNCIS INSURANCE SOLUTIONS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000296892 - SYNCIS INSURANCE SOLUTIONS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000296922 - SYNCIS INSURANCE SOLUTIONS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000TJ8822 - SYNCIS INSURANCE SOLUTIONS INC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000296789 - TRANONTLIFE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000108309 - SCHLAIS,LES</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000186729 - RETIRING AMERICA AND INSURANCE</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000296907 - FREEDOM EQUITY GROUP LLC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000296908 - FREEDOM EQUITY GROUP LLC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.Email__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.IsActive__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>SUPP - SYNCIS by MGA/Upline</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AgentID__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>AgentID__c.EffectiveDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

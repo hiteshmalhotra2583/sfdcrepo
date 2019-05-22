@@ -1,0 +1,11 @@
+.THIS .multiSelectHeight {
+    max-height: 134px !important;
+    
+}
+.THIS .slds-radio{
+    display:block !important;
+    
+}
+.THIS ._Required{
+    border-left: 5px solid red !important;
+}

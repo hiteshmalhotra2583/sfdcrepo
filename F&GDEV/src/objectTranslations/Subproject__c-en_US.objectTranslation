@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Subproject</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Subprojects</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Expenses --></label>
+        <name>Actual_Expenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Change Control Outstanding --></label>
+        <name>Change_Control_Outstanding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Variance --></label>
+        <name>Cost_Variance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Estimate Count --></label>
+        <name>Current_Estimate_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Estimate --></label>
+        <name>Current_Estimate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Firm Estimate --></label>
+        <name>Current_Firm_Estimate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Firm Target Date --></label>
+        <name>Current_Firm_Target_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Target Date Per Estimate --></label>
+        <name>Current_Target_Date_Per_Estimate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Target Date --></label>
+        <name>Current_Target_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days to Close --></label>
+        <name>Days_to_Close__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deferred Expenses --></label>
+        <name>Deferred_Expenses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enhancement Idea --></label>
+        <name>Enhancement_Idea__c</name>
+        <relationshipLabel><!-- Subprojects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estimated Completion Date --></label>
+        <name>Estimated_Completion_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude Project Track Report --></label>
+        <name>Exclude_Project_Track_Report__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Requested Target Date --></label>
+        <name>Initial_Requested_Target_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Billing Date --></label>
+        <name>Last_Billing_Date2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Billing Date --></label>
+        <name>Last_Billing_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Change Control Date --></label>
+        <name>Last_Change_Control_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Estimate Added --></label>
+        <name>Last_Estimate_Added__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy PD Database ID --></label>
+        <name>Legacy_PD_Database_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non Product Development --></label>
+        <name>Non_Product_Development__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object --></label>
+        <name>Object__c</name>
+        <picklistValues>
+            <masterLabel>Accounts</masterLabel>
+            <translation><!-- Accounts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Activities</masterLabel>
+            <translation><!-- Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Review</masterLabel>
+            <translation><!-- Ad Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AgentIDs</masterLabel>
+            <translation><!-- AgentIDs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chatter</masterLabel>
+            <translation><!-- Chatter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contacts</masterLabel>
+            <translation><!-- Contacts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dashboards</masterLabel>
+            <translation><!-- Dashboards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enhancement Ideas</masterLabel>
+            <translation><!-- Enhancement Ideas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estimates</masterLabel>
+            <translation><!-- Estimates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expenses</masterLabel>
+            <translation><!-- Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIlings</masterLabel>
+            <translation><!-- FIlings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Files</masterLabel>
+            <translation><!-- Files --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Instance</masterLabel>
+            <translation><!-- General Instance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HubSpot</masterLabel>
+            <translation><!-- HubSpot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Materials</masterLabel>
+            <translation><!-- Marketing Materials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Objections</masterLabel>
+            <translation><!-- Objections --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Policy Form States</masterLabel>
+            <translation><!-- Policy Form States --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Policy Forms</masterLabel>
+            <translation><!-- Policy Forms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product State Policy Form Associations</masterLabel>
+            <translation><!-- Product State Policy Form Associations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product States</masterLabel>
+            <translation><!-- Product States --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products</masterLabel>
+            <translation><!-- Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Projects</masterLabel>
+            <translation><!-- Projects --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reports</masterLabel>
+            <translation><!-- Reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subprojects</masterLabel>
+            <translation><!-- Subprojects --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support Case</masterLabel>
+            <translation><!-- Support Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trademarks</masterLabel>
+            <translation><!-- Trademarks --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Type --></label>
+        <name>Project_Type__c</name>
+        <picklistValues>
+            <masterLabel>Enhancement</masterLabel>
+            <translation><!-- Enhancement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project --></label>
+        <name>Project__c</name>
+        <relationshipLabel><!-- Subprojects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SubProject Comments --></label>
+        <name>SubProject_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subproject Category --></label>
+        <name>Subproject_Category__c</name>
+        <picklistValues>
+            <masterLabel>Apex/Flow/Trigger</masterLabel>
+            <translation><!-- Apex/Flow/Trigger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attachment</masterLabel>
+            <translation><!-- Attachment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call</masterLabel>
+            <translation><!-- Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Management</masterLabel>
+            <translation><!-- Data Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployment</masterLabel>
+            <translation><!-- Deployment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field Addition</masterLabel>
+            <translation><!-- Field Addition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field Removal</masterLabel>
+            <translation><!-- Field Removal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hierarchy/Roles</masterLabel>
+            <translation><!-- Hierarchy/Roles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Illustration Software</masterLabel>
+            <translation><!-- Illustration Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrations</masterLabel>
+            <translation><!-- Integrations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing</masterLabel>
+            <translation><!-- Marketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Object Creation</masterLabel>
+            <translation><!-- Object Creation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Page Layout Change</masterLabel>
+            <translation><!-- Page Layout Change --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Policy Form Filing</masterLabel>
+            <translation><!-- Policy Form Filing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Policy Print</masterLabel>
+            <translation><!-- Policy Print --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profiles/Permissions/Sets</masterLabel>
+            <translation><!-- Profiles/Permissions/Sets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Record Creation</masterLabel>
+            <translation><!-- Record Creation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report Creation</masterLabel>
+            <translation><!-- Report Creation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report Modification</masterLabel>
+            <translation><!-- Report Modification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Development</masterLabel>
+            <translation><!-- System Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Setup</masterLabel>
+            <translation><!-- System Setup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TBD</masterLabel>
+            <translation><!-- TBD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Task</masterLabel>
+            <translation><!-- Task --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visualforce</masterLabel>
+            <translation><!-- Visualforce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subproject Close Date --></label>
+        <name>Subproject_Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subproject Code Description --></label>
+        <name>Subproject_Code_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subproject Description --></label>
+        <name>Subproject_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subproject Notes --></label>
+        <name>Subproject_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subproject Status --></label>
+        <name>Subproject_Status__c</name>
+        <picklistValues>
+            <masterLabel>Blue</masterLabel>
+            <translation><!-- Blue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blue - Pulled</masterLabel>
+            <translation><!-- Blue - Pulled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Expenses --></label>
+        <name>Total_Expenses__c</name>
+    </fields>
+    <layouts>
+        <layout>PD Ops Subproject Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Subproject Notes --></label>
+            <section>Subproject Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Subproject Summary --></label>
+            <section>Subproject Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PD Ops Subproject Layout Read</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Subproject Summary --></label>
+            <section>Subproject Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Sub Project Layout</layout>
+        <sections>
+            <label><!-- Change Control --></label>
+            <section>Change Control</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Subproject Dates --></label>
+            <section>Subproject Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Subproject Expense Summary --></label>
+            <section>Subproject Expense Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Subproject Summary --></label>
+            <section>Subproject Summary</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- PD Ops Subproject Layout --></label>
+        <name>PD_Ops_Subproject_Layout</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Subproject --></label>
+        <name>Subproject</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You can only have one current estimate related to a subproject. --></errorMessage>
+        <name>Validate_One_Current_Estimate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This is a duplicate Subproject Code. --></errorMessage>
+        <name>Validate_Unique_Subproject_Code</name>
+    </validationRules>
+    <workflowTasks>
+        <description><!-- 1. Create &amp; Save the Estimate record.
+2. Upload the document as an attachment.
+3. Click the &apos;Submit For Approval&apos; button. --></description>
+        <name>Dell_Submit_Work_Order_Estimate</name>
+        <subject><!-- Dell Submit Work Order &amp; Estimate --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Upload the BRD as an Attachment on the Subproject record. --></description>
+        <name>Dell_Upload_BRD</name>
+        <subject><!-- Dell Upload BRD --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Upload the Test Output as an Attachment on the Subproject record. --></description>
+        <name>Dell_Upload_Model_Office_Test_Output</name>
+        <subject><!-- Dell Upload Model Office Test Output --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Upload the Test Plan as an Attachment on the Subproject record. --></description>
+        <name>Dell_Upload_Model_Office_Test_Plan</name>
+        <subject><!-- Dell Upload Model Office Test Plan --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>FGL_Distribute_BRD_for_Approval</name>
+        <subject><!-- FGL Distribute BRD for Approval --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>FGL_Distribute_Test_Output_for_Approval</name>
+        <subject><!-- FGL Distribute Test Output for Approval --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>FGL_Distribute_Test_Plan_for_Approval</name>
+        <subject><!-- FGL Distribute Test Plan for Approval --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

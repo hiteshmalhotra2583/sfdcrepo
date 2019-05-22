@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>HubSpot_Setup</defaultLandingTab>
+    <description>Synchronize your HubSpot Contacts with Salesforce.com Leads and Contacts and provide valuable website intelligence directly to your Sales Team.</description>
+    <formFactors>Large</formFactors>
+    <label>HubSpot</label>
+    <logo>Images/HubSpot_Logo.png</logo>
+    <tab>HubSpot</tab>
+    <tab>HubSpot_Setup</tab>
+    <tab>standard-Lead</tab>
+    <tab>standard-Contact</tab>
+    <tab>AccountSales__c</tab>
+    <tab>MasterAssociation__c</tab>
+    <tab>Daily_Goals__c</tab>
+    <tab>Enhancement_Ideas__c</tab>
+    <tab>Approval_State__c</tab>
+</CustomApplication>

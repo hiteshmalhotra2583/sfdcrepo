@@ -1,0 +1,6 @@
+A revision has been requested for {!Marketing_Materials__c.Ad_Review_Number__c} - {!Marketing_Materials__c.MktCombinedFormNumber__c}.  Comments are as follows:
+
+{!Marketing_Materials__c.Revisions_Requested_Comments__c}
+
+Please click on the link for more detail:
+{!Marketing_Materials__c.Link}

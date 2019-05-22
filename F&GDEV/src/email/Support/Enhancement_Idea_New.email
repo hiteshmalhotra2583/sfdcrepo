@@ -1,0 +1,9 @@
+Hi {!Enhancement_Ideas__c.Submitter__c},
+
+This is a confirmation email to notify you that your enhancement idea, "{!Enhancement_Ideas__c.Enhancement_Idea__c}", relating to {!Enhancement_Ideas__c.Category__c} has been recorded for our review. 
+
+{!Enhancement_Ideas__c.Link}
+
+Thank you for contributing to a better Salesforce experience!
+
+- Your Salesforce Support Team

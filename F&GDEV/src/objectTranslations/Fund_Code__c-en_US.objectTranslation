@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fund Code</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Fund Codes</value>
+    </caseValues>
+    <fields>
+        <label><!-- DJ Index Option --></label>
+        <name>DJ_Index_Option__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Index Required --></label>
+        <name>External_Index_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Index --></label>
+        <name>External_Index__c</name>
+        <picklistValues>
+            <masterLabel>Barclays</masterLabel>
+            <translation><!-- Barclays --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DJIA</masterLabel>
+            <translation><!-- DJIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DJREIT</masterLabel>
+            <translation><!-- DJREIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LBMA</masterLabel>
+            <translation><!-- LBMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SP500</masterLabel>
+            <translation><!-- SP500 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fund Type --></label>
+        <name>Fund_Type__c</name>
+        <picklistValues>
+            <masterLabel>1YDA</masterLabel>
+            <translation><!-- 1YDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YGT</masterLabel>
+            <translation><!-- 1YGT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YGTF</masterLabel>
+            <translation><!-- 1YGTF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YMA</masterLabel>
+            <translation><!-- 1YMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YMAS</masterLabel>
+            <translation><!-- 1YMAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YMPTP</masterLabel>
+            <translation><!-- 1YMPTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YMPTPF</masterLabel>
+            <translation><!-- 1YMPTPF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YPTP</masterLabel>
+            <translation><!-- 1YPTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YPTPF</masterLabel>
+            <translation><!-- 1YPTPF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1YPTPP</masterLabel>
+            <translation><!-- 1YPTPP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2YDA</masterLabel>
+            <translation><!-- 2YDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2YMA</masterLabel>
+            <translation><!-- 2YMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2YMPTP</masterLabel>
+            <translation><!-- 2YMPTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2YPTP</masterLabel>
+            <translation><!-- 2YPTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3YMA</masterLabel>
+            <translation><!-- 3YMA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3YMAS</masterLabel>
+            <translation><!-- 3YMAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3YMPTP</masterLabel>
+            <translation><!-- 3YMPTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3YPTP</masterLabel>
+            <translation><!-- 3YPTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5YPTP</masterLabel>
+            <translation><!-- 5YPTP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HWM</masterLabel>
+            <translation><!-- HWM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- InterestCreditingMethodCode --></label>
+        <name>InterestCreditingMethodCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- InterestCreditingStrategyCode --></label>
+        <name>InterestCreditingStrategyCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- LegacyDB_ID --></label>
+        <name>LegacyDB_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plan Code --></label>
+        <name>Plan_Code__c</name>
+        <relationshipLabel><!-- Fund Codes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SP Index Option --></label>
+        <name>SP_Index_Option__c</name>
+    </fields>
+    <layouts>
+        <layout>Fund Code Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AgentID__c.AgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.AgentName__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Email__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.UplineAgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.MgaAgentID__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000245307 - LEGACY MARKETING GROUP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.MgaAgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>l	000270798 - LEGACY MARKETING GROUP</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.Email__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AgentID__c.IsActive__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>SUPP - Legacy by MGA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$AgentID__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>AgentID__c.EffectiveDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

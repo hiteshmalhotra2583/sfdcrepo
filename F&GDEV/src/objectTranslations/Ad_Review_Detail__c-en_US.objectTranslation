@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ad Review Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ad Review Detail</value>
+    </caseValues>
+    <fields>
+        <label><!-- Ad Review Number --></label>
+        <name>Ad_Review_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Review Priority --></label>
+        <name>Ad_Review_Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Admin Review of Revisions --></label>
+        <name>Admin_Review_of_Revisions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discussion Required --></label>
+        <name>Discussion_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Availability --></label>
+        <name>Document_Availability__c</name>
+    </fields>
+    <fields>
+        <label><!-- FirstStatusSent --></label>
+        <name>FirstStatusSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Form Description --></label>
+        <name>Form_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Review --></label>
+        <name>Initial_Review__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Material --></label>
+        <name>Marketing_Material__c</name>
+        <relationshipLabel><!-- Ad Review Detail --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Mkt Material Form Number --></label>
+        <name>Mkt_Material_Form_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- MyReviewOnHold --></label>
+        <name>MyReviewOnHold__c</name>
+    </fields>
+    <fields>
+        <label><!-- OrigReviewDueDate --></label>
+        <name>OrigReviewDueDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preliminary PD Product Review --></label>
+        <name>Preliminary_PD_Product_Review__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result of Review --></label>
+        <name>Result_of_Review__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved with Changes</masterLabel>
+            <translation><!-- Approved with Changes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ReviewOutstandingDays --></label>
+        <name>ReviewOutstandingDays__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Completed --></label>
+        <name>Review_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Due --></label>
+        <name>Review_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Started --></label>
+        <name>Review_Started__c</name>
+    </fields>
+    <fields>
+        <label><!-- Review Status --></label>
+        <name>Review_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReviewerDaysToComplete --></label>
+        <name>ReviewerDaysToComplete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reviewer Comments --></label>
+        <name>Reviewer_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reviewer Department --></label>
+        <name>Reviewer_Department__c</name>
+        <picklistValues>
+            <masterLabel>Actuarial - Annuity</masterLabel>
+            <translation><!-- Actuarial - Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actuarial - Life</masterLabel>
+            <translation><!-- Actuarial - Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Compliance</masterLabel>
+            <translation><!-- Compliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Corporate</masterLabel>
+            <translation><!-- Corporate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Communications</masterLabel>
+            <translation><!-- Marketing Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operations</masterLabel>
+            <translation><!-- Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Development</masterLabel>
+            <translation><!-- Product Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tax</masterLabel>
+            <translation><!-- Tax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Underwriting</masterLabel>
+            <translation><!-- Underwriting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reviewer --></label>
+        <name>Reviewer__c</name>
+        <relationshipLabel><!-- Ad Review Detail --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Ad Review Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

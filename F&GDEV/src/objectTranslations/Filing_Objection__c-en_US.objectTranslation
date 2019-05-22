@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Filing Objection</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Filing Objections</value>
+    </caseValues>
+    <fields>
+        <label><!-- Objection Assigned To --></label>
+        <name>Objection_Assigned_To__c</name>
+        <relationshipLabel><!-- Filing Objections --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Objection Closed --></label>
+        <name>Objection_Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection Detail --></label>
+        <name>Objection_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection Received --></label>
+        <name>Objection_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection Response Detail --></label>
+        <name>Objection_Response_Detail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection Response Required By --></label>
+        <name>Objection_Response_Required_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection Response Submitted --></label>
+        <name>Objection_Response_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection Response Summary --></label>
+        <name>Objection_Response_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection State --></label>
+        <name>Objection_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objection Summary --></label>
+        <name>Objection_Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Policy Form State --></label>
+        <name>Policy_Form_State__c</name>
+        <relationshipLabel><!-- Filing Objections --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- When this checkbox is checked, the Filing Status on the Policy Form State record will have a status of &quot;Withdrawn&quot;. --></help>
+        <label><!-- Will Not Be Responding --></label>
+        <name>Will_Not_Be_Responding__c</name>
+    </fields>
+    <layouts>
+        <layout>Filing Objection Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Objection Detail --></label>
+            <section>Objection Detail</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

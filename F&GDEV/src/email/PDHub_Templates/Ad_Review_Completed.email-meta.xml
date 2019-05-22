@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Ad Review Completed</name>
+    <style>none</style>
+    <subject>{!Ad_Review_Detail__c.Reviewer__c} Completed Review of {!Marketing_Materials__c.Ad_Review_Number__c}</subject>
+    <type>text</type>
+</EmailTemplate>

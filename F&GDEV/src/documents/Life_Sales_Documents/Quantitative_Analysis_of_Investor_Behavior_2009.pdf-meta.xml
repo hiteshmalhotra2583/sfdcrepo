@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This is an analysis that is done by DALBAR every year.  It shows the 20 year historical returns of investment returns vs. investor returns.  It&apos;s all about behavioral economics.</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Quantitative Analysis of Investor Behavior - 2009</name>
+    <public>false</public>
+</Document>

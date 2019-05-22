@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Trademark</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Trademarks</value>
+    </caseValues>
+    <fields>
+        <help><!-- What is the class description listed on the certificate? --></help>
+        <label><!-- Class --></label>
+        <name>Class__c</name>
+    </fields>
+    <fields>
+        <label><!-- Continued Use End Date --></label>
+        <name>Continued_Use_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Continued Use Start Date --></label>
+        <name>Continued_Use_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Filed --></label>
+        <name>Date_Filed__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is the first use and in commerce date found on the certificate? --></help>
+        <label><!-- First Use --></label>
+        <name>First_Use__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Name --></label>
+        <name>Marketing_Name__c</name>
+        <picklistValues>
+            <masterLabel>Accelerator Plus</masterLabel>
+            <translation><!-- Accelerator Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG AccumulatorPlus</masterLabel>
+            <translation><!-- FG AccumulatorPlus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Guarantee-Platinum</masterLabel>
+            <translation><!-- FG Guarantee-Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Immediate-Income</masterLabel>
+            <translation><!-- FG Immediate-Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Index-Choice 0</masterLabel>
+            <translation><!-- FG Index-Choice 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Life-Choice</masterLabel>
+            <translation><!-- FG Life-Choice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Life-Elite</masterLabel>
+            <translation><!-- FG Life-Elite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FG Retirement Pro</masterLabel>
+            <translation><!-- FG Retirement Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FGNY Index-Choice 10</masterLabel>
+            <translation><!-- FGNY Index-Choice 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performance Pro</masterLabel>
+            <translation><!-- Performance Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prosperity Elite</masterLabel>
+            <translation><!-- Prosperity Elite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safe Income Plus</masterLabel>
+            <translation><!-- Safe Income Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Synergy Global Advantage Freedom</masterLabel>
+            <translation><!-- Synergy Global Advantage Freedom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Synergy Global Advantage Gold</masterLabel>
+            <translation><!-- Synergy Global Advantage Gold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Owner of Reg. No. --></label>
+        <name>Owner_of_Reg_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Principal Register --></label>
+        <name>Principal_Register__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product_Type__c --></label>
+        <name>Product_Type_c__c</name>
+        <picklistValues>
+            <masterLabel>Annuity</masterLabel>
+            <translation><!-- Annuity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Life</masterLabel>
+            <translation><!-- Life --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Received Date --></label>
+        <name>Received_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Issued --></label>
+        <name>Registration_Issued__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registration Type --></label>
+        <name>Registration_Type__c</name>
+        <picklistValues>
+            <masterLabel>Logo</masterLabel>
+            <translation><!-- Logo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Renewal End Date --></label>
+        <name>Renewal_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Renewal Start Date --></label>
+        <name>Renewal_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Serial Number --></label>
+        <name>Serial_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Text Serial Number --></label>
+        <name>Text_Serial_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Trademark Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Post Registration --></label>
+            <section>Post Registration</section>
+        </sections>
+        <sections>
+            <label><!-- Principal Register --></label>
+            <section>Principal Register</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

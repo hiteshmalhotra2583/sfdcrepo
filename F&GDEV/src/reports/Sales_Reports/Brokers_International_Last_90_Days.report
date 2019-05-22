@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.TopLevelAccount__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.LastPolicyIssued__c</field>
+    </columns>
+    <columns>
+        <field>Account.FirstPolicyIssued__c</field>
+    </columns>
+    <columns>
+        <field>Account.YTDAnnuity__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.FirstContracted__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_90_DAYS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.TopLevelAccount__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>BROKERS INTERNATIONAL</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>Account.FirstContracted__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Brokers International - Last 90 Days</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account.YTDAnnuity__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account.FirstPolicyIssued__c</dateColumn>
+        <interval>INTERVAL_LAST90</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,460 @@
+<aura:component controller="CTRL_CreateMassPolicyForm" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" >
+    <aura:attribute name="insuranceType" type="String" default="" />
+    <aura:attribute name="policyFormType" type="String" default="" />
+    <aura:attribute name="otherType" type="String" default="" />
+    <aura:attribute name="individualStd" type="String" default="" />
+    <aura:attribute name="groupStd" type="String" default="" />
+    <aura:attribute name="compact" type="String" default="" />
+    <aura:attribute name="stateVarianceList" type="Object[]" default="[]" />
+    <aura:attribute name="selectedDefaultFillingStrategy" type="String" default="" />
+    <aura:attribute name="ResponseData" type="Object[]"  />
+    <aura:attribute name="ResultData" type="Object[]"  />
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="editRecIndex" type="Integer" />
+    <aura:attribute name="FIA_Filing_Strategy_1" type="object[]" />
+    <aura:attribute name="FIA_Filing_Strategy_Individual" type="object[]" />
+    <aura:attribute name="FIA_Filing_Strategy_Group" type="object[]" />
+    <aura:attribute name="FIA_Filing_Strategy_Compact" type="object[]" />
+    <aura:attribute name="FIA_Filing_Strategy_State_Variance" type="object[]" />
+    <aura:attribute name="FIA_Filing_Strategy_2" type="object[]" />
+    <aura:attribute name="policyFormDetail" type="object[]" />
+    <aura:attribute name="isPrimaryInd" type="Boolean" />
+    <aura:attribute name="isPrimaryStd" type="Boolean" />
+    
+    
+    <aura:attribute name="STRecord" type="CTRL_CreateMassPolicyForm.StateVariationFormWrapper" default="{}"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    
+    <lightning:navigation aura:id="navService"/>
+    <aura:attribute name="isIndividualStdExist" type="Boolean" default="false"/>
+    <aura:attribute name="isGroupStdExist" type="Boolean" default="false"/>
+    <aura:attribute name="isCompactExist" type="Boolean" default="false"/>
+    <aura:attribute name="isSTRecordPolicyFormExist" type="Boolean" default="false"/>
+    
+    <aura:attribute name="IndividualStdDes" type="String" default=""/>
+    <aura:attribute name="GroupStdDes" type="String" default=""/>
+    <aura:attribute name="CompactStdDes" type="String" default=""/>
+    
+    <div class="slds"  style="background-color:white !important;overflow:auto;padding-bottom:50px;" >
+        <div class="slds" id="policyFormDetail"  >
+            <div class="slds-page-header" role="banner" >
+                <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                        <div class="slds-media slds-media--center slds-no-space slds-grow">
+                            <div class="slds-media__body">
+                                <h1 class="slds-page-header__title slds-m-right--small slds-truncate slds-align-middle" title="Policy Information">Policy Information</h1>
+                            </div>
+                        </div>                    
+                    </div>                
+                </div>
+            </div>
+            <div  class="slds-form--horizontal slds-grid slds-wrap slds-p-around--small slds-border--bottom " style="background-color:white !important;overflow:auto"  >
+                <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin-top: 0.5rem !important;" >
+                    <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >Insurance Type</label> 
+                  
+                    <div class="slds-form-element__control">
+                        <div class="slds-control paddingTop" >
+                            <ui:inputSelect aura:id="InsuranceType" class="slds-select _Required" value="{!v.insuranceType}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin-top: 0.5rem !important;" >
+                    <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >Policy Form Type</label>
+                   
+                    <div class="slds-form-element__control">
+                        <div class="slds-control paddingTop" >
+                            <ui:inputSelect aura:id="PolicyFormType" class="slds-select _Required" value="{!v.policyFormType}" />
+                        </div>
+                    </div>
+                </div>
+                <aura:if isTrue="{!v.policyFormType=='Other'}">
+                    <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin-top: 0.5rem !important;" >
+                        <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >Other</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-control paddingTop" >
+                                <ui:inputText value="{!v.otherType}" class="_Required"/>
+                            </div>
+                        </div>
+                    </div>
+                </aura:if>
+            </div>
+        </div>
+         <div class="slds" id="SelectStrategy"  >
+            <div class="slds-page-header" role="banner" >
+                <h1 class=" slds-m-right--small slds-truncate slds-align-middle" title="Policy Information">Default Filing Strategy (Please select one)</h1>
+            </div>
+            <div  class="slds-form--horizontal slds-grid slds-wrap slds-p-around--small slds-border--bottom " >
+                <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin-top: 0.5rem !important;" >
+                    <div class="slds-radio">
+                        <input type="radio" id="radio-1" name="options" value="radio-1" data-value="FIA" onchange="{!c.strategySelect}"/>
+                        
+                        <label class="slds-radio__label" for="radio-1">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy 1 (FIA)</span>
+                        </label>
+                        
+                    </div>
+                    <div class="slds-radio">
+                        <input type="radio" id="radio-2" name="options" value="radio-2" data-value="MYGA" onchange="{!c.strategySelect}"/>
+                        
+                        <label class="slds-radio__label" for="radio-2">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy 2 (MYGA)</span>
+                        </label>
+                        
+                    </div>
+                    <div class="slds-radio">
+                        <input type="radio" id="radio-3" name="options" value="radio-3" data-value="IUL" onchange="{!c.strategySelect}"/>
+                        
+                        <label class="slds-radio__label" for="radio-3">
+                            <span class="slds-radio_faux"></span>
+                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy 3 (IUL)</span>
+                        </label>
+                        
+                    </div>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="slds" id="StandardPolicyForm"  >
+            <div class="slds-page-header" role="banner" >
+                <h1 class="slds-m-right--small slds-truncate slds-align-middle" title="Policy Information">Standard Policy Form(s) (Please select one)</h1>
+            </div>
+            <div  class="slds-form--horizontal slds-grid slds-wrap slds-p-around--small slds-border--bottom " >
+                <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin-top: 0.5rem !important;" >
+                   <div class="slds-float_left slds-size_4-of-12">
+                        <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >
+                            Individual Std
+                            <!-- <ui:inputCheckbox class="dynamic" aura:id="isPrimaryInd"/> -->
+                        </label> 
+                        <div class="slds-checkbox">
+                            <input type="checkbox" name="options" id="isPrimaryInd" onchange="{!c.isPrimarySelected}"/>
+                            <label class="slds-checkbox__label" for="isPrimaryInd">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Primary</span>
+                            </label>
+                        </div>
+                        <div class="slds-form-element__control">
+                            <div class="slds-control paddingTop" >
+                                <ui:inputText value="{!v.individualStd}"  change="{!c.isIndividualStdChange}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-float_right  slds-size_6-of-12">
+                        <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >
+                            Description
+                        </label> 
+                        <ui:inputTextArea  value="{!v.IndividualStdDes}" />
+                    </div>
+                </div>
+                <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin-top: 0.5rem !important;" >
+                    <div class="slds-float_left slds-size_4-of-12">
+                        <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >
+                            Group Std
+                        </label>
+                        <!--<div class="slds-checkbox">
+                        <input type="checkbox" name="options" id="isPrimaryStd" onchange="{!c.isPrimarySelected}"/>
+                        <label class="slds-checkbox__label" for="isPrimaryStd">
+                            <span class="slds-checkbox_faux"></span>
+                            <span class="slds-form-element__label">Primary</span>
+                        </label>
+                    </div> -->
+                        <div class="slds-form-element__control">
+                            <div class="slds-control paddingTop" >
+                                <ui:inputText value="{!v.groupStd}" change="{!c.isGroupStdChange}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-float_right  slds-size_6-of-12">
+                        <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >
+                            Description
+                        </label> 
+                        <ui:inputTextArea  value="{!v.GroupStdDes}" />
+                    </div>
+                </div>
+                <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin-top: 0.5rem !important;" >
+                    <div class="slds-float_left slds-size_4-of-12">
+                        <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >
+                            Compact
+                        </label>
+                        <div class="slds-checkbox">
+                            <input type="checkbox" name="options" id="isPrimaryStd" onchange="{!c.isPrimarySelected}"/>
+                            <label class="slds-checkbox__label" for="isPrimaryStd">
+                                <span class="slds-checkbox_faux"></span>
+                                <span class="slds-form-element__label">Primary</span>
+                            </label>
+                        </div> 
+                        <div class="slds-form-element__control">
+                            <div class="slds-control paddingTop" >
+                                <ui:inputText value="{!v.compact}" change="{!c.isCompactChange}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-float_right  slds-size_6-of-12">
+                        <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;" >
+                            Description
+                        </label> 
+                        <ui:inputTextArea  value="{!v.CompactStdDes}" />
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="slds" id="StateVariancePolicyForm"  >
+            <div class="slds-page-header" role="banner" >
+                <div class="slds-grid">
+                    <div class="slds-size--3-of-4">
+                        <h1 class=" slds-m-right--small slds-truncate slds-align-middle" title="Policy Information">State Variation Policy Form </h1>
+                        
+                    </div>
+                    <div class="slds-size--1-of-4" align="right">
+                        <button class="slds-button slds-button--neutral ng-binding"    onclick="{!c.addRecord}">
+                            <lightning:icon class="icnreset" iconName="utility:add"  size="x-small" />
+                            Add
+                        </button>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div id="listRecords" style="padding:10px;background-color:white !important;max-height: 200px;overflow: auto;">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Policy Form">Policy Form</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Group / Ind">Group / Ind</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Description">Description</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="States">States</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Action">Action</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <aura:iteration items="{!v.stateVarianceList}" var="SV" indexVar="index">
+                            <tr>
+                                <td data-label="Policy Form" >
+                                    <div class="slds-truncate" title="Policy Form">{!SV.policyFormName}</div>
+                                </td>
+                                
+                                <td data-label="Group / Ind">
+                                    <div class="slds-truncate" title="Group / Ind">{!SV.fillingType}</div>
+                                </td>
+                                <td data-label="Description" >
+                                    <div class="slds-truncate" title="Description">{!SV.description}</div>
+                                </td>
+                                
+                                <td data-label="States" >
+                                    <!-- <span class="rc-phone-number" > {!con.Phone} </span>-->
+                                    <div style="max-width:200px;word-break: break-all">{!SV.selectedStates}</div>
+                                    
+                                    
+                                </td>  
+                                <td data-label="States" style="width:10%">
+                                    <button class="slds-button slds-button--neutral ng-binding"  data-value="{!index}" onclick="{!c.editRecord}" >
+                                        <lightning:icon class="icnreset" iconName="utility:edit"  size="x-small" alternativeText="Edit" />
+                                    </button>
+                                    <button class="slds-button slds-button--neutral ng-binding"  data-value="{!index}" onclick="{!c.removeRecord}">
+                                        <lightning:icon class="icnreset" iconName="utility:delete" size="x-small" alternativeText="Delete"/>
+                                    </button>
+                                </td>
+                                
+                            </tr>
+                            
+                        </aura:iteration>
+                        <aura:if isTrue="{!v.stateVarianceList.length==0}">
+                            <tr  >
+                                <td colspan="5"><div align="center"><b>No Record Found</b></div></td>
+                            </tr>
+                        </aura:if>
+                    </tbody>
+                </table>
+                
+            </div>
+            
+        </div>
+        <div class="slds-grid">
+            <div class="slds-size--1-of-1" align="center">
+                <button class="slds-button slds-button_brand"    onclick="{!c.submit}">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div role="dialog" aura:id="saveCallLog" tabindex="-1" aria-labelledby="header99" class="slds-modal  " >
+            <div class="slds-modal__container">
+                <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+                <div class="slds-modal__header">
+                    
+                    <h2 id="header99" class="slds-text-heading--medium">Edit Policy Form Records</h2>
+                </div>
+                <!--###### MODAL BOX BODY Part Start From Here ######-->
+                
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div  class="slds-form--horizontal slds-grid slds-wrap slds-p-around--small " style="padding-top:0px">
+                        <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin:0px"  >
+                            <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;position:initial" >Policy Form</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-control " >
+                                    <ui:inputText value="{!v.STRecord.policyFormName}" class="_Required" change="{!c.isSTRecordFormChange}"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin:0px"  >
+                            <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;position:initial" >Group / Ind</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-control " >
+                                    <ui:inputSelect aura:id="groupSelect" class="slds-select " value="{!v.STRecord.fillingType}" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin:0px"  >
+                            <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;position:initial" >Description</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-control " >
+                                    <ui:inputTextArea value="{!v.STRecord.description}" class="_Required"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-form-element slds-size--1-of-1 slds-p-horizontal--small " style="margin:0px"  >
+                            <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;position:initial" >States</label>
+                            <div class="slds-form-element__control">
+                                <div class="slds-control " >
+                                    <ui:inputSelect aura:id="stateList" class="slds-select multiSelectHeight" multiple="true"  value="{!v.STRecord.selectedStates}" />
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+                
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+                    <button class="slds-button slds-button--brand" onclick="{!c.saveDetail}" >Next</button>
+                </div>
+            </div>
+        </div>
+        <div aura:id="saveCallLogBackDrop" class="slds-backdrop"></div>
+        <!--###### MODAL BOX Part END Here ######-->
+    </div>
+    <div>
+        <div role="dialog" aura:id="stateModel" tabindex="-1" aria-labelledby="header99" class="slds-modal  " >
+            <div class="slds-modal__container" style="width:80%;max-width: 100%;">
+                <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+                <div class="slds-modal__header">
+                    
+                    <h2 id="header99" class="slds-text-heading--medium">Review/Modify Filing Approach</h2>
+                </div>
+                <!--###### MODAL BOX BODY Part Start From Here ######-->
+                
+                <div class="slds-modal__content slds-p-around--medium">
+                    <aura:if isTrue="{!v.ResultData.length>0}">
+                        <div class="slds-table--header-fixed_container" style="height:378px;">
+                            <div class="slds-scrollable_y" style="height:100%;">
+                                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_fixed-layout slds-table--header-fixed" >
+                                    <aura:iteration items="{!v.ResultData}" var="data"  indexVar="index">
+                                        <!--  <aura:if isTrue="{!index==1}" >-->
+                                            <thead>
+                                                <tr class="slds-text-title_caps">
+                                                    <th scope="col">
+                                                        <div class="slds-truncate slds-cell-fixed" title="State">StateName</div>
+                                                    </th>
+                                                    
+                                                    <aura:iteration items="{!data.approach}" var="approachData"  indexVar="index">
+                                                        <th scope="col">
+                                                            <div class="slds-truncate slds-cell-fixed" title="{!approachData.formName}">{!approachData.formName}</div>
+                                                        </th>
+                                                    </aura:iteration>
+                                                </tr>
+                                            </thead>
+                                        <!-- </aura:if>-->
+                                        <aura:if isTrue="{!and(data.state!=null,data.state!='')}" >
+                                            <tr>
+                                                <td data-label="State" >
+                                                    <div class="slds-truncate" title="{!data.state}">{!data.state}</div>
+                                                </td>
+                                                <aura:iteration items="{!data.approach}" var="approachData"  indexVar="index">  
+                                                    <td data-label="Approach1" >
+                                                        <aura:if isTrue="{!approachData.type=='individualStd'}">
+                                                            <ui:inputSelect aura:id="approach1" class="slds-select" value="{!approachData.ApproachName}" >
+                                                                <aura:iteration items="{!v.FIA_Filing_Strategy_Individual}" var="picklistdata"  indexVar="index1">
+                                                                    <ui:inputSelectOption label="{!picklistdata.label}" text="{!picklistdata.value}" value="{!approachData.ApproachName==picklistdata.label}" />
+                                                                </aura:iteration>
+                                                            </ui:inputSelect>
+                                                        </aura:if>
+                                                        <aura:if isTrue="{!approachData.type=='groupStd'}">
+                                                            <ui:inputSelect aura:id="approach1" class="slds-select" value="{!approachData.ApproachName}" >
+                                                                <aura:iteration items="{!v.FIA_Filing_Strategy_Group}" var="picklistdata"  indexVar="index1">
+                                                                    <ui:inputSelectOption label="{!picklistdata.label}" text="{!picklistdata.value}" value="{!approachData.ApproachName==picklistdata.label}" />
+                                                                </aura:iteration>
+                                                            </ui:inputSelect>
+                                                        </aura:if>
+                                                        <aura:if isTrue="{!approachData.type=='compact'}">
+                                                            <ui:inputSelect aura:id="approach1" class="slds-select" value="{!approachData.ApproachName}" >
+                                                                <aura:iteration items="{!v.FIA_Filing_Strategy_Compact}" var="picklistdata"  indexVar="index1">
+                                                                    <ui:inputSelectOption label="{!picklistdata.label}" text="{!picklistdata.value}" value="{!approachData.ApproachName==picklistdata.label}"/>
+                                                                </aura:iteration>
+                                                            </ui:inputSelect>
+                                                        </aura:if>
+                                                        <aura:if isTrue="{!approachData.type=='State Variation'}">
+                                                            <ui:inputSelect aura:id="approach1" class="slds-select" value="{!approachData.ApproachName}" >
+                                                                <aura:iteration items="{!v.FIA_Filing_Strategy_State_Variance}" var="picklistdata"  indexVar="index1">
+                                                                    <ui:inputSelectOption label="{!picklistdata.label}" text="{!picklistdata.value}" value="{!approachData.ApproachName==picklistdata.label}" />
+                                                                </aura:iteration>
+                                                            </ui:inputSelect>
+                                                        </aura:if>
+                                                    </td>   
+                                                </aura:iteration>
+                                            </tr>
+                                        </aura:if>
+                                    </aura:iteration>
+                                </table> 
+                                <aura:set attribute="else">
+                                    <div align="center">No Record Found</div>
+                                </aura:set>
+                            </div>
+                        </div>
+                    </aura:if>
+                </div>
+                <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+                
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeStateModel}" >Cancel</button>
+                    <aura:if isTrue="{!v.ResultData.length>0}">
+                        <button class="slds-button slds-button--brand" onclick="{!c.saveStateDetail}" >Create Records Now</button>
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+        <div aura:id="stateModelBackDrop" class="slds-backdrop"></div>
+        <!--###### MODAL BOX Part END Here ######-->
+    </div>
+    <aura:if isTrue="{!v.Spinner}">
+        <div class="demo-only" style="height: 6rem; z-index: 10000; !important">
+            <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand slds-spinner--brand   slds-spinner_inverse">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+</aura:component>

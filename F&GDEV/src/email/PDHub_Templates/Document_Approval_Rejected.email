@@ -1,0 +1,7 @@
+Rejection Comments (if provided) are as follows:
+
+{!ApprovalRequest.Comments}
+
+Please click on the link for more detail:
+
+{!Document_Approval__c.Link}

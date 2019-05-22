@@ -1,0 +1,129 @@
+<aura:component 
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader"  
+                controller="CTRL_ClonePolicyForm" 
+                access="global" 
+                extends="c:BaseLightningComponent" >
+    <!--Aura attributes-->
+    <aura:attribute name="policyFormStates" 
+                    type="List" 
+                    default="[]" />
+    <aura:attribute name="message" 
+                    type="String"/>
+    
+    <aura:attribute name = "existingPolicyFormName"
+                    type = "String" />
+    <aura:attribute name="newPolicyFormName" 
+                    type="String" />
+    
+    <aura:attribute name="stateSelect" 
+                    type="String" default="" />
+    
+    <aura:attribute name="showSpinner" 
+                    type="Boolean" 
+                    default="false" />
+    <aura:attribute name="existingPolicyNameMatches"
+                    type="Boolean"
+                    default="true" />
+    <aura:attribute name="isOpen"
+                    type="Boolean"
+                    default="false" />
+    <!--Init handler-->
+    <aura:handler name="init" 
+                  value="{!this}" 
+                  action="{!c.doInit}" />
+    
+    <!--Modal footer styling-->
+    <aura:html tag="style">
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:hidden !important;
+        height:unset !important;
+        max-height:unset !important;
+        overflow:scroll !important;
+        }
+        .slds-modal__close{
+        display:none;
+        }
+        .cloneInput input:focus, .cloneInput:active {
+        border-color : rgb(255,0,0);
+        box-shadow : 0 0 3px #ff0000;
+        }
+    </aura:html>
+    <!--componentbody-->
+    <lightning:card title="Clone Policy Form State">
+        <div class="slds-grid slds-wrap slds-m-around_large">
+            <div class="slds-col slds-size_11-of-12">
+                <div aura:id="formInput" class="cloneInput">
+                    <lightning:helptext style="position: absolute;left: 160px;" content="{!'Name must be different than original policy state form name'}" iconName="utility:info" class="popover"/>
+                    <lightning:input 
+                                     type="text" 
+                                     label="Clone Policy Form State " 
+                                     value="{!v.newPolicyFormName}"
+                                     onchange="{!c.validateNameChange}" />
+                    
+                </div>
+            </div>
+            <!--List of policy form states-->
+            <div class="slds-col slds-size_1-of-1">
+                <lightning:radioGroup
+                                      name="States"
+                                      aura:id="elecheckbox"
+                                      label="Select a state to clone"
+                                      options="{!v.policyFormStates}"
+                                      value="{!v.stateSelect}"
+                                      type="radio"
+                                      onchange="{!c.handleCheckBoxSelect}" ></lightning:radioGroup>
+            </div>
+        </div>
+        <aura:if isTrue="{!v.showSpinner}">
+            <lightning:spinner alternativeText="Cloning" size="medium" />
+        </aura:if>
+    </lightning:card>
+    
+    <!--component footer with buttons-->
+    <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+        <lightning:button variant="brand" label="Clone" title="Clone" onclick="{!c.openModal}" disabled="{!or(or(v.stateSelect.length!=18, empty(v.newPolicyFormName)),v.existingPolicyNameMatches)}" />
+        <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{!c.handleCancel}"/>
+    </div>
+    <aura:if isTrue="{!v.isOpen}">
+        
+        <!--###### MODAL BOX Start######--> 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- ###### MODAL BOX HEADER Start ######-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.handleCancel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Do you want to continue?</h2>
+                </header>
+                <!--###### MODAL BOX BODY Part Start######-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p><b>Important: The Policy Form and the selected Policy Form State are being copied and the source Policy Form State record and related records will be deleted. Do you wish to continue?
+                        </b>
+                    </p>
+                </div>
+                <!--###### MODAL BOX FOOTER Part Start ######-->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="No"
+                                      title="Cancel"
+                                      onclick="{!c.handleCancel}"/>
+                    <lightning:button variant="brand" 
+                                      label="Yes"
+                                      title="Proceed"
+                                      onclick="{!c.handleClone}"/>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!--###### MODAL BOX Part END Here ######-->
+    </aura:if>
+</aura:component>

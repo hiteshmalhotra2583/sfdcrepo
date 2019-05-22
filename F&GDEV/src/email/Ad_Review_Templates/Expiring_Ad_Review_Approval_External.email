@@ -1,0 +1,5 @@
+Please note that the ad review approval on the attached {!Marketing_Materials__c.Ad_Review_Number__c} - {!Marketing_Materials__c.Form_Description__c} is due to expire on {!Marketing_Materials__c.Current_Expiration__c}. At that time, please do not use the ad without a new approval and a new ad review number.
+
+For continued use, please submit this piece to Product.Compliance-Adreview@fglife.com, and reference {!Marketing_Materials__c.Ad_Review_Number__c} as the ad to be replaced. Please, with your submission, indicate if the ad stayed the same or if it had edits. If it had edits, please give details as to what changed.
+
+Thanks!

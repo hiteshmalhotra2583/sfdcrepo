@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>AgentIDUpline</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AgentIDUpline</value>
+    </caseValues>
+    <fields>
+        <label><!-- AgentID + Upline AgentID (ID) --></label>
+        <name>AgentIDUplineAgentID__c</name>
+    </fields>
+    <fields>
+        <label><!-- AgentID --></label>
+        <name>AgentID__c</name>
+        <relationshipLabel><!-- Upline --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- AgentID Name --></label>
+        <name>UplineAgentID__c</name>
+        <relationshipLabel><!-- Full Downline --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hierarchy Level --></label>
+        <name>UplineAgentLevel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upline Text --></label>
+        <name>Upline_Text__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

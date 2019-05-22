@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AgentID__c$Name</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Sales__r$Month__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c$YTDAnnuity__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c$Last3TotalAnnuity__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Sales__r$TAPAmount__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c.Sales__r$PlanCode__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c$UplineAgentID__c</field>
+    </columns>
+    <columns>
+        <field>AgentID__c$MgaAgentID__c.Name</field>
+    </columns>
+    <description>Report for tracking TAP of agents who attend Webinars</description>
+    <filter>
+        <criteriaItems>
+            <column>AgentID__c$AgentID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>000295609,000292092,000298015,000282623,000295956,000075688,000285982,000239909,000247191,000280098,000292162,000182277,000199877,000291983,000297788,000286116,000291605,000267181,000275928,000239273,000101690,000015258,000285498,000146227,000284502,000166408,000282235,000296448</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Webinar Tracking Report – by Agent ID</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Agent_ID_TAP__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>AgentID__c.Sales__r$Month__c</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

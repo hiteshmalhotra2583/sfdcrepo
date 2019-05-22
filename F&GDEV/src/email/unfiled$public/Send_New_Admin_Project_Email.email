@@ -1,0 +1,7 @@
+Hi David,
+
+{!Project__c.CreatedBy} has just been created per the request of {!Project__c.Requestor__c}. You can view the project and its related subprojects here: {!Project__c.Link}
+
+Best,
+
+Your Salesforce Admin

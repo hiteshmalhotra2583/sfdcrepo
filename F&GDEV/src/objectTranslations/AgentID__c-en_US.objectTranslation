@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>AgentID</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>AgentIDs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- AgentIDs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>AddrCity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Code --></label>
+        <name>AddrPostalCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>AddrState__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>AddrStreet__c</name>
+    </fields>
+    <fields>
+        <label><!-- AgentID_Name_ID --></label>
+        <name>AgentID_Name_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent ID --></label>
+        <name>AgentID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agent Name --></label>
+        <name>AgentName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Role --></label>
+        <name>ContractRole__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Status --></label>
+        <name>ContractStatusText__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Type --></label>
+        <name>ContractType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Channel --></label>
+        <name>Distribution_Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>EffectiveDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax --></label>
+        <name>Fax__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Policy Issued --></label>
+        <name>FirstPolicyIssued__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Name --></label>
+        <name>Group_Name__c</name>
+        <relationshipLabel><!-- AgentIDs (Group Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hierarchy Level --></label>
+        <name>HierarchyLevel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>IsActive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fixed Annuity --></label>
+        <name>Last3FixedAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indexed Annuity --></label>
+        <name>Last3IndexedAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indexed UL --></label>
+        <name>Last3IndexedUL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annuity Issued Count (L3) --></label>
+        <name>Last3IssuedPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life Issued Count (L3) --></label>
+        <name>Last3IssuedPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annuity Issued Count as WA (L3) --></label>
+        <name>Last3IssuedWrittenPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life Issued Count as WA (L3) --></label>
+        <name>Last3IssuedWrittenPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Life (L3) --></label>
+        <name>Last3OtherLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- SPIA --></label>
+        <name>Last3SPIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- SPIUL (L3) --></label>
+        <name>Last3SPIUL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annuity TAP Count (L3) --></label>
+        <name>Last3TAPPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life TAP Count (L3) --></label>
+        <name>Last3TAPPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annuity TAP Count as WA (L3) --></label>
+        <name>Last3TAPWrittenPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Life TAP Count as WA (L3) --></label>
+        <name>Last3TAPWrittenPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Annualized Life (L3) --></label>
+        <name>Last3TotalAnnualizedLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Annuity (L3) --></label>
+        <name>Last3TotalAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Life (L3) --></label>
+        <name>Last3TotalLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Policy Issued --></label>
+        <name>LastPolicyIssued__c</name>
+    </fields>
+    <fields>
+        <label><!-- Licensed States --></label>
+        <name>LicenseStatesText__c</name>
+    </fields>
+    <fields>
+        <label><!-- MGA Agent ID --></label>
+        <name>MgaAgentID__c</name>
+        <relationshipLabel><!-- MGA Downlines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Phone --></label>
+        <name>OtherPhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Power Partner Reporting --></label>
+        <name>Power_Partner_Reporting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Annuity --></label>
+        <name>PriorYearAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Annuity Issued Count --></label>
+        <name>PriorYearIssuedPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Life Issued Count --></label>
+        <name>PriorYearIssuedPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Annuity Issued Count as WA --></label>
+        <name>PriorYearIssuedWrittenPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Life Issued Count as WA --></label>
+        <name>PriorYearIssuedWrittenPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Life --></label>
+        <name>PriorYearLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Annuity TAP Count --></label>
+        <name>PriorYearTAPPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Life TAP Count --></label>
+        <name>PriorYearTAPPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Annuity TAP Count as WA --></label>
+        <name>PriorYearTAPWrittenPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Life TAP Count as WA --></label>
+        <name>PriorYearTAPWrittenPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Annuity --></label>
+        <name>ProjectedAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Projected Life --></label>
+        <name>ProjectedLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <picklistValues>
+            <masterLabel>Territory 1</masterLabel>
+            <translation><!-- Territory 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Territory 2</masterLabel>
+            <translation><!-- Territory 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Territory 3</masterLabel>
+            <translation><!-- Territory 3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 1 --></label>
+        <name>Top1ProductName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 1 % --></label>
+        <name>Top1ProductPercent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 1 $ --></label>
+        <name>Top1ProductSales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 2 --></label>
+        <name>Top2ProductName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 2 % --></label>
+        <name>Top2ProductPercent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 2 $ --></label>
+        <name>Top2ProductSales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 3 --></label>
+        <name>Top3ProductName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 3 % --></label>
+        <name>Top3ProductPercent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Top Seller 3 $ --></label>
+        <name>Top3ProductSales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upline AgentID --></label>
+        <name>UplineAgentID__c</name>
+        <relationshipLabel><!-- Direct Downline --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Upline BB --></label>
+        <name>Upline_BB__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Annuity --></label>
+        <name>YTDAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Annuity Issued Count --></label>
+        <name>YTDIssuedPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Life Issued Count --></label>
+        <name>YTDIssuedPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Annuity Issued Count as WA --></label>
+        <name>YTDIssuedWrittenPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Life Issued Count as WA --></label>
+        <name>YTDIssuedWrittenPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Life --></label>
+        <name>YTDLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Annuity TAP Count --></label>
+        <name>YTDTAPPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Life TAP Count --></label>
+        <name>YTDTAPPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Annuity TAP Count as WA --></label>
+        <name>YTDTAPWrittenPoliciesAnnuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Life TAP Count as WA --></label>
+        <name>YTDTAPWrittenPoliciesLife__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Fixed Annuity --></label>
+        <name>YTD_Fixed_Annuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD Indexed Annuity --></label>
+        <name>YTD_Indexed_Annuity__c</name>
+    </fields>
+    <fields>
+        <label><!-- YTD SPIA --></label>
+        <name>YTD_SPIA__c</name>
+    </fields>
+    <layouts>
+        <layout>AgentID Layout</layout>
+        <sections>
+            <label><!-- Annual  Production --></label>
+            <section>Annual  Production</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Information --></label>
+            <section>Contract Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Last 3 Months Production --></label>
+            <section>Last 3 Months Production</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- TAP_Breakdown --></label>
+        <name>TAP_Breakdown</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,9 @@
+{!Ad_Review_Detail__c.Reviewer__c} has completed review of {!Marketing_Materials__c.Ad_Review_Number__c} - {!Marketing_Materials__c.MktCombinedFormNumber__c} - {!Marketing_Materials__c.Form_Description__c}.
+
+{!Ad_Review_Detail__c.Reviewer__c} has NOT requested additional changes.
+
+There are {!Marketing_Materials__c.ARROminus1__c} reviews outstanding.
+
+Ad Review priority is {!Marketing_Materials__c.Marketing_Ad_Review_Priority__c}
+
+You can access the Salesforce marketing material at {!Marketing_Materials__c.Link}

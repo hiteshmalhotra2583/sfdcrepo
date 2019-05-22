@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Marketing Name</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Marketing Names</value>
+    </caseValues>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Specification --></label>
+        <name>Product_Specification__c</name>
+        <relationshipLabel><!-- Marketing Names --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
