@@ -552,6 +552,14 @@ FIA Filing Strategy</description>
         <label>All</label>
     </listViews>
     <listViews>
+        <fullName>FIA_Filing_Strategy</fullName>
+        <columns>NAME</columns>
+        <columns>FIA_Filing_Strategy_1__c</columns>
+        <columns>FIA_Filing_Strategy_2__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>FIA Filing Strategy</label>
+    </listViews>
+    <listViews>
         <fullName>States_w_Filing_Strategy</fullName>
         <columns>NAME</columns>
         <columns>FIA_Filing_Strategy_1__c</columns>

@@ -79,7 +79,7 @@
                 <button class="slds-button slds-button_brand"  disabled="{!!v.refPolicies.length>0}" onclick="{!c.undoHidePolicy}">Restore Policy Form</button>
                 <button class="slds-button slds-button_brand"  disabled="{!and(v.statepolicyselectcount==0,v.isDoubleClicked==false)}" onclick="{!c.refreshPage}">Refresh</button>
                 <button class="slds-button slds-button_brand" disabled="{!and(and(v.selectedOptionsList.length==0,v.policyFormStateVal==''),v.selctedPolicyFormType=='')}" onclick="{!c.resetAllFilter}">Reset Filter</button>
-                <button class="slds-button slds-button_brand"   onclick="{!c.redirectToHome}">Close Tool </button> 
+                <!--<button class="slds-button slds-button_brand"   onclick="{!c.redirectToHome}">Close Tool </button> -->
             </div>
             <div style="clear:both;"></div>
         </div>

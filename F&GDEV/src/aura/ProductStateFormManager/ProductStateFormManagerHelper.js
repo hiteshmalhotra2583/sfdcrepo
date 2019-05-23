@@ -141,7 +141,7 @@
 	},
     doInitSubHelper: function (component, event,products,policies){
         var productpolicies = []; 
-        if(products.length>0){
+        if(products!=undefined && products.length>0){
             for(var i=0;i<products.length;i++){
                 for(var j=0;j<policies.length;j++){
                     //Add PolicyFormType field in obj for display records Policy_Form_Type__c from Product_Detail__c obj.

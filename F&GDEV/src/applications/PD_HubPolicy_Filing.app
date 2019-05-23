@@ -11,6 +11,7 @@
     <navType>Standard</navType>
     <tab>standard-home</tab>
     <tab>Project__c</tab>
+    <tab>Filing_Strategy__c</tab>
     <tab>Create_Policy_Form</tab>
     <tab>Policy_Form_Detail__c</tab>
     <tab>Filing_Status__c</tab>

@@ -80,7 +80,7 @@
                 <button class="slds-button slds-button_brand"  disabled="{!!v.refProducts.length>0}" onclick="{!c.undoHideProduct}">Restore Product</button>
                 <button class="slds-button slds-button_brand"  disabled="{!and(v.refPolicies.length==0,v.isDoubleClicked==false)}" onclick="{!c.refreshPage}">Refresh</button>
                 <button class="slds-button slds-button_brand" disabled="{!and(and(v.selctedProduct=='',v.policyFormStateVal==''),and(v.selctedPolicyFormType=='',v.selectedOptionsList.length==0))}" onclick="{!c.resetAllFilter}">Reset Filter</button>
-                <button class="slds-button slds-button_brand"   onclick="{!c.redirectToHome}">Close Tool </button>
+                <!--<button class="slds-button slds-button_brand"   onclick="{!c.redirectToHome}">Close Tool </button>-->
             </div>
             <div style="clear:both;"></div>
         </div>

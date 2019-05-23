@@ -33,9 +33,9 @@
             </div>
             <div class="slds-col slds-size_7-of-12"> 
                   
-                <lightning:button variant="brand" label="Save" onclick="{!c.handleSubmit }" disabled="{! empty(v.lstSelectedStates) || empty(v.lstSelectedProducts) || empty(v.lstSelectedForms) }"/>
+                <lightning:button variant="brand" label="Create Associations" onclick="{!c.handleSubmit }" disabled="{! empty(v.lstSelectedStates) || empty(v.lstSelectedProducts) || empty(v.lstSelectedForms) }"/>
                 <lightning:button variant="brand" label="Clear All" onclick="{!c.clearForm }" disabled="{! empty(v.lstSelectedStates) || empty(v.lstSelectedProducts) || empty(v.lstSelectedForms) }"/>
-                <lightning:button variant="brand" label="Close Tool" onclick="{!c.goBack}" />
+                <!--<lightning:button variant="brand" label="Close Tool" onclick="{!c.goBack}" />-->
             </div>
         </div>
         <div class="slds-grid slds-wrap slds-gutters slds-m-left_medium">
