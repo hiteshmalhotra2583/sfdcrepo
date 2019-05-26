@@ -54,6 +54,7 @@ global with sharing class W_Policy
 		this.Name = policy.Name;
 		this.FormName = policy.Policy_Form_Name__c;	
         this.PolicyFormType = policy.Policy_Form_Type__c;
+        this.FilingStrategy = policy.Filing_Strategy__c;
         this.PolicyFormStatus = policy.Status__c;
 		this.UISelected = false;
 	}
@@ -71,6 +72,7 @@ global with sharing class W_Policy
 	global Boolean UISelected{get; set;}
     global String PolicyFormType{get;set;}
     global String PolicyFormStatus{get;set;}
+    global String FilingStrategy{get;set;}
 	global Filing_Status__c FilingStatusObj {get; set;}
      
 

@@ -34,6 +34,7 @@ public with sharing class DAL_PolicyFormDetail {
 					   Project__c,
                		   Status__c, 
                        Policy_Form_Type__c,
+                Filing_Strategy__c,
 	                   (Select
 	                   		  Id,
                               State__c, 

@@ -60,6 +60,33 @@
         });
         $A.enqueueAction(action);
     },
+    getFilingStrategyHelper:function(component,event) {
+        var action = component.get("c.getFilingStrategy");
+        action.setCallback(component, function(response){
+            var state = response.getState();
+            var errorMsg='',warningMsg='',successMsg='';
+            if (state == "SUCCESS"){
+                var result = response.getReturnValue();
+                component.set("v.filingStrategyList",result); 
+            }else if (state === "INCOMPLETE") {
+                errorMsg = response.getReturnValue();
+                self.toastMessage(component, event,"Error!","error",errorMsg);
+            } else if (state === "ERROR") {
+                var errors = response.getError();
+                var errorMsg='';
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        errorMsg = errors[0].message;
+                        self.toastMessage(component, event,"Error!","error",errorMsg);
+                    }
+                } else {
+                    errorMsg = "Unknown error!";
+                    self.toastMessage(component, event,"Error!","error",errorMsg);
+                }
+            }
+        });
+        $A.enqueueAction(action);
+    },
 	doInitHelper : function(component,event,policyFormStateVal) {
         var pageReference = component.get("v.pageReference");
 		component.set("v.recordId", pageReference.state.Id);

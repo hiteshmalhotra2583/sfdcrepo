@@ -97,7 +97,6 @@
             <div>
                 <div class="slds-float_left slds-size_3-of-6 ">
                     <div class="slds-size_4-of-6">
-                        <aura:if isTrue="{!v.products.length>0}">
                             <lightning:select name="policyformState"  label="Policy Form Status" value="{!v.policyFormStateVal}" onchange="{!c.policyFormStateChange}">
                                 <option text="-- Select --" value=""></option>
                                 <aura:iteration items="{!v.policyFormStateList}" var="policyFormState" >
@@ -113,7 +112,7 @@
                                                    options="{!v.options}" 
                                                    size="5"
                                                    onchange="{! c.handleChange }"/>
-                        </aura:if>
+                        
                     </div>
                 </div>
                 <div class="slds-float_left slds-size_3-of-6">
@@ -164,10 +163,10 @@
             <!-- ===== State column ===== -->
             <!-- ===== State Table ===== -->
             <div class="slds-float_left stateTable">
-                 <aura:if isTrue="{!and(v.policies.length>0,v.products.length>0)}">
+                 <aura:if isTrue="{!and(v.policies.length>0)}">
                         <table class="slds-table slds-table_cell-buffer slds-table_bordered">
                             <thead>
-                                 <aura:if isTrue="{!v.products.length>0}"> 
+                                 
                                     <tr > 
                                         <aura:if isTrue="{!v.policies.length>0}">
                                             <aura:iteration items="{!v.policies}" var="policy" indexVar="index">
@@ -192,13 +191,13 @@
                                             </aura:iteration>
                                         </aura:if>
                                     </tr>
-                              </aura:if> 
+                             
                             </thead>
                             <tbody>
                                 <aura:iteration items="{!v.statess}" var="state" indexVar="index">
                                     <aura:if isTrue="{!state!=null}">
                                         <tr> 
-                                            <aura:if isTrue="{!v.products.length>0}">
+                                            <aura:if isTrue="{!v.policies.length>0}">
                                                 <aura:iteration items="{!v.policies}" var="policy" indexVar="index">
                                                     <td  data-value="{!state.StateCode__c+','+policy.Id}" ondblclick="{!c.redirectToSobject2}" onclick="{!c.selectColumn}" class="{!'policyStatusBlock '+policy.Id+' '+state.StateCode__c}" > 
                                                         <c:PolicyFormManagerImgViewer statepolicymap="{!v.statepolicymap}" 

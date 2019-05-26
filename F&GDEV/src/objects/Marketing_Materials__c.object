@@ -1787,6 +1787,7 @@
                 <valueName>_</valueName>
             </valueSettings>
             <valueSettings>
+                <controllingFieldValue>Submitted</controllingFieldValue>
                 <controllingFieldValue>Initial Review</controllingFieldValue>
                 <controllingFieldValue>Review Completed</controllingFieldValue>
                 <controllingFieldValue>Revisions Requested</controllingFieldValue>

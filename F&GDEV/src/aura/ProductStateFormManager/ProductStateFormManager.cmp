@@ -60,7 +60,9 @@
     <aura:attribute name="options" type="List" default="[]"/>
     <aura:attribute name="selctedProduct" type="String"/>
     <aura:attribute name="policyFormTypeList" type="String[]"/>
+    <aura:attribute name="filingStrategyList" type="String[]"/>
     <aura:attribute name="selctedPolicyFormType" type="String"/>
+    <aura:attribute name="selctedFilingStrategy" type="String"/>
     
     <!-- selected states multi dropdown -->
     <aura:attribute name="selectedOptionsList" type="String[]"/>
@@ -128,6 +130,13 @@
                         <lightning:select name="policyFormType" label="Policy Form Type" value="{!v.selctedPolicyFormType}" onchange="{!c.PolicyFormTypeChange}">
                             <option text="-- Select --" value=""></option>
                             <aura:iteration items="{!v.policyFormTypeList}" var="pofoty">
+                                <option text="{!pofoty}" value="{!pofoty}"></option>
+                            </aura:iteration> 
+                        </lightning:select>
+                        <br/>
+                        <lightning:select name="filingStrategy" label="Filing Strategy" value="{!v.selctedFilingStrategy}" onchange="{!c.PolicyFormTypeChange}">
+                            <option text="-- Select --" value=""></option>
+                            <aura:iteration items="{!v.filingStrategyList}" var="pofoty">
                                 <option text="{!pofoty}" value="{!pofoty}"></option>
                             </aura:iteration> 
                         </lightning:select>

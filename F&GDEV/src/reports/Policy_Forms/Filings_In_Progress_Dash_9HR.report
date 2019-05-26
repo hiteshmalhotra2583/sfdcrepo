@@ -46,7 +46,7 @@
             <column>Policy_Form_Detail__c.Filing_Statuses__r$Filing_Status__c</column>
             <isUnlocked>true</isUnlocked>
             <operator>notEqual</operator>
-            <value>Withdrawn,Closed,Approved,Pending Compact,Pending Group,Approved - Dependent Group,Approved - Compact,Approved - Exempt,Approved - Dependent Compact</value>
+            <value>Withdrawn,Closed,Approved,Pending Compact,Pending Group,Approved - Dependent Group,Approved - Compact,Approved - Exempt</value>
         </criteriaItems>
         <criteriaItems>
             <column>Policy_Form_Detail__c.Filing_Statuses__r$Submitted_to_State_Date__c</column>

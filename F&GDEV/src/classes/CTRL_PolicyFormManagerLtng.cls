@@ -94,6 +94,21 @@ public class  CTRL_PolicyFormManagerLtng {
         IW.PolicyReturns=getPolicies(lstId,policyFormStateVal);
         return JSON.serialize(IW);
      }
+    @AuraEnabled
+    public static String getPolicyDetails(String projectId,String policyFormStateVal)
+    {
+        InitialWrapper IW=new InitialWrapper();
+        IW.states= getStates();
+        //IW.ProductReturns=getProducts(projectId);
+        List<String> lstId=new List<String>();
+        
+        for(Project_Policy__c ProjPolicy:[select Id,Project__c,Policy_Form__c from Project_Policy__c where Project__c = :projectId ]){
+            lstId.add(String.valueOf(ProjPolicy.Policy_Form__c));
+        }
+        
+        IW.PolicyReturns=getPolicies(lstId,policyFormStateVal);
+        return JSON.serialize(IW);
+    }
     
     @AuraEnabled
     public static List<State__c> getStates()
@@ -123,26 +138,26 @@ public class  CTRL_PolicyFormManagerLtng {
 
             List<State_Availability__c> stateavailList = new List<State_Availability__c>();
             stateavailList = [Select 
-                              Product_Specification__r.Project__r.Id,
-                              Product_Specification__r.Project__r.Name, 
-                              Product_Specification__c, 
-                              Product_Specification__r.Id, 
-                              Product_Specification__r.Name, 
-                              State__c, 
-                              Status__c,
-                              Approval_Date__c,
-                              Target_Launch_Date__c,
-                              Launch_Date__c,
-                              Pull_Date__c,
-                              (SELECT 
-                               Filing_Status__c,
-                               Filing_Status__r.Policy_Form__c
-                               FROM 
-                               Product_State_Statuses__r)
-               			        FROM 
-               			        	 State_Availability__c
-               			        WHERE
-               			        	 Product_Specification__r.Project__c =: sProjectId];
+		                              Product_Specification__r.Project__r.Id,
+		                              Product_Specification__r.Project__r.Name, 
+		                              Product_Specification__c, 
+		                              Product_Specification__r.Id, 
+		                              Product_Specification__r.Name, 
+		                              State__c, 
+		                              Status__c,
+		                              Approval_Date__c,
+		                              Target_Launch_Date__c,
+		                              Launch_Date__c,
+		                              Pull_Date__c,
+		                              (SELECT 
+				                               Filing_Status__c,
+				                               Filing_Status__r.Policy_Form__c
+				                          FROM 
+				                               Product_State_Statuses__r)
+		               			      FROM 
+		               			        	 State_Availability__c
+		               			      WHERE
+		               			            Product_Specification__r.Project__c =: sProjectId];
 
             List<Project_Policy__c> ProjPolicyList = [Select 
             												Id,
@@ -235,7 +250,19 @@ public class  CTRL_PolicyFormManagerLtng {
 		}     
 		return pickListValuesList;
     }
-    
+   
+    @AuraEnabled
+    public static List<String> getFilingStrategy(){
+        List<String> pickListValuesList= new List<String>();
+        Schema.DescribeFieldResult fieldResult = Policy_Form_Detail__c.Filing_Strategy__c.getDescribe();
+        List<Schema.PicklistEntry> ple = fieldResult.getPicklistValues();
+        for( Schema.PicklistEntry pickListVal : ple)
+        {
+            pickListValuesList.add(pickListVal.getLabel());
+        }     
+        return pickListValuesList;
+    }
+   
     @AuraEnabled
     public static PolicyReturn getPolicies(List<String> PolicyIds,String policyFormStateVal)
     {
@@ -255,6 +282,7 @@ public class  CTRL_PolicyFormManagerLtng {
                 			    Project__c,
                          		Status__c, 
                          		Policy_Form_Type__c,
+                         Filing_Strategy__c,
                 			    (Select 
                 			    		Id,
                 			    	    State__c,
@@ -290,6 +318,7 @@ public class  CTRL_PolicyFormManagerLtng {
                 				Project__c,
                 				Status__c,
                          		Policy_Form_Type__c,
+                         Filing_Strategy__c,
                 				(SELECT 
                 				 		Id, 
                 				 		State__c, 

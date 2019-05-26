@@ -14,6 +14,7 @@
         var policyFormStateVal = component.get('v.policyFormStateVal');
         helper.getPolicyFormStateHelper(component,event);
         helper.getPolicyFormTypeHelper(component,event);
+        helper.getFilingStrategyHelper(component,event);
         helper.doInitHelper(component,event,policyFormStateVal);
 	},
      refreshCmp : function(component, event, helper) {
@@ -321,16 +322,35 @@
     PolicyFormTypeChange:function(component, event, helper){
         var policies = [];
         var selctedPolicyFormType = component.get('v.selctedPolicyFormType');
+        var selctedFilingStrategy = component.get('v.selctedFilingStrategy');
         var products = component.get('v.products');
         var policiesCopy = component.get("v.policiesCopy");
-        if(selctedPolicyFormType!='' && selctedPolicyFormType!=null){
+        if((selctedPolicyFormType!='' && selctedPolicyFormType!=null) || (selctedFilingStrategy!='' && selctedFilingStrategy!=null)){
             for(var i=0;i<policiesCopy.length;i++){
-                if(policiesCopy[i].PolicyFormType==selctedPolicyFormType){
-                    policies.push(policiesCopy[i]);
-                }
+                policies.push(policiesCopy[i]);
             }
-            component.set("v.policies",policies);
-            helper.doInitSubHelper(component, event,products,policies);
+            var policiesFormFilter=[];
+            if(selctedPolicyFormType!='' && selctedPolicyFormType!=null){
+                for(var i=0;i<policies.length;i++){
+                    if(policies[i].PolicyFormType==selctedPolicyFormType){
+                        policiesFormFilter.push(policies[i]);
+                    }
+                }
+            }else{
+                policiesFormFilter=policies;
+            }
+            var filingStrategyFilter=[];
+            if(selctedFilingStrategy!='' && selctedFilingStrategy!=null){
+                for(var i=0;i<policiesFormFilter.length;i++){
+                    if(policiesFormFilter[i].FilingStrategy==selctedFilingStrategy){
+                        filingStrategyFilter.push(policiesFormFilter[i]);
+                    }
+                }
+            }else{
+                filingStrategyFilter=policiesFormFilter;
+            }
+            component.set("v.policies",filingStrategyFilter);
+            helper.doInitSubHelper(component, event,products,filingStrategyFilter);
             helper.handleChangeHelper(component, event);
         }else{
            
@@ -340,6 +360,9 @@
             helper.handleChangeHelper(component, event);
  
         }
+        
+    },
+    FilingStrategyChange:function(component, event, helper){
         
     },
     resetAllFilter:function(component, event, helper){

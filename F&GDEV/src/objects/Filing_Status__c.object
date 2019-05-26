@@ -367,11 +367,6 @@
                     <default>false</default>
                 </value>
                 <value>
-                    <fullName>Approved - Dependent Compact</fullName>
-                    <default>false</default>
-                    <isActive>false</isActive>
-                </value>
-                <value>
                     <fullName>Filed with DOI</fullName>
                     <default>false</default>
                     <isActive>false</isActive>

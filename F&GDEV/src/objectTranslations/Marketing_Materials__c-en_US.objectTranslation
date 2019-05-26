@@ -1332,6 +1332,18 @@
     <layouts>
         <layout>Internal</layout>
         <sections>
+            <label><!-- Ad Review Admin - Other --></label>
+            <section>Ad Review Admin - Other</section>
+        </sections>
+        <sections>
+            <label><!-- Ad Review Admin - Request Revisions --></label>
+            <section>Ad Review Admin - Request Revisions</section>
+        </sections>
+        <sections>
+            <label><!-- Ad Review Dates --></label>
+            <section>Ad Review Dates</section>
+        </sections>
+        <sections>
             <label><!-- Ad Review Summary --></label>
             <section>Ad Review Summary</section>
         </sections>
@@ -1354,14 +1366,6 @@
         <sections>
             <label><!-- Mkt Material Setup --></label>
             <section>Mkt Material Setup</section>
-        </sections>
-        <sections>
-            <label><!-- New Section --></label>
-            <section>New Section</section>
-        </sections>
-        <sections>
-            <label><!-- Product Association - High Level --></label>
-            <section>Product Association - High Level</section>
         </sections>
         <sections>
             <label><!-- Requester Information --></label>

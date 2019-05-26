@@ -66,7 +66,7 @@
         component.set("v.recordId", pageReference.state.Id);
         component.set('v.Spinner',true);
         var self=this;
-        var action = component.get("c.getDetails");
+        var action = component.get("c.getPolicyDetails");
         action.setParams({
             "projectId":component.get("v.recordId"),
             "policyFormStateVal":policyFormStateVal
@@ -83,24 +83,32 @@
                 }
                 result=JSON.parse(result);
                // console.log('result :',result);
-                if(result.ProductReturns!=null && result.states!=null && result.PolicyReturns!=null){
+                if(result.states!=null && result.PolicyReturns!=null){
                     component.set("v.states", result.states);
-                    
-                    component.set("v.project", result.ProductReturns.oProject);  
-                    component.set("v.products", result.ProductReturns.oProducts);  
-                    component.set("v.prodstatepolicystatestatmap", result.ProductReturns.oProdStatePolicyStateStatMap);  
-                    component.set("v.policyidlist", result.ProductReturns.oPolicyIdSet);  
+                    if(result.ProductReturns!=null ){
+                        component.set("v.project", result.ProductReturns.oProject);  
+                        component.set("v.products", result.ProductReturns.oProducts);  
+                        component.set("v.prodstatepolicystatestatmap", result.ProductReturns.oProdStatePolicyStateStatMap);  
+                        component.set("v.policyidlist", result.ProductReturns.oPolicyIdSet);  
+                    }
                     component.set("v.statepolicymap", result.PolicyReturns.oStatePolicyMap);
                     component.set("v.policies", result.PolicyReturns.oPolicyList); 
                     component.set("v.policiesCopy", result.PolicyReturns.oPolicyList); 
                     component.set("v.policyUpdateAccess", result.PolicyReturns.bPolicyUpdateAccess); 
+                    
                     component.set("v.statepolicyselectcount", 0); 
                     component.set("v.refPolicies", []); 
                     if(result.PolicyReturns.oPolicyList.length<=0){
                         self.toastMessage(component, event,"Warning!","warning",'No Policy Records Found !');
                     }
-                    var products=result.ProductReturns.oProducts;
-                    var policies=result.PolicyReturns.oPolicyList;
+                    var products=[];
+                    var policies=[];
+                    if(result.ProductReturns!=null){
+                         products=result.ProductReturns.oProducts;
+                    }
+                    if(result.PolicyReturns!=null){
+                         policies=result.PolicyReturns.oPolicyList;
+                    }
                     self.doInitSubHelper(component,event,products,policies);
                     /*==== states multi dropdown ====*/
                     var states = component.get("v.states");
