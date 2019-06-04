@@ -114,10 +114,6 @@
                 <behavior>Edit</behavior>
                 <field>Ad_Review_File_Only__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Missing_Ad_Review_Number_Only__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>

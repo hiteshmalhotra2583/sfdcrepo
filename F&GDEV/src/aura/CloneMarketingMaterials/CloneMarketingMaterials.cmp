@@ -1,0 +1,50 @@
+<aura:component 
+                implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader" 
+                controller="CTRL_MarketingMaterialClone" 
+                access="global"
+                >
+    <aura:attribute name = "newMarketingMaterialName" type="String"/>
+    <aura:attribute name="existingMarketingMaterialName" type="String" />
+     
+    <!--Init handler-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+     <!--Adding html to make quick action modal buttons look more clean-->
+    <aura:html tag="style">
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:hidden !important;
+        height:unset !important;
+        max-height:unset !important;
+        overflow:scroll !important;
+        }
+        .slds-modal__close{
+        display:none;
+        }
+        .cloneInput input:focus, .cloneInput:active {
+        border-color : rgb(255,0,0);
+        box-shadow : 0 0 3px #ff0000;
+        }
+    </aura:html>
+   
+    <lightning:card title="Clone Marketing Material">
+        <div class="slds-wrap slds-m-around_small">
+        <div aura:id="formInput" class="cloneInput">
+        <lightning:input type="text"  label="Cloned Marketing Material Name"   value="{!v.newMarketingMaterialName}" />
+    </div>
+            </div>
+    </lightning:card>
+    
+   
+    <!--modal button html stops-->
+    <!--modal footer button start-->
+    <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+        <lightning:button variant="brand" label="Clone" title="Clone" onclick="{! c.handleClone }" disabled="{! or(empty(v.newMarketingMaterialName),equals(v.newMarketingMaterialName,v.existingMarketingMaterialName))}"/>
+        <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{! c.handleCancel }"/>
+    </div>
+    <!--modal footer button stop-->
+</aura:component>

@@ -159,6 +159,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CTRL_MarketingMaterialClone</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CTRL_PolicyFormManager</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -215,6 +219,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>DAL_MarketingMaterial</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DAL_ObjectCloneSkippedField</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -264,6 +272,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>DAL_StateAvailability_T</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HLPR_MarketingMaterialClone</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>

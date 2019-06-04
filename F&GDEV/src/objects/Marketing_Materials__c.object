@@ -727,7 +727,7 @@
     <fields>
         <fullName>Description_of_Change__c</fullName>
         <externalId>false</externalId>
-        <label>Description of Change</label>
+        <label>Reason For Revision</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>

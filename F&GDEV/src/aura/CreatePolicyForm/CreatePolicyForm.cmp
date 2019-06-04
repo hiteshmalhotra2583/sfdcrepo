@@ -93,7 +93,7 @@
                         
                         <label class="slds-radio__label" for="radio-1">
                             <span class="slds-radio_faux"></span>
-                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy 1 (FIA)</span>
+                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy FIA</span>
                         </label>
                         
                     </div>
@@ -102,7 +102,7 @@
                         
                         <label class="slds-radio__label" for="radio-2">
                             <span class="slds-radio_faux"></span>
-                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy 2 (MYGA)</span>
+                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy MYGA</span>
                         </label>
                         
                     </div>
@@ -111,7 +111,7 @@
                         
                         <label class="slds-radio__label" for="radio-3">
                             <span class="slds-radio_faux"></span>
-                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy 3 (IUL)</span>
+                            <span class="slds-form-element__label" style="font-weight: 600;float: none;">Default Filing Strategy IUL</span>
                         </label>
                         
                     </div>

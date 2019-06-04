@@ -39,7 +39,7 @@
             <column>Policy_Form_Detail__c.Filing_Statuses__r$State_Approval_Date__c</column>
             <isUnlocked>false</isUnlocked>
             <operator>equals</operator>
-            <value>LAST_N_DAYS:180</value>
+            <value>LAST_N_DAYS:30</value>
         </criteriaItems>
         <criteriaItems>
             <column>Policy_Form_Detail__c.Filing_Statuses__r$Days_to_Approve__c</column>

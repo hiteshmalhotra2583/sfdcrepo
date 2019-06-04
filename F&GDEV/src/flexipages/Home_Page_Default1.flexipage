@@ -28,7 +28,30 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>home:recentRecordContainer</componentName>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;p&gt;&lt;span style=&quot;color: rgb(137, 0, 155); font-size: 20px;&quot;&gt;Welcome to the PD Hub Project Management home page! Follow the PM&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;https://fglife--uat.lightning.force.com/lightning/page/chatter/record/0F91g0000005GqICAU&quot; target=&quot;_blank&quot; style=&quot;color: rgb(137, 0, 155); font-size: 20px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;b&gt;&lt;u&gt;Chatter Group&lt;/u&gt;&lt;/b&gt;&lt;/a&gt;&lt;span style=&quot;color: rgb(137, 0, 155); font-size: 20px;&quot;&gt;&amp;nbsp;for updates to your instance.&lt;/span&gt;&lt;/p&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>entityNames</name>
+                <value>[&quot;DR_X1_Year_Goal__c&quot;,&quot;Account&quot;,&quot;Account_Opportunity__c&quot;,&quot;AccountSales__c&quot;,&quot;SFGA__Ad_Group__c&quot;,&quot;Ad_Review_Detail__c&quot;,&quot;Ad_Review_Documents__c&quot;,&quot;AgentSales__c&quot;,&quot;AgentID__c&quot;,&quot;AgentUpline__c&quot;,&quot;Approval_State__c&quot;,&quot;DR_Area_of_Focus__c&quot;,&quot;Asset&quot;,&quot;AssetRelationship&quot;,&quot;Campaign&quot;,&quot;Case&quot;,&quot;Commission_Option__c&quot;,&quot;Contact&quot;,&quot;ContactRequest&quot;,&quot;ContentDocument&quot;,&quot;Contract&quot;,&quot;Loop__DDP__c&quot;,&quot;Loop__DDP_File__c&quot;,&quot;Daily_Goals__c&quot;,&quot;Dashboard&quot;,&quot;Loop__DDP_Integration_Option__c&quot;,&quot;Document_Approval__c&quot;,&quot;Document_Approval_Subproject__c&quot;,&quot;Loop__Document_Request__c&quot;,&quot;DuplicateRecordSet&quot;,&quot;EmailTemplate&quot;,&quot;EnhancedEmailTemplate&quot;,&quot;Enhancement_Ideas__c&quot;,&quot;Estimate__c&quot;,&quot;Expense__c&quot;,&quot;Filing_Objection__c&quot;,&quot;Filing_Strategy__c&quot;,&quot;Loop__Form_Field__c&quot;,&quot;Loop__Form_Rule__c&quot;,&quot;Loop__Form_Step__c&quot;,&quot;Fund_Code__c&quot;,&quot;SFGA__Google_Campaign__c&quot;,&quot;Google_Campaign__c&quot;,&quot;CollaborationGroup&quot;,&quot;HubSpot_Inc__HubSpot_Activity__c&quot;,&quot;HubSpot_Inc__Company_Id__c&quot;,&quot;HubSpot_Inc__HubSpot_Field__c&quot;,&quot;HubSpot_Inc__HubSpot_Intelligence__c&quot;,&quot;HubSpot_Inc__HubSpot_Log__c&quot;,&quot;HubSpot_Inc__HubSpot_Log_Message__c&quot;,&quot;HubSpot_Inc__HubSpot_Pending_Change__c&quot;,&quot;HubSpot_Inc__HubSpot_Settings__c&quot;,&quot;IT_Initiative__c&quot;,&quot;Image&quot;,&quot;Loop__Insert_Update__c&quot;,&quot;Interest_Crediting_Option__c&quot;,&quot;SFGA__Keyword__c&quot;,&quot;Keyword__c&quot;,&quot;Lead&quot;,&quot;ListEmail&quot;,&quot;Macro&quot;,&quot;Marketing_Materials__c&quot;,&quot;Marketing_Name__c&quot;,&quot;Marketing_to_Product_State_Association__c&quot;,&quot;Marketing_to_Project_Association__c&quot;,&quot;MasterAssociation__c&quot;,&quot;Monthly_Goal__c&quot;,&quot;LEXMAGICMOVER__NAMAttachmentConversionStatus__c&quot;,&quot;LEXMAGICMOVER__NAMConfig__c&quot;,&quot;LEXMAGICMOVER__NAMNoteConversionStatus__c&quot;,&quot;LEXMAGICMOVER__NAMNoteConverted__c&quot;,&quot;ContentNote&quot;,&quot;Opportunity&quot;,&quot;PD_Plan_Code__c&quot;,&quot;Loop__PDF_Stamp__c&quot;,&quot;PlanCode__c&quot;,&quot;Policy_Form_Detail__c&quot;,&quot;Filing_Status__c&quot;,&quot;Policy_Print_Package__c&quot;,&quot;Pricebook2&quot;,&quot;PricebookEntry&quot;,&quot;Product2&quot;,&quot;Product_Specification__c&quot;,&quot;Product_Series__c&quot;,&quot;State_Availability__c&quot;,&quot;Product_State_Status__c&quot;,&quot;Product_to_Plan_Code_Association__c&quot;,&quot;Project__c&quot;,&quot;Project_Policy__c&quot;,&quot;Qtr_Goal__c&quot;,&quot;QuickText&quot;,&quot;Loop__dsRecipient__c&quot;,&quot;Recommendation&quot;,&quot;Loop__Related_Object__c&quot;,&quot;SFGA__Version_33_0_3__c&quot;,&quot;Scorecard&quot;,&quot;ScorecardAssociation&quot;,&quot;SFGA__Search_Phrase__c&quot;,&quot;Loop__SecureField__c&quot;,&quot;SocialPersona&quot;,&quot;SocialPost&quot;,&quot;StreamingChannel&quot;,&quot;Subproject__c&quot;,&quot;Support_Case__c&quot;,&quot;Task&quot;,&quot;SFGA__Text_Ad__c&quot;,&quot;Topic&quot;,&quot;Trademarks__c&quot;,&quot;Weekly_Goal__c&quot;]</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>10 Most Recent Items</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>maxRecords</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:recentItems</componentName>
         </componentInstances>
         <mode>Replace</mode>
         <name>sidebar</name>

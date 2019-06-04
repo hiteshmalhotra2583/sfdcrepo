@@ -280,7 +280,7 @@
         <name>Department_Legacy__c</name>
     </fields>
     <fields>
-        <label><!-- Description of Change --></label>
+        <label><!-- Reason For Revision --></label>
         <name>Description_of_Change__c</name>
     </fields>
     <fields>

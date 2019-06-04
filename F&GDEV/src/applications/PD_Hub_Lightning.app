@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Product Development Database (PD Hub) App utilized for managing product development process</description>
+    <brand>
+        <headerColor>#0070D2</headerColor>
+    </brand>
+    <description>Product Development Hub (PD Hub) App utilized for managing product development process</description>
     <formFactors>Large</formFactors>
-    <label>PD Hub-Projects Lightning</label>
+    <label>PD Hub-Projects</label>
     <navType>Standard</navType>
     <tab>standard-home</tab>
-    <tab>standard-Feed</tab>
     <tab>Project__c</tab>
     <tab>Subproject__c</tab>
     <tab>Estimate__c</tab>
