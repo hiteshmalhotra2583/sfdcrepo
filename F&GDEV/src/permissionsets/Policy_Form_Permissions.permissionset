@@ -145,6 +145,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CTRL_MarketingMaterialClone_T</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CTRL_PolicyFormManager</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -202,6 +206,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>DAL_MarketingMaterial</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DAL_MarketingMaterial_T</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>

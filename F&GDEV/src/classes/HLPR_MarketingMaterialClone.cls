@@ -4,15 +4,15 @@ public class HLPR_MarketingMaterialClone {
     private static final String ERROR_MESSAGE = 'Error Occurred!!';
     public Id recordId {get;set;}
     public String parentObjName {get;set;}
-    public List<ChildObjectWrapper> childObjWrapperList {get;set;}
-    private final Set<String> setSTRChildObjectsToBeConverted = new Set<String>{'Marketing_Materials__c','Ad_Review_Detail__c'};
+   // public List<ChildObjectWrapper> childObjWrapperList {get;set;}
+    //private final Set<String> setSTRChildObjectsToBeConverted = new Set<String>{'Marketing_Materials__c'};
         
     //constructor
     public HLPR_MarketingMaterialClone(String recordId) {
         this.recordID = recordId;
-        childObjWrapperList = new List<ChildObjectWrapper>();
+        //childObjWrapperList = new List<ChildObjectWrapper>();
         parentObjName = UtilityClass.getObjectNameFromId(recordId);
-        List<Schema.ChildRelationship> childObjList = UtilityClass.getChildRelationshipsFromId(recordId);
+       /* List<Schema.ChildRelationship> childObjList = UtilityClass.getChildRelationshipsFromId(recordId);
         for(Schema.ChildRelationship child : childObjList) {
             String childObjectName = (String)child.getChildSObject().getDescribe().getName();
             if(child.getChildSObject().getDescribe().isQueryable() && setSTRChildObjectsToBeConverted.contains(child.getChildSObject().getDescribe().getName())){
@@ -21,26 +21,27 @@ public class HLPR_MarketingMaterialClone {
                     childObjWrapperList.add(new ChildObjectWrapper(child.getChildSObject().getDescribe().getName(),true,recordId,String.valueOf(child.getField())));
                 }
             }
-        }
+        }*/
     }
     
     
-    public String cloneWithChildren(String parentObjectNewName) {
+    public String cloneMarketingMaterial() {
         SavePoint sp = Database.setSavepoint();
         String message = '';
         try {
             //get skipped fields list for the parentobject
             Map<String,Set<String>> mapChildObjSkipList  = new Map<String,Set<String>>();
-            mapChildObjSkipList = DAL_ObjectCloneSkippedField.getChildSkipListByParentName(parentObjName);
+            mapChildObjSkipList = DAL_ObjectCloneSkippedField.getChildSkipListByParentName('Marketing_Materials__c');
             // Clone parent object record first
-            List<Sobject> clonedParentObj = UtilityClass.cloneObject(parentObjName,recordId,true,null,null,mapChildObjSkipList);
-            clonedParentObj[0].put('Name',parentObjectNewName);
+            List<Sobject> clonedParentObj = UtilityClass.cloneObject('Marketing_Materials__c',recordId,true,null,null,mapChildObjSkipList);
+            //clonedParentObj[0].put('Name',parentObjectNewName);
+            system.debug('clonedParentObj:::'+clonedParentObj[0]);
             BaseTriggerHandler.bypass('MARKETINGMATERIALSHANDLER');
             insert clonedParentObj;
             BaseTriggerHandler.clearBypass('MARKETINGMATERIALSHANDLER');
             // Clone child records
             
-            List<sobject> childObjList = new List<sobject>();
+            /*List<sobject> childObjList = new List<sobject>();
             if(childObjWrapperList.size() > 0) {
                 for(ChildObjectWrapper obj : childObjWrapperList) {
                     List<Sobject> clonedChildObj = UtilityClass.cloneObject(obj.objName,obj.recordId,false,obj.relationshipName,clonedParentObj.get(0).Id,mapChildObjSkipList);
@@ -64,8 +65,9 @@ public class HLPR_MarketingMaterialClone {
 			            System.debug('fields that affected this error: ' + err.getFields());
 			        }
 			    }
-			}    
+			}    */
             message = String.valueOf(clonedParentObj[0].get('Id'));
+             system.debug('return message is :::'+message);
             //cloneProductStateStatuses(message);
             
             // call the future method only after the code control reaches here and delete records
@@ -165,7 +167,7 @@ public class HLPR_MarketingMaterialClone {
         insert lstContentDocumentToInsert;
     }
    
-    private void cloneProductStateStatuses(String message)
+    /*private void cloneProductStateStatuses(String message)
     {
         //Get newly created records and existing ones
         List<State_Availability__c> lstProductStates = DAL_ProductState.getProductStatesWithChild(new Set<String>{message,recordId});
@@ -220,10 +222,10 @@ public class HLPR_MarketingMaterialClone {
           System.debug('Error occured ' + ex.getMessage());
         }
       }
-    } 
+    } */
     
     
-    public class ChildObjectWrapper {
+    /*public class ChildObjectWrapper {
         
         public String objName {get;set;}
         public Boolean isSelected {get;set;}   
@@ -238,5 +240,5 @@ public class HLPR_MarketingMaterialClone {
             this.relationshipName = relationshipName;
         }
         
-    }
+    }*/
 }

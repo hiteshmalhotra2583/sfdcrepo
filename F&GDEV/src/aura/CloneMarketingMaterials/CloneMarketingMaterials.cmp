@@ -3,11 +3,11 @@
                 controller="CTRL_MarketingMaterialClone" 
                 access="global"
                 >
-    <aura:attribute name = "newMarketingMaterialName" type="String"/>
-    <aura:attribute name="existingMarketingMaterialName" type="String" />
+    <!--<aura:attribute name = "newMarketingMaterialName" type="String"/>
+    <aura:attribute name="existingMarketingMaterialName" type="String" />-->
      
     <!--Init handler-->
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <!--<aura:handler name="init" value="{!this}" action="{!c.doInit}" />-->
      <!--Adding html to make quick action modal buttons look more clean-->
     <aura:html tag="style">
         .cuf-content {
@@ -31,19 +31,19 @@
         }
     </aura:html>
    
-    <lightning:card title="Clone Marketing Material">
+    <!--<lightning:card title="Clone Marketing Material">
         <div class="slds-wrap slds-m-around_small">
         <div aura:id="formInput" class="cloneInput">
         <lightning:input type="text"  label="Cloned Marketing Material Name"   value="{!v.newMarketingMaterialName}" />
     </div>
             </div>
-    </lightning:card>
+    </lightning:card>-->
     
    
     <!--modal button html stops-->
     <!--modal footer button start-->
     <div class="modal-footer slds-modal__footer slds-size_1-of-1">
-        <lightning:button variant="brand" label="Clone" title="Clone" onclick="{! c.handleClone }" disabled="{! or(empty(v.newMarketingMaterialName),equals(v.newMarketingMaterialName,v.existingMarketingMaterialName))}"/>
+        <lightning:button variant="brand" label="Clone" title="Clone" onclick="{! c.handleClone }"/>
         <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{! c.handleCancel }"/>
     </div>
     <!--modal footer button stop-->

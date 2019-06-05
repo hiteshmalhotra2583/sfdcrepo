@@ -155,10 +155,14 @@
        
         if(stateVarianceList.length<=0)
         {
-            if(!isPrimaryInd && !isPrimaryStd){
+            if(individualStd !='' && CompactStdDes!='')
+            {
+              if(!isPrimaryInd && !isPrimaryStd){
                 helper.toastMessage(component,event,"Warning!","Warning","Please select at least one Primary checkbox!");
                 return;
+             }  
             }
+            
             
             if( isPrimaryInd && !isPrimaryStd && (individualStd==undefined || individualStd==null || individualStd=='') ){
                 helper.toastMessage(component,event,"Warning!","Warning","Please Enter Individual Std Name!”");

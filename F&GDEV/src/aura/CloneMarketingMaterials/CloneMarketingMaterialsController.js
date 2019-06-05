@@ -1,7 +1,5 @@
 ({
-	doInit : function(component, event, helper) {
-		 helper.getMarketingMaterialName(component,event);
-	},
+	
     handleClone : function(component,event,helper) {
         helper.callToServer(component,event);
     },

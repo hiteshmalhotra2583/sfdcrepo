@@ -47,7 +47,7 @@ private class CTRL_MarketingMaterialClone_T {
             Test.startTest();
             String clonedObjectId = CTRL_MarketingMaterialClone.cloneMarketingMaterials(marketingNames[0].Id, 'ClonedMarketingMaterialTest');
             String objName = UtilityClass.getObjectNameFromId(clonedObjectId);
-            System.assertEquals('Marketing_Name__c', objName);
+            System.assertEquals('Marketing_Name__cj', objName);
             Test.stopTest();
 	}
 }

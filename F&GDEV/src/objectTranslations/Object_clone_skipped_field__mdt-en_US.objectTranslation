@@ -48,6 +48,10 @@
         <label><!-- Parent Object Name --></label>
         <name>Parent_Object_Name__c</name>
         <picklistValues>
+            <masterLabel>Marketing_Materials__c</masterLabel>
+            <translation><!-- Marketing_Materials__c --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Product_Specification__c</masterLabel>
             <translation><!-- Product_Specification__c --></translation>
         </picklistValues>

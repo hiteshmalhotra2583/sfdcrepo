@@ -71,6 +71,10 @@
                     <fullName>Product_Specification__c</fullName>
                     <default>true</default>
                 </value>
+                <value>
+                    <fullName>Marketing_Materials__c</fullName>
+                    <default>false</default>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>

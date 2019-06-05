@@ -1437,6 +1437,10 @@
             <section>Submit To Ad Review</section>
         </sections>
     </layouts>
+    <quickActions>
+        <label><!-- Clone Marketing Materials --></label>
+        <name>Clone_Marketing_Materials</name>
+    </quickActions>
     <recordTypes>
         <label><!-- External --></label>
         <name>External</name>
