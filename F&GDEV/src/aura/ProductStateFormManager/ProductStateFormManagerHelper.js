@@ -89,7 +89,7 @@
     },
 	doInitHelper : function(component,event,policyFormStateVal) {
         var pageReference = component.get("v.pageReference");
-		component.set("v.recordId", pageReference.state.Id);
+		component.set("v.recordId", pageReference.state.c__Id);
         component.set('v.Spinner',true);
         var self=this;
         var action = component.get("c.getDetails");

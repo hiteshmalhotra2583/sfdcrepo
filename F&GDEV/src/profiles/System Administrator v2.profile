@@ -223,14 +223,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>DAL_MarketingMaterial</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>DAL_MarketingMaterial_T</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>DAL_ObjectCloneSkippedField</apexClass>
         <enabled>true</enabled>
     </classAccesses>

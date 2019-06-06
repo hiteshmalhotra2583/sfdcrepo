@@ -2294,7 +2294,7 @@ Request_Bill_Code__c=False)</errorConditionFormula>
         <protected>false</protected>
         <showsLocation>false</showsLocation>
         <showsStatus>false</showsStatus>
-        <url>/lightning/n/ProductStateFormManager?Id={!Project__c.Id}</url>
+        <url>/lightning/n/ProductStateFormManager?c__Id={!Project__c.Id}</url>
     </webLinks>
     <webLinks>
         <fullName>Manage_Policies</fullName>
@@ -2316,6 +2316,6 @@ Request_Bill_Code__c=False)</errorConditionFormula>
         <masterLabel>Manage Policies</masterLabel>
         <openType>replace</openType>
         <protected>false</protected>
-        <url>/lightning/n/ManagePolicy?Id={!Project__c.Id}</url>
+        <url>/lightning/n/ManagePolicy?c__Id={!Project__c.Id}</url>
     </webLinks>
 </CustomObject>
