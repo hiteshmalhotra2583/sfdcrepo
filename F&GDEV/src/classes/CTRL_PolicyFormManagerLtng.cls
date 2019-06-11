@@ -79,13 +79,14 @@ public class  CTRL_PolicyFormManagerLtng {
     }
    
     @AuraEnabled
-    public static String getDetails(String projectId,String policyFormStateVal)
+    public static String getDetails(String projectId,String policyFormStateVal, String productForm)
     {
         InitialWrapper IW=new InitialWrapper();
-        IW.states= getStates();
+        IW.states= getStates(productForm);
         IW.ProductReturns=getProducts(projectId);
         List<String> lstId=new List<String>();
-        if(IW.ProductReturns!=null && IW.ProductReturns.oPolicyIdSet!=null)
+        if(IW.ProductReturns != null 
+         && IW.ProductReturns.oPolicyIdSet != null)
         {
             for(Id pID:IW.ProductReturns.oPolicyIdSet){
                 lstId.add(String.valueOf(pID));
@@ -95,14 +96,21 @@ public class  CTRL_PolicyFormManagerLtng {
         return JSON.serialize(IW);
      }
     @AuraEnabled
-    public static String getPolicyDetails(String projectId,String policyFormStateVal)
+    public static String getPolicyDetails(String projectId,String policyFormStateVal,String productForm)
     {
         InitialWrapper IW=new InitialWrapper();
-        IW.states= getStates();
+        IW.states= getStates(productForm);
         //IW.ProductReturns=getProducts(projectId);
         List<String> lstId=new List<String>();
         
-        for(Project_Policy__c ProjPolicy:[select Id,Project__c,Policy_Form__c from Project_Policy__c where Project__c = :projectId ]){
+        for(Project_Policy__c ProjPolicy:[select 
+        										Id,
+        										Project__c,
+        										Policy_Form__c 
+        							       FROM 
+        							            Project_Policy__c 
+        							      WHERE
+        							            Project__c = :projectId ]){
             lstId.add(String.valueOf(ProjPolicy.Policy_Form__c));
         }
         
@@ -111,23 +119,61 @@ public class  CTRL_PolicyFormManagerLtng {
     }
     
     @AuraEnabled
-    public static List<State__c> getStates()
+    public static List<State__c> getStates(String productForm)
     {
-        return [SELECT 
-        				Id, 
-        				Name, 
-        				IsDeleted,
-        			    SetupOwnerId, 
-        			    CreatedDate, 
-        			    CreatedById, 
-        			    LastModifiedDate, 
-        			    LastModifiedById, 
-        			    SystemModstamp, 
-        			    IsActive__c, 
-        			    StateCode__c 
-        		  FROM 
-        		        State__c 
-        		 ORDER by name asc];
+       List<State__c> states = new List<State__c>();
+       Set<String> statesNameNotToBeIncluded = null;
+       if(productForm =='ProductFromAssoication')
+       {
+      	   statesNameNotToBeIncluded = getStatesNameWhichNotToBeIncluded();
+       }
+       
+       for(State__c state:[SELECT 
+			        				Id, 
+			        				Name, 
+			        				IsDeleted,
+			        			    SetupOwnerId, 
+			        			    CreatedDate, 
+			        			    CreatedById, 
+			        			    LastModifiedDate, 
+			        			    LastModifiedById, 
+			        			    SystemModstamp, 
+			        			    IsActive__c, 
+			        			    StateCode__c 
+			        		  FROM 
+			        		        State__c 
+			        		 ORDER by name asc])
+		 {
+		 	if( productForm =='PolicyFrom')
+		 	{
+		 		states.add(state);
+		 	}
+		 	else
+		 	{
+		      if(productForm =='ProductFromAssoication' && !statesNameNotToBeIncluded.contains(state.StateCode__c))
+		       states.add(state);
+		 	}
+		 }
+		 
+		 return  states;
+    }
+    
+    
+    
+    public static Set<String> getStatesNameWhichNotToBeIncluded() {
+        
+       Set<String> statesNames = new Set<String>();
+       for(StatesNotToBeIncluded__mdt s:[Select 
+						        			  Id,
+						        			  MasterLabel,
+							                  StateName__c
+							            FROM 
+							                 StatesNotToBeIncluded__mdt ])
+	  {
+	  	statesNames.add(s.StateName__c);
+	  }		
+	  
+	  return statesNames;				                 
     }
     
     @AuraEnabled
@@ -192,12 +238,11 @@ public class  CTRL_PolicyFormManagerLtng {
                     //  Add Product State Status Objects (Junction Object) to State Availability by Policy Id
                     for(Product_State_Status__c prodstatestat : stateavail.Product_State_Statuses__r)
                     { 
-                        if(prodstatestat.Filing_Status__r.Policy_Form__c!=null){
-                            System.debug('stateavail.Id : '+stateavail.Id);
+                        if(prodstatestat.Filing_Status__r.Policy_Form__c != null)
+                        {
                             statestatprodmap.get(stateavail.Product_Specification__c).get(stateavail.State__c).get(stateavail.Id).PolicytoProdStateStat.put(prodstatestat.Filing_Status__r.Policy_Form__c, new W_ProdStateStatus(prodstatestat));
                         }
                     }
-
                 }
 
                 //  Populate Return Object with Values
@@ -282,7 +327,7 @@ public class  CTRL_PolicyFormManagerLtng {
                 			    Project__c,
                          		Status__c, 
                          		Policy_Form_Type__c,
-                         Filing_Strategy__c,
+                                Filing_Strategy__c,
                 			    (Select 
                 			    		Id,
                 			    	    State__c,
@@ -318,7 +363,7 @@ public class  CTRL_PolicyFormManagerLtng {
                 				Project__c,
                 				Status__c,
                          		Policy_Form_Type__c,
-                         Filing_Strategy__c,
+                                Filing_Strategy__c,
                 				(SELECT 
                 				 		Id, 
                 				 		State__c, 
@@ -337,10 +382,12 @@ public class  CTRL_PolicyFormManagerLtng {
                 				 	    Filing_Notes_Status_Notes__c 
                 				 FROM
                 				 		 Filing_Statuses__r) 
-                	     FROM 
-                	    	 Policy_Form_Detail__c 
-                	    WHERE 
-                	    	  Id in: PolicyIds order by Policy_Form_Type__c asc];
+	                	     FROM 
+	                	    	  Policy_Form_Detail__c 
+	                	    WHERE 
+	                	    	  Id in: PolicyIds 
+	                	  order by
+	                	          Policy_Form_Type__c asc];
             }
              
             for(Policy_Form_Detail__c item : items)
@@ -392,9 +439,9 @@ public class  CTRL_PolicyFormManagerLtng {
                 											FROM 
                 												 SetupEntityAccess 
                     										WHERE 
-                    											  SetupEntityType = 'CustomPermission' 
+                    											 SetupEntityType = 'CustomPermission' 
                     									    AND 
-                    									    	  SetupEntityId IN 
+                    									    	 SetupEntityId IN 
             									    		(SELECT
 								    					 			Id 
 								    					 	   FROM 
@@ -503,11 +550,14 @@ public class  CTRL_PolicyFormManagerLtng {
             }
 
             //  Loop New Policies for Insert
-            for(String state : policyformstateaggr.NewStatePolicyMap.keySet()){
-                for(Id policyid : policyformstateaggr.NewStatePolicyMap.get(state)){
+            for(String state : policyformstateaggr.NewStatePolicyMap.keySet())
+            {
+                for(Id policyid : policyformstateaggr.NewStatePolicyMap.get(state))
+                {
                     Filing_Status__c filingStat = fillPolicyFormStateObj(state, policyid, policyformstateaggr);
 
-                    if(filingStat != null){
+                    if(filingStat != null)
+                    {
                         forInsFilingStatList.add(filingStat);
                     }
                 }
@@ -523,7 +573,8 @@ public class  CTRL_PolicyFormManagerLtng {
                 insert forInsFilingStatList;
             }
 
-        }Catch (Exception ex){
+        }catch (Exception ex)
+        {
             ret.sMessage = ex.getMessage();
             ret.bIsError = true;
         }
@@ -531,34 +582,45 @@ public class  CTRL_PolicyFormManagerLtng {
         return json.serialize(ret);
     }
     
-    public static Filing_Status__c fillPolicyFormStateObj(Id FilingStatusId, W_PolicyFormStateAggregateLtng policyformstateaggr){
+    public static Filing_Status__c fillPolicyFormStateObj(Id FilingStatusId,
+    													  W_PolicyFormStateAggregateLtng policyformstateaggr)
+   {
         Filing_Status__c polfrmstate = new Filing_Status__c(Id = FilingStatusId);
         return fillPolicyFormStateObj(polfrmstate, policyformstateaggr);
     }
 
-    public static Filing_Status__c fillPolicyFormStateObj(String state, Id policyid, W_PolicyFormStateAggregateLtng policyformstateaggr){
+    public static Filing_Status__c fillPolicyFormStateObj(String state,
+    												 	  Id policyid,
+    												 	  W_PolicyFormStateAggregateLtng policyformstateaggr)
+   {
 
-        Filing_Status__c polfrmstate = new Filing_Status__c(State__c = state, Policy_Form__c = policyid);
+        Filing_Status__c polfrmstate = new Filing_Status__c(State__c = state,
+        													 Policy_Form__c = policyid);
         return fillPolicyFormStateObj(polfrmstate, policyformstateaggr);
     }
 
-    public static Filing_Status__c fillPolicyFormStateObj(Filing_Status__c polfrmstate, W_PolicyFormStateAggregateLtng policyformstateaggr){
+    public static Filing_Status__c fillPolicyFormStateObj(Filing_Status__c polfrmstate,
+    													   W_PolicyFormStateAggregateLtng policyformstateaggr)
+    {
         final String FIELDTYPE_DATE = 'DATE';
         
         Boolean hasUpdate = false;
         Filing_Status__c retPlcyFrmState;
         
-        for(String field : policyformstateaggr.Fields){
+        for(String field : policyformstateaggr.Fields)
+        {
             
-            if(policyformstateaggr.isEditedMap.get(field)){
+            if(policyformstateaggr.isEditedMap.get(field))
+            {
                 //  Update Field Value
-                if(policyformstateaggr.FieldTypeMap.get(field) == FIELDTYPE_DATE){
+                if(policyformstateaggr.FieldTypeMap.get(field) == FIELDTYPE_DATE)
+                {
                     
                     //  Only Attempt to Save Date if Field Not Empty
-                    if(policyformstateaggr.FieldValueMap.get(field) != null && policyformstateaggr.FieldValueMap.get(field) != ''){
-                        
+                    if(policyformstateaggr.FieldValueMap.get(field) != null 
+                    	&& policyformstateaggr.FieldValueMap.get(field) != '')
+                     {
                         String dtStr = String.valueOf(policyformstateaggr.FieldValueMap.get(field));
-                        
                         String dtDay = dtStr.substring(0,2);
                         String dtMonth = dtStr.substring(2,4);
                         String dtYear = dtStr.substring(4,8);
@@ -567,13 +629,17 @@ public class  CTRL_PolicyFormManagerLtng {
                         
                     }
                     
-                }else{
+                }
+                else
+                {
                     polfrmstate.put(field, policyformstateaggr.FieldValueMap.get(field));
                 }
                 hasUpdate = true;
             }              
         }
-        if(hasUpdate){
+        
+        if(hasUpdate)
+        {
             retPlcyFrmState = polfrmstate;
         }
         
@@ -600,53 +666,59 @@ public class  CTRL_PolicyFormManagerLtng {
             //  Create Map of StateAvail to Policy Filing Status for Records Where Filing Status Does Not Presently Exist
             Map<Id, List<Filing_Status__c>> StateAvailIdtoFilingStatList = new Map<Id, List<Filing_Status__c>>();
 
-            for(Id prodid : prodstatepolicystatmap.keySet()){
-                for(String state : prodstatepolicystatmap.get(prodid).keySet()){
-                    for(Id stateavailid : prodstatepolicystatmap.get(prodid).get(state).keySet()){
-
-                        for(Id policyid : prodstatepolicystatmap.get(prodid).get(state).get(stateavailid).PolicytoProdStateStat.keySet()){
+            for(Id prodid : prodstatepolicystatmap.keySet())
+            {
+                for(String state : prodstatepolicystatmap.get(prodid).keySet())
+                {
+                    for(Id stateavailid : prodstatepolicystatmap.get(prodid).get(state).keySet())
+                    {
+                        for(Id policyid : prodstatepolicystatmap.get(prodid).get(state).get(stateavailid).PolicytoProdStateStat.keySet())
+                        {
                             W_ProdStateStatus prodstatestat = prodstatepolicystatmap.get(prodid).get(state).get(stateavailid).PolicytoProdStateStat.get(policyid);
-
-                            if(prodstatestat.InsertOrDelete && prodstatestat.ProductStateStatusId == null){
-
+                            if(prodstatestat.InsertOrDelete && prodstatestat.ProductStateStatusId == null)
+                            {
                                 //  Populate Product State Status Insert List
                                 if(prodstatestat.FilingStatusId != null){
                                     pssforInsList.add(new Product_State_Status__c(Filing_Status__c = prodstatestat.FilingStatusId, Product_State_Availability__c = stateavailid));
-                                }else{
-
+                                }
+                                else
+                                {
                                     //  List to Create State Availability Before Product State Status is Inserted
-                                    if(!StateAvailIdtoFilingStatList.containsKey(stateavailid)){
+                                    if(!StateAvailIdtoFilingStatList.containsKey(stateavailid))
+                                    {
                                         StateAvailIdtoFilingStatList.put(stateavailid, new List<Filing_Status__c>());
                                     }
                                     StateAvailIdtoFilingStatList.get(stateavailid).add(new Filing_Status__c(Policy_Form__c = policyid, State__c = state));
                                 }
                             }
 
-                            if(prodstatestat.InsertOrDelete && prodstatestat.ProductStateStatusId != null){
-
+                            if(prodstatestat.InsertOrDelete && prodstatestat.ProductStateStatusId != null)
+                            {
                                 //  Populate Product State Status Delete List
                                 pssforDelList.add(new Product_State_Status__c(Id = Id.valueOf(prodstatestat.ProductStateStatusId)));
                             }
-
                         }
-
                     }
                 }
             }
 
             //  Create Filing Status Records if they Exist
-            if(StateAvailIdtoFilingStatList.size() > 0){
+            if(StateAvailIdtoFilingStatList.size() > 0)
+            {
                 List<Filing_Status__c> fsforInsertList = new List<Filing_Status__c>();
-                for(Id key : StateAvailIdtoFilingStatList.keySet()){
+                for(Id key : StateAvailIdtoFilingStatList.keySet())
+                {
                     fsforInsertList.addAll(StateAvailIdtoFilingStatList.get(key));
                 }
 
-                if(fsforInsertList.size() > 0){
+                if(fsforInsertList.size() > 0)
+                {
                     insert fsforInsertList;
-
                     //  Add Additional Recors to Product State Status List
-                    for(Id key : StateAvailIdtoFilingStatList.keySet()){
-                        for(Filing_Status__c fs : StateAvailIdtoFilingStatList.get(key)){
+                    for(Id key : StateAvailIdtoFilingStatList.keySet())
+                    {
+                        for(Filing_Status__c fs : StateAvailIdtoFilingStatList.get(key))
+                        {
                             pssforInsList.add(new Product_State_Status__c(Filing_Status__c = fs.Id, Product_State_Availability__c = key));
                         }
                     }
@@ -656,18 +728,21 @@ public class  CTRL_PolicyFormManagerLtng {
 
             //  Update the Database
             Id ProjectId;
-            if(pssforDelList.size()>0){
+            if(pssforDelList.size()>0)
+            {
                 ProjectId = getProjectIdfromProductStateStat(pssforDelList[0].Id);
                 delete pssforDelList;
             }
 
-            if(pssforInsList.size()>0){
+            if(pssforInsList.size()>0)
+            {
                 insert pssforInsList;
                 ProjectId = getProjectIdfromProductStateStat(pssforInsList[0].Id);
             }
 
             //  Requery Product Status Policy Map
-            if(!ret.bIsError && ProjectId != null){
+            if(!ret.bIsError && ProjectId != null)
+            {
                 ret = getProducts(ProjectId);
                 if(!ret.bIsError){
                     ret.sMessage = successmessage;
@@ -687,8 +762,15 @@ public class  CTRL_PolicyFormManagerLtng {
 
         //  Retrieve Project Related to Product Status Status Record
         List<Product_State_Status__c> prdstateStatList = new List<Product_State_Status__c>();
-        prdstateStatList = [Select Product_State_Availability__r.Product_Specification__r.Project__c from Product_State_Status__c Where Id=:ProductStateStatId Limit 1];
-        if(prdstateStatList.size() > 0){
+        prdstateStatList = [Select 
+        							Product_State_Availability__r.Product_Specification__r.Project__c
+        					   FROM 
+        					   		Product_State_Status__c 
+        					   WHERE 
+        					   		Id=:ProductStateStatId Limit 1];
+        
+        if(prdstateStatList.size() > 0)
+        {
             ProjectId = prdstateStatList[0].Product_State_Availability__r.Product_Specification__r.Project__c;
         }
 

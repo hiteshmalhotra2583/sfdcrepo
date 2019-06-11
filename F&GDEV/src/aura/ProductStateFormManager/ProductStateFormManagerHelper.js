@@ -95,7 +95,8 @@
         var action = component.get("c.getDetails");
         action.setParams({
             "projectId":component.get("v.recordId"),
-            "policyFormStateVal":policyFormStateVal
+            "policyFormStateVal":policyFormStateVal,
+            "productForm":"ProductFromAssoication",
         });
         
         var opts = [];

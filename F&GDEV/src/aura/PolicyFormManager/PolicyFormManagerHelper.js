@@ -69,7 +69,8 @@
         var action = component.get("c.getPolicyDetails");
         action.setParams({
             "projectId":component.get("v.recordId"),
-            "policyFormStateVal":policyFormStateVal
+            "policyFormStateVal":policyFormStateVal,
+            "productForm":"PolicyFrom",
         });
         
         var opts = [];
