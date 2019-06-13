@@ -156,11 +156,11 @@ private class CTRL_PolicyFormManagerLtng_T {
         
         testData();
         initStateRecs();
-        //	W_Policy
+        //  W_Policy
         W_Policy policywrappr = new W_Policy(policyForms[0], filingStatus[0]);
         policywrappr.UISelected = true;
         
-        //	W_PolicyFormStateAggr
+        //  W_PolicyFormStateAggr
         W_PolicyFormStateAggregateLtng policyformstateaggr = new W_PolicyFormStateAggregateLtng();
         policyformstateaggr.Fields.add('Expected_Next_Response_Date__c');
         policyformstateaggr.AddPolicyFormState(policywrappr, 'AK', policywrappr.Id);
@@ -181,8 +181,8 @@ private class CTRL_PolicyFormManagerLtng_T {
         String statepolicymapstr = '{ "PA":{ "a0aC000000En5vYIAR":{ "UISelected":false, "StatusDate":null, "Status":"Not Started", "Name":"FGL TI 1 (2003)", "Id":"a0aC000000En5vYIAR", "FormName":null, "FilingStatusObj":{ "attributes":{ "type":"Filing_Status__c", "url":"" }, "Policy_Form__c":"a0aC000000En5vYIAR", "Id":"a0TC000000QjzsNMAR", "State__c":"PA", "Filing_Status__c":"Not Started" }, "FilingStatusId":"a0TC000000QjzsNMAR", "FilingStatusAvailId":null }, "a0aC000000En5o1IAB":{ "UISelected":false, "StatusDate":"9/11/2011", "Status":"Filed", "Name":"2011 Annual Life Illustration Certification Filing", "Id":"a0aC000000En5o1IAB", "FormName":null, "FilingStatusObj":{ "attributes":{ "type":"Filing_Status__c", "url":"" }, "Policy_Form__c":"a0aC000000En5o1IAB", "Id":"a0TC000000L5bTFMAZ", "State__c":"PA", "Filing_Status__c":"Filed", "Filing_Followup_Date__c":"2011-09-11", "State_Approval_Date__c":"2011-08-11", "Submitted_to_State_Date__c":"2011-06-23", "Objection_Received_Date__c":"2011-07-29", "Objection_Response_Date__c":"2011-08-11", "Filing_Notes_Status_Notes__c":"objection forwarded to actuarial 7-29-2011" }, "FilingStatusId":"a0TC000000L5bTFMAZ", "FilingStatusAvailId":null } }, "NY":{ "a0aC000000En5sKIAR":{ "UISelected":false, "StatusDate":null, "Status":"Not Filing", "Name":"OM PTP2 2008", "Id":"a0aC000000En5sKIAR", "FormName":null, "FilingStatusObj":{ "attributes":{ "type":"Filing_Status__c", "url":"" }, "Policy_Form__c":"a0aC000000En5sKIAR", "Id":"a0TC000000L5a78MAB", "State__c":"NY", "Filing_Status__c":"Not Filing" }, "FilingStatusId":"a0TC000000L5a78MAB", "FilingStatusAvailId":null } }, "PR":{ "a0aC000000En5sKIAR":{ "UISelected":false, "StatusDate":null, "Status":"Not Filing", "Name":"OM PTP2 2008", "Id":"a0aC000000En5sKIAR", "FormName":null, "FilingStatusObj":{ "attributes":{ "type":"Filing_Status__c", "url":"" }, "Policy_Form__c":"a0aC000000En5sKIAR", "Id":"a0TC000000L5a76MAB", "State__c":"PR", "Filing_Status__c":"Not Filing" }, "FilingStatusId":"a0TC000000L5a76MAB", "FilingStatusAvailId":null }, "a0aC000000En5sJIAR":{ "UISelected":false, "StatusDate":null, "Status":"Not Filing", "Name":"OM MPTP 2008", "Id":"a0aC000000En5sJIAR", "FormName":null, "FilingStatusObj":{ "attributes":{ "type":"Filing_Status__c", "url":"" }, "Policy_Form__c":"a0aC000000En5sJIAR", "Id":"a0TC000000L5a6mMAB", "State__c":"PR", "Filing_Status__c":"Not Filing" }, "FilingStatusId":"a0TC000000L5a6mMAB", "FilingStatusAvailId":null }, "a0aC000000En5pLIAR":{ "UISelected":false, "StatusDate":null, "Status":"Not Started", "Name":"ARI-1006(02-11)", "Id":"a0aC000000En5pLIAR", "FormName":null, "FilingStatusObj":{ "attributes":{ "type":"Filing_Status__c", "url":"" }, "Policy_Form__c":"a0aC000000En5pLIAR", "Id":"a0TC000000L5ah2MAB", "State__c":"PR", "Filing_Status__c":"Not Started" }, "FilingStatusId":"a0TC000000L5ah2MAB", "FilingStatusAvailId":null }, "a0aC000000En5o3IAB":{ "UISelected":false, "StatusDate":null, "Status":"Not Filing", "Name":"2012 Annual Life Illustration Certification Filing", "Id":"a0aC000000En5o3IAB", "FormName":null, "FilingStatusObj":{ "attributes":{ "type":"Filing_Status__c", "url":"" }, "Policy_Form__c":"a0aC000000En5o3IAB", "Id":"a0TC000000L5bGLMAZ", "State__c":"PR", "Filing_Status__c":"Not Filing" }, "FilingStatusId":"a0TC000000L5bGLMAZ", "FilingStatusAvailId":null } } }';
         String prodstatepolicystatmapstr='{ "a0dC000000C9u7kIAB":{ "AZ":{ "a0iC000000BzXPkIAN":{ "StateAvailId":"a0iC000000BzXPkIAN", "PolicytoProdStateStat":{ "a0aC000000En5o2IAB":{ "ProductStateStatusId":"a0e0q000000fGHRAA2", "InsertOrDelete":true, "FilingStatusId":"a0TC000000L5aizMAB" }, "a0a0q000000ZTwiAAG":{ "ProductStateStatusId":"a0e0q000000fFu1AAE", "InsertOrDelete":false, "FilingStatusId":"a0T0q000001OhsxEAC" } } } }, "AK":{ "a0iC000000BzXPjIAN":{ "StateAvailId":"a0iC000000BzXPjIAN", "PolicytoProdStateStat":{ "a0aC000000En5o4IAB":{ "ProductStateStatusId":"a0e0q000000fGGxAAM", "InsertOrDelete":false, "FilingStatusId":"a0TC000000L5YzhMAF" }, "a0a0q000000ZTwiAAG":{ "ProductStateStatusId":"a0e0q000000fFv4AAE", "InsertOrDelete":false, "FilingStatusId":"a0T0q000001OhvDEAS" } } } }, "WY":{ "a0i0q000002Eqt4AAC":{ "StateAvailId":"a0i0q000002Eqt4AAC", "PolicytoProdStateStat":{ "a0aC000000En5o2IAB":{ "ProductStateStatusId":"a0e0q000000fGH3AAM", "InsertOrDelete":false, "FilingStatusId":"a0TC000000L5ajBMAR" } } } } } }';
         
-        List<State__c> stateList = CTRL_PolicyFormManagerLtng.getStates();
-        CTRL_PolicyFormManagerLtng.getDetails(projectId,'Active');
+        List<State__c> stateList = CTRL_PolicyFormManagerLtng.getStates('ProductFromAssoication');
+        CTRL_PolicyFormManagerLtng.getDetails(projectId,'Active','ProductFromAssoication');
         CTRL_PolicyFormManagerLtng.getPolicies(policyFormsIds,'Active');
         CTRL_PolicyFormManagerLtng.searchPolicies(policyForms[0].Name);
         CTRL_PolicyFormManagerLtng.saveProjectPolicy(projectId,policyFormsIds);
@@ -200,11 +200,11 @@ private class CTRL_PolicyFormManagerLtng_T {
         testData();
         initStateRecs();
         Test.startTest();
-        //	W_Policy
+        //  W_Policy
         W_Policy policywrappr = new W_Policy(policyForms[0], filingStatus[0]);
         policywrappr.UISelected = true;
         
-        //	PolicyFormStateAggr
+        //  PolicyFormStateAggr
         Map<String, Map<Id, W_Policy>> statepolicymap = new Map<String, Map<Id, W_Policy>>();
         statepolicymap.put('AK', new Map<Id, W_Policy>());
         statepolicymap.get('AK').put(policyForms[0].Id, policywrappr);
