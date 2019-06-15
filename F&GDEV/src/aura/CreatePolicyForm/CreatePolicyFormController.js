@@ -68,12 +68,19 @@
         
         var policyFormNameState = component.get("v.STRecord.policyFormName");
         var StateDescription = component.get("v.STRecord.description");
+        var groupInd = component.get("v.STRecord.fillingType");
         
         if(policyFormNameState==undefined || policyFormNameState==null || policyFormNameState==''){
             helper.toastMessage(component,event,"Warning!","Warning","Policy Form is a mandatory field!");
             return;
         }
-        if(StateDescription==undefined || StateDescription==null || StateDescription==''){
+        
+        if(groupInd == undefined || groupInd == null || groupInd == ''){
+            helper.toastMessage(component,event,"Warning!","Warning","Group/Ind is a mandatory field!");
+            return;
+        }
+        
+        if(StateDescription == undefined || StateDescription == null || StateDescription == ''){
             helper.toastMessage(component,event,"Warning!","Warning","Description is a mandatory field!");
             return;
         }

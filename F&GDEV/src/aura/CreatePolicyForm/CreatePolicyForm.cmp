@@ -319,7 +319,7 @@
                             <label class="slds-form-element__label slds-p-right--small ng-scope ng-binding" style="font-weight: 600;float: none;position:initial" >Group / Ind</label>
                             <div class="slds-form-element__control">
                                 <div class="slds-control " >
-                                    <ui:inputSelect aura:id="groupSelect" class="slds-select " value="{!v.STRecord.fillingType}" />
+                                    <ui:inputSelect aura:id="groupSelect" class="_Required" value="{!v.STRecord.fillingType}" />
                                 </div>
                             </div>
                         </div>
